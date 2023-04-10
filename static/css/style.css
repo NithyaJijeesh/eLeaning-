@@ -1,10 +1,12 @@
 /********** Template CSS **********/
 :root {
-    --primary: #06BBCC;
+    --primary: #2bacb8;
     --light: #F0FBFC;
     --dark: #181d38;
 }
-
+h1{
+    color: var(--dark);
+}
 .fw-medium {
     font-weight: 600 !important;
 }

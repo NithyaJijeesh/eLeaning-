@@ -4,10 +4,9 @@ from.import views
 urlpatterns = [
 
     path('', views.index, name='index'),
-    # path('register', views.register, name='register'),
-    # path('login', views.login, name='login'),
-    # path('base', views.base, name='base'),
-    # path('logout', views.logout, name='logout'),
-    # path('view_profile', views.view_profile, name='view_profile'),
-    # path('edit_profile/<pk>', views.edit_profile, name='edit_profile'),
+    path('about', views.about, name='about'),
+    path('contact', views.contact, name='contact'),
+    path('courses', views.courses, name='courses'),
+    path('team', views.team, name='team'),
+    path('testimonial', views.testimonial, name='testimonial'),
 ]
