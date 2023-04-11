@@ -1,0 +1,153 @@
+{% extends 'base.html'%}
+{% block content %}
+{% load static %}
+
+<style>
+    h3{
+        color:#06BBCC;
+    }
+    .row {
+		  display: flex;
+		  flex-wrap: wrap;
+		  padding: 0 4px;
+		}
+
+		.column {
+		  flex: 33.33%;
+		  max-width: 33.33%;
+		  padding: 0 4px;
+		}
+
+		.column img {
+		  margin-top: 8px;
+		  vertical-align: middle;
+		  width: 100%;
+		}
+
+		.column p {
+		  font-size: 16px;
+		  text-align: center;
+		}
+
+		@media screen and (max-width: 800px) {
+		  .column {
+		    flex: 50%;
+		    max-width: 50%;
+		  }
+		}
+
+		@media screen and (max-width: 600px) {
+		  .column {
+		    flex: 100%;
+		    max-width: 100%;
+		  }
+		}
+</style>
+<!-- Header Start -->
+<div class="container-fluid bg-primary py-5 mb-5 page-header">
+    <div class="container py-5">
+        <div class="row justify-content-center">
+            <div class="col-lg-10 text-center">
+                <h1 class="display-3 text-white animated slideInDown">Placements</h1>
+                <nav aria-label="breadcrumb">
+                    <ol class="breadcrumb justify-content-center">
+                        <li class="breadcrumb-item"><a class="text-white" href="{% url 'index' %}">Home</a></li>
+                        <li class="breadcrumb-item"><a class="text-white" href="#">Pages</a></li>
+                        <li class="breadcrumb-item text-white active" aria-current="page">Placements</li>
+                    </ol>
+                </nav>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- Header End -->
+
+
+    
+    
+    
+
+<div class="container">
+    <h3 class="tblplcmnt text-center" style="padding-bottom: 0px;">Students Placed</h3>
+    <hr>
+    
+    <div class="row p-5" style="display: flex; flex-wrap: wrap;">
+        <div class="col-md-4" style="margin-bottom: 5px; display:flex; flex-grow: 1;">
+          <div class="row events-single-box" style="margin: 2px; border-radius: 10px;width:100%">
+            <div class="col-md-6">
+                <img style="object-fit: contain;" class="img-fluid img-responsive lazy" src="static/img/stud1.jpeg" alt="">
+            </div>
+            <div class="col-md-6">
+              <h4 class="text-center text-md-left">SARAH</h4>
+              <p class="events-time text-center text-md-left">
+                <i class="fa fa-map-marker event-icon"></i> abcd</p>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4" style="margin-bottom: 5px; display:flex; flex-grow: 1;">
+            <div class="row events-single-box" style="margin: 2px; border-radius: 10px;width:100%">
+              <div class="col-md-6">
+                  <img style="object-fit: contain;" class="img-fluid img-responsive lazy" src="static/img/stud2.jpeg" alt="static/img/defualt.jpeg">
+              </div>
+              <div class="col-md-6">
+                <h4 class="text-center text-md-left">JOHN </h4>
+                <p class="events-time text-center text-md-left">
+                  <i class="fa fa-map-marker event-icon"></i>abcd  </p>
+              </div>
+            </div>
+          </div>
+   
+
+          <div class="col-md-4" style="margin-bottom: 5px; display:flex; flex-grow: 1;">
+            <div class="row events-single-box" style="margin: 2px; border-radius: 10px;width:100%">
+              <div class="col-md-6">
+                  <img style="object-fit: contain;" class="img-fluid img-responsive lazy" src="static/img/stud1.jpeg" alt="static/img/defualt.jpeg">
+              </div>
+              <div class="col-md-6">
+                <h4 class="text-center text-md-left">JANE </h4>
+                <p class="events-time text-center text-md-left">
+                  <i class="fa fa-map-marker event-icon"></i>
+                  abcd                    </p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="row p-5" style="display: flex; flex-wrap: wrap;">
+          <div class="col-md-4" style="margin-bottom: 5px; display:flex; flex-grow: 1;">
+            <div class="row events-single-box" style="margin: 2px; border-radius: 10px;width:100%">
+              <div class="col-md-6">
+                  <img style="object-fit: contain;" class="img-fluid img-responsive lazy" src="static/img/defualt.jpeg" alt="static/img/defualt.jpeg">
+              </div>
+              <div class="col-md-6">
+                <h4 class="text-center text-md-left">JOHN </h4>
+                <p class="events-time text-center text-md-left">
+                  <i class="fa fa-map-marker event-icon"></i>abcd</p>
+              </div>
+            </div>
+          </div>
+   
+
+          
+
+          <div class="col-md-4" style="margin-bottom: 5px; display:flex; flex-grow: 1;">
+            <div class="row events-single-box" style="margin: 2px; border-radius: 10px;width:100%">
+              <div class="col-md-6">
+                  <img style="object-fit: contain;" class="img-fluid img-responsive lazy" src="static/img/defualt.jpeg" alt="static/img/defualt.jpeg">
+              </div>
+              <div class="col-md-6">
+                <h4 class="text-center text-md-left">JOHN </h4>
+                <p class="events-time text-center text-md-left">
+                  <i class="fa fa-map-marker event-icon"></i>abcd </p>
+              </div>
+            </div>
+          </div>
+    </div>
+</div>
+
+                    
+</div>
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper"></script>
+
+
+{% endblock %}
