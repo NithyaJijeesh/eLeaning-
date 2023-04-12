@@ -19,5 +19,12 @@ def team(request):
 
 def testimonial(request):
     return render(request,'testimonial.html')
+
 def placement(request):
     return render(request,'placement.html')
+
+def vision(request):
+    return render(request,'vision.html')
+
+def blogs(request):
+    return render(request,'blog.html')

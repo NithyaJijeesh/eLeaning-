@@ -42,6 +42,13 @@
 		    max-width: 100%;
 		  }
 		}
+    .img{
+      background: #F0FBFC;
+    }
+    .img:hover {
+            margin-top: -10px;
+            background: #06BBCC;
+        }
 </style>
 <!-- Header Start -->
 <div class="container-fluid bg-primary py-5 mb-5 page-header">
@@ -52,7 +59,7 @@
                 <nav aria-label="breadcrumb">
                     <ol class="breadcrumb justify-content-center">
                         <li class="breadcrumb-item"><a class="text-white" href="{% url 'index' %}">Home</a></li>
-                        <li class="breadcrumb-item"><a class="text-white" href="#">Pages</a></li>
+                        <!-- <li class="breadcrumb-item"><a class="text-white" href="#">Pages</a></li> -->
                         <li class="breadcrumb-item text-white active" aria-current="page">Placements</li>
                     </ol>
                 </nav>
@@ -68,76 +75,116 @@
     
 
 <div class="container">
-    <h3 class="tblplcmnt text-center" style="padding-bottom: 0px;">Students Placed</h3>
+  
+    <div class="text-center wow fadeInUp" data-wow-delay="0.1s">
+        <h6 class="section-title bg-white text-center text-primary px-3">Placements</h6>
+        <h1 class="mb-5">Students Placed in 2022-2023</h1>
+    </div>
     <hr>
     
     <div class="row p-5" style="display: flex; flex-wrap: wrap;">
-        <div class="col-md-4" style="margin-bottom: 5px; display:flex; flex-grow: 1;">
-          <div class="row events-single-box" style="margin: 2px; border-radius: 10px;width:100%">
+        <div class="col-md-3"  style="margin-bottom: 5px; display:flex; flex-grow: 1;">
+          <div class="row events-single-box img" style="margin: 2px; border-radius: 10px;width:100%">
             <div class="col-md-6">
-                <img style="object-fit: contain;" class="img-fluid img-responsive lazy" src="static/img/stud1.jpeg" alt="">
+                <img style="object-fit: contain;" class="img-fluid img-responsive lazy m-2 mt-3" src="{% static 'img/stud1.jpeg' %}" onerror="this.onerror=null; this.src='static/img/default.png'" alt="">
             </div>
-            <div class="col-md-6">
-              <h4 class="text-center text-md-left">SARAH</h4>
+            <div class="col-md-6" style="margin-top: 25%;">
+              <h4 class="text-center text-md-left">JANE</h4>
               <p class="events-time text-center text-md-left">
-                <i class="fa fa-map-marker event-icon"></i> abcd</p>
+                <i class="fa fa-map-marker event-icon"></i> abcd company</p>
             </div>
           </div>
         </div>
-        <div class="col-md-4" style="margin-bottom: 5px; display:flex; flex-grow: 1;">
-            <div class="row events-single-box" style="margin: 2px; border-radius: 10px;width:100%">
+
+        <div class="col-md-3"  style="margin-bottom: 5px; display:flex; flex-grow: 1;">
+          <div class="row events-single-box img" style="margin: 2px; border-radius: 10px;width:100%">
+            <div class="col-md-6">
+              <img style="object-fit: contain;" class="img-fluid img-responsive lazy m-2 mt-3" src="{% static 'img/stud3.png' %}" onerror="this.onerror=null; this.src='static/img/default.png'" alt="">
+
+            </div>
+            <div class="col-md-6" style="margin-top: 25%;">
+              <h4 class="text-center text-md-left">SARAH</h4>
+              <p class="events-time text-center text-md-left">
+                <i class="fa fa-map-marker event-icon"></i> abcd company</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-md-3 " style="margin-bottom: 5px; display:flex; flex-grow: 1;">
+            <div class="row events-single-box img" style="margin: 2px; border-radius: 10px;width:100%">
               <div class="col-md-6">
-                  <img style="object-fit: contain;" class="img-fluid img-responsive lazy" src="static/img/stud2.jpeg" alt="static/img/defualt.jpeg">
+                <img style="object-fit: contain;" class="img-fluid img-responsive lazy m-2 mt-3" src="{% static 'img/stud2.jpeg' %}" onerror="this.onerror=null; this.src='static/img/default.png'" alt="">
               </div>
-              <div class="col-md-6">
+              <div class="col-md-6" style="margin-top: 25%;">
                 <h4 class="text-center text-md-left">JOHN </h4>
                 <p class="events-time text-center text-md-left">
-                  <i class="fa fa-map-marker event-icon"></i>abcd  </p>
+                  <i class="fa fa-map-marker event-icon"></i>abcd company  </p>
               </div>
             </div>
           </div>
    
 
-          <div class="col-md-4" style="margin-bottom: 5px; display:flex; flex-grow: 1;">
-            <div class="row events-single-box" style="margin: 2px; border-radius: 10px;width:100%">
+          <div class="col-md-3 " style="margin-bottom: 5px; display:flex; flex-grow: 1;">
+            <div class="row events-single-box img" style="margin: 2px; border-radius: 10px;width:100%">
               <div class="col-md-6">
-                  <img style="object-fit: contain;" class="img-fluid img-responsive lazy" src="static/img/stud1.jpeg" alt="static/img/defualt.jpeg">
+                  <img style="object-fit: contain;" class="img-fluid img-responsive lazy m-2 mt-3" src="{% static 'img/stud1.jpeg' %}" onerror="this.onerror=null; this.src='static/img/default.png'" alt="">
               </div>
-              <div class="col-md-6">
+              <div class="col-md-6" style="margin-top: 25%;">
                 <h4 class="text-center text-md-left">JANE </h4>
                 <p class="events-time text-center text-md-left">
-                  <i class="fa fa-map-marker event-icon"></i>
-                  abcd                    </p>
+                  <i class="fa fa-map-marker event-icon"></i>abcd company</p>
               </div>
             </div>
           </div>
         </div>
         <div class="row p-5" style="display: flex; flex-wrap: wrap;">
-          <div class="col-md-4" style="margin-bottom: 5px; display:flex; flex-grow: 1;">
-            <div class="row events-single-box" style="margin: 2px; border-radius: 10px;width:100%">
+          <div class="col-md-3 " style="margin-bottom: 5px; display:flex; flex-grow: 1;">
+            <div class="row events-single-box img m-1" style="margin: 2px; border-radius: 10px;width:100%">
               <div class="col-md-6">
-                  <img style="object-fit: contain;" class="img-fluid img-responsive lazy" src="static/img/defualt.jpeg" alt="static/img/defualt.jpeg">
+                <img style="object-fit: contain;" class="img-fluid img-responsive lazy m-2 mt-3" src="{% static 'img/stud2.jpeg' %}" onerror="this.onerror=null; this.src='static/img/default.png'" alt="">
               </div>
-              <div class="col-md-6">
+              <div class="col-md-6" style="margin-top: 25%;">
                 <h4 class="text-center text-md-left">JOHN </h4>
                 <p class="events-time text-center text-md-left">
-                  <i class="fa fa-map-marker event-icon"></i>abcd</p>
+                  <i class="fa fa-map-marker event-icon"></i>abcd company</p>
               </div>
             </div>
           </div>
-   
-
-          
-
-          <div class="col-md-4" style="margin-bottom: 5px; display:flex; flex-grow: 1;">
-            <div class="row events-single-box" style="margin: 2px; border-radius: 10px;width:100%">
+          <div class="col-md-3"  style="margin-bottom: 5px; display:flex; flex-grow: 1;">
+            <div class="row events-single-box img" style="margin: 2px; border-radius: 10px;width:100%">
               <div class="col-md-6">
-                  <img style="object-fit: contain;" class="img-fluid img-responsive lazy" src="static/img/defualt.jpeg" alt="static/img/defualt.jpeg">
+                  <img style="object-fit: contain;" class="img-fluid img-responsive lazy m-2 mt-3" src="{% static 'img/stud1.jpeg' %}" onerror="this.onerror=null; this.src='static/img/default.png'" alt="">
               </div>
+              <div class="col-md-6" style="margin-top: 25%;">
+                <h4 class="text-center text-md-left">JANE</h4>
+                <p class="events-time text-center text-md-left">
+                  <i class="fa fa-map-marker event-icon"></i> abcd company</p>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-3" style="margin-bottom: 5px; display:flex; flex-grow: 1;">
+            <div class="row events-single-box img" style="margin: 2px; border-radius: 10px;width:100%">
               <div class="col-md-6">
+                  <img style="object-fit: contain;" class="img-fluid img-responsive lazy m-2 mt-3" src="{% static 'img/stud2.jpeg' %}" onerror="this.onerror=null; this.src='static/img/default.png'" alt="">
+              </div>
+              <div class="col-md-6" style="margin-top: 25%;">
                 <h4 class="text-center text-md-left">JOHN </h4>
                 <p class="events-time text-center text-md-left">
-                  <i class="fa fa-map-marker event-icon"></i>abcd </p>
+                  <i class="fa fa-map-marker event-icon"></i>abcd company </p>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-md-3"  style="margin-bottom: 5px; display:flex; flex-grow: 1;">
+            <div class="row events-single-box img" style="margin: 2px; border-radius: 10px;width:100%">
+              <div class="col-md-6">
+                <img style="object-fit: contain;" class="img-fluid img-responsive lazy m-2 mt-3" src="{% static 'img/stud3.png' %}" onerror="this.onerror=null; this.src='static/img/default.png'" alt="">
+  
+              </div>
+              <div class="col-md-6" style="margin-top: 25%;">
+                <h4 class="text-center text-md-left">SARAH</h4>
+                <p class="events-time text-center text-md-left">
+                  <i class="fa fa-map-marker event-icon"></i> abcd company</p>
               </div>
             </div>
           </div>

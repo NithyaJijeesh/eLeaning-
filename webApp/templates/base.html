@@ -229,7 +229,7 @@
         }
 
         .page-header {
-            background: linear-gradient(rgba(24, 29, 56, .7), rgba(24, 29, 56, .7)), url(static/img/hero1.jpg);
+            background: linear-gradient(rgba(24, 29, 56, .9), rgba(24, 29, 56, .9)), url(static/img/hero1.jpg);
             background-position: center center;
             background-repeat: no-repeat;
             background-size: cover;
@@ -468,6 +468,24 @@
             color: var(--dark);
         }
 
+        ::-webkit-scrollbar {
+            width: 8px;
+            height: 10px;
+        }
+
+      
+        ::-webkit-scrollbar-track {
+            background: #f1f1f1;
+        }
+
+        ::-webkit-scrollbar-thumb {
+        background: #888;
+        }
+
+        ::-webkit-scrollbar-thumb:hover {
+        background: #555;
+        }
+
     </style>
 </head>
 
@@ -486,28 +504,37 @@
         <a href="{% url 'index' %}" class="navbar-brand d-flex align-items-center px-4 px-lg-5">
                 <img src="{% static 'img/logo.png' %}"
                      style="width:60px; height:60px;">
-            <h2 class="m-0 text-primary">Skill Coach</h2>
+            <h2 class="m-0 text-primary">Altos Software Institute</h2>
         </a>
         <button type="button" class="navbar-toggler me-4" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
             <span class="navbar-toggler-icon"></span>
         </button>
         <div class="collapse navbar-collapse" id="navbarCollapse">
-            <div class="navbar-nav ms-auto p-4 p-lg-0">
+            <!-- <div class="navbar-nav ms-auto p-4 p-lg-0">
                 <a href="{% url 'index' %}" class="nav-item nav-link active">Home</a>
                 <a href="{% url 'about' %}" class="nav-item nav-link">About</a>
                 <a href="{% url 'courses' %}" class="nav-item nav-link">Courses</a>
                 <a href="{% url 'placement' %}" class="nav-item nav-link">Placements</a>
+                <a href="{% url 'blogs' %}" class="nav-item nav-link">Blogs</a>
 
-                <!-- <div class="nav-item dropdown">
-                    <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">Pages</a>
+                <a href="{% url 'contact'%}" class="nav-item nav-link">Contact</a>
+            </div> -->
+            <div class="navbar-nav ms-auto p-4 p-lg-0">
+                <a href="{% url 'index' %}" class="nav-item nav-link active">Home</a>
+                <a href="{% url 'vision' %}" class="nav-item nav-link">Vision</a>
+                <div class="nav-item dropdown">
+                    <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">Courses</a>
                     <div class="dropdown-menu fade-down m-0">
-                        <a href="{% url 'team' %}" class="dropdown-item">Our Team</a>
-                        <a href="{% url 'testimonial' %}" class="dropdown-item">Testimonial</a>
+                        <a href="{% url 'courses' %}" class="nav-item dropdown-item">Courses</a>
+                        <a href="{% url 'placement' %}" class=" nav-item dropdown-item">Placements</a>
                     </div>
-                </div> -->
+                </div>
+             
+                <!-- <a href="{% url 'blogs' %}" class="nav-item nav-link">Blogs</a> -->
+                <a href="{% url 'about' %}" class="nav-item nav-link">About</a>
                 <a href="{% url 'contact'%}" class="nav-item nav-link">Contact</a>
             </div>
-            <!-- <a href="" class="btn btn-primary py-4 px-lg-5 d-none d-lg-block">Join Now<i class="fa fa-arrow-right ms-3"></i></a> -->
+          
         </div>
     </nav>
     <!-- Navbar End -->
@@ -599,10 +626,10 @@
     <script src="static/js/main.js"></script>
 
     <script>
-        $('.navbar a').removeClass('active');
+        $('.navbar .navbar-nav a').removeClass('active');
        var currentUrl = window.location.pathname;
   
-        $('.navbar a[href="'+currentUrl+'"]').addClass('active');
+        $('.navbar .navbar-nav  a[href="'+currentUrl+'"]').addClass('active');
     </script>
 </body>
 
