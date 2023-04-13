@@ -2,9 +2,10 @@
 {% block content %}
 {% load static %}
 
+ 
 <style>
     .modal p{
-        color: #F0FBFC;
+        color: black;
         font-weight: 600;
     }
     .video-icon a iframe i {
@@ -21,6 +22,8 @@
     .row {
   display: flex;
   flex-wrap: wrap;
+  justify-content: space-evenly;
+
 }
 
 /* Styles for the columns on small screens */
@@ -47,44 +50,49 @@
   }
 }
 
-
+.service-item h5{
+    color: #181d38;
+}
 
 /* modal */
  h2{
-        color:#06BBCC;
-        justify-content: center;
-        margin-left: 170px;
+        color:var(--dark);
+        margin-left: 200px;
+        top:0;
     }
 
         .modal {
             display: none;
             position: fixed;
-            z-index: 1;
+            z-index: 9999;
             left: 450px;
             top: 150px;
-            width: 50%;
+            width: 600px;
             height: 450px;
             overflow: hidden;
-            border-radius: 10px;
-            /* background-color: rgba(0, 0, 0, 0.4); */
+            border-radius: 10px 10px 10px 10px;
+            box-shadow: -1px -1px 4px #aaa9a9a2,
+              1px 1px 7px rgba(147, 149, 151, 0.671);
             }
 
         .modal-content {
-            background-image: url("{% static 'img/modalback.jpg' %}");
-            background-color: rgba(20, 20, 20, 0.805);
+            /* background-color: rgba(20, 20, 20, 0.805); */
+            background: var(--light);
             margin: auto;
-            padding: 20px;
-            border-radius: 10px;
-            width: 80%;
+            padding: 0px;
+            /* border-radius: 10%; */
+            width: 100%;
             max-width: 600px;
             min-height: 800px;
+            
             }
 
         .close {
-            color: #aaa;
+            color: var(--dark);
             float: right;
             font-size: 28px;
             font-weight: bold;
+            padding: auto;
             }
 
         .close:hover,
@@ -125,7 +133,7 @@
 
              label{
                 margin-right: 10px;
-                color: #F0FBFC;
+                color: black;
                 display: flex;
                 margin-bottom: 10px;
             
@@ -165,23 +173,7 @@
 }
 
 
-/* counter section */
-
-/* .counter {
- position: absolute; 
- width: 80vw;
- transform: translate(-50%, -50%);
-  top: 50%; 
- left: 50%; 
- display: flex;
- justify-content: space-around;
- gap: 10px;
-} */
-
-.row{
-    justify-content: space-around;
-}
- .container1 {
+.container1 {
  width: 28vmin;
  height: 28vmin;
  display: flex;
@@ -190,7 +182,7 @@
  padding: 1em 0;
  position: relative;
  font-size: 16px;
- border-radius: 0.5em;
+ /* border-radius: 0.5em; */
  backdrop-filter: blur(10px);
  box-shadow: -1px -1px 4px #aaa9a9a2,
               1px 1px 7px rgba(147, 149, 151, 0.671);
@@ -313,8 +305,17 @@ span.text {
 }
 }
 
-
 /* end counter section */
+
+.whatsapp{
+    size: 120px;
+    height: 20px;
+    width: 20px;
+}
+
+    h1{
+            color: var(--light);
+        }
 </style>
 
 <!-- Carousel Start -->
@@ -329,8 +330,8 @@ span.text {
                             <h1 class="display-3 text-white animated slideInDown">Best Software Training Institute of Kochi</h1>
                             <h5 class="text-primary text-uppercase mb-3 animated slideInDown">Get the best software training of Kochi for better career</h5>
                             <!-- <p class="fs-5 text-white mb-4 pb-2">We are focused on providing advanced level software training like Big Data Training, Hadoop Training, Data Science Training, Python Training, Machine Learning Training, Selenium Training in Cochin Kerala.</p> -->
-                            <!-- <a href="" class="btn btn-primary py-md-3 px-md-5 me-3 animated slideInLeft">Read More</a> -->
-                            <!-- <a href="" class="btn btn-light py-md-3 px-md-5 animated slideInRight">Join Now</a> -->
+                            <a href="" class="btn btn-primary py-md-3 px-md-5 me-3 animated slideInLeft">Read More</a> 
+                            <a href="" class="btn btn-light py-md-3 px-md-5 animated slideInRight">Join Now</a>
                         </div>
                     </div>
                 </div>
@@ -346,8 +347,8 @@ span.text {
                             <h1 class="display-3 text-white animated slideInDown">Why do you choose Altos Software Institute ?</h1>
                             <p class="fs-5 text-white mb-4 pb-2">&#10004; &nbsp;&nbsp; Infopark based No.1 Professional Training Center.</p>
                             <p class="fs-5 text-white mb-4 pb-2"> &#10004; &nbsp;&nbsp; Our Students are Well Placed across the Globe.</p>
-                            <!-- <a href="" class="btn btn-primary py-md-3 px-md-5 me-3 animated slideInLeft">Read More</a> -->
-                            <!-- <a href="" class="btn btn-light py-md-3 px-md-5 animated slideInRight">Join Now</a> -->
+                            <a href="" class="btn btn-primary py-md-3 px-md-5 me-3 animated slideInLeft">Read More</a> 
+                            <a href="" class="btn btn-light py-md-3 px-md-5 animated slideInRight">Join Now</a>
                         </div>
                     </div>
                 </div>
@@ -361,13 +362,13 @@ span.text {
 <div id="myModal" class="modal">
     <div class="modal-content">
       <span class="close">&times;</span>
-      <h2 class="justify-content-center p-3">Updates</h2>
-      <hr>
-      <p>Great Things Are Happening</p>
-      <h5 class="text-primary text-uppercase mb-3 animated slideInDown">Sign up and be the first to know</h5>
-
-      <form action="" method="post" class="p-3">
-
+      <h2 class=" p-3">Updates</h2>
+      
+      <p class="m-2">Great Things Are Happening</p>
+      <h5 class="text-primary text-uppercase mb-3 animated slideInDown m-2" style="color: var(--dark);">Sign up and be the first to know</h5>
+      <hr style="color:grey">
+      <form action="{% url 'subscribe' %}" method="post" class="p-3">
+        {% csrf_token %}
         <!-- <div class="form-group">
             <label for="name">Name:</label>
             <input type="text" id="name" name="name" required>
@@ -381,7 +382,7 @@ span.text {
             <textarea id="message" name="message" required></textarea>
         </div> -->
 
-        <button type="submit" class="btn btn-light py-md-3 px-md-5 animated slideInRight" style="margin-left: 75px;">Singup</button>
+        <input type="submit" class="btn btn-dark py-md-3 px-md-5 animated slideInRight" style="margin-left: 50px;" value="Signup">
       </form>
       
     </div>
@@ -397,7 +398,7 @@ span.text {
                 <div class="service-item text-center pt-3">
                     <div class="p-4">
                         <i class="fa fa-3x fa-graduation-cap text-primary mb-4"></i>
-                        <h5 class="mb-3">Skilled Instructors</h5>
+                        <h5 class="mb-3 " >Skilled Instructors</h5>
                         <p>Diam elitr kasd sed at elitr sed ipsum justo dolor sed clita amet diam</p>
                     </div>
                 </div>
@@ -423,7 +424,7 @@ span.text {
             <div class="col-lg-3 col-sm-6 wow fadeInUp" data-wow-delay="0.7s">
                 <div class="service-item text-center pt-3">
                     <div class="p-4">
-                        <i class="fa fa-3x fas fa-chair text-primary mb-4"></i>
+                        <i class="fas fa-chair text-primary mb-4" style="font-size: 50px;"></i>
                         <h5 class="mb-3">Placement Assistance</h5>
                         <p>Diam elitr kasd sed at elitr sed ipsum justo dolor sed clita amet diam</p>
                     </div>
@@ -441,7 +442,31 @@ span.text {
         <div class="row g-5">
             <div class="col-lg-6 wow fadeInUp" data-wow-delay="0.1s" style="min-height: 400px;">
                 <div class="position-relative h-100">
-                    <img class="img-fluid position-absolute w-100 h-100" src="static/img/about.jpg" alt="" style="object-fit: cover;">
+                    <div id="video-carousel" class="carousel slide" data-ride="carousel">
+                        <div class="carousel-inner">
+                          <div class="carousel-item active">
+                            <iframe id="video1" width="100%" height="400" src="https://www.youtube.com/embed/Br-rP0tQnuE" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share; muted; loop;" allowfullscreen></iframe>
+                          </div>
+                          <div class="carousel-item">
+                            <iframe id="video1" width="100%" height="400" src="https://www.youtube.com/embed/cdZHQFCqK3g" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share; muted; loop;" allowfullscreen></iframe>
+                           </div>
+                          <div class="carousel-item">
+                            <iframe id="video1" width="100%" height="400" src="https://www.youtube.com/embed/Fy5cFfdZ4p4" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; muted; loop; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe> 
+                          </div>
+                        </div>
+                      </div>
+                    
+            
+                      <a class="carousel-control-prev" href="#video-carousel" role="button" data-slide="prev">
+                        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                        <span class="sr-only">Previous</span>
+                      </a>
+                      <a class="carousel-control-next" href="#video-carousel" role="button" data-slide="next">
+                        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                        <span class="sr-only">Next</span>
+                      </a>
+  
+                    <!-- <img class="img-fluid position-absolute w-100 h-100" src="static/img/about.jpg" alt="" style="object-fit: cover;"> -->
                 </div>
             </div>
             <div class="col-lg-6 wow fadeInUp" data-wow-delay="0.3s">
@@ -469,7 +494,6 @@ span.text {
                         <p class="mb-0"><i class="fa fa-arrow-right text-primary me-2"></i>International Certificate</p>
                     </div>
                 </div>
-                <a class="btn btn-primary py-3 px-5 mt-2" href="">Read More</a>
             </div>
         </div>
     </div>
@@ -533,13 +557,13 @@ span.text {
 
 <!-- Courses Start -->
 <div class="container-xxl py-5">
-    <div class="container">
+    <div class="container justify-content-between">
         <div class="text-center wow fadeInUp" data-wow-delay="0.1s">
             <h6 class="section-title bg-white text-center text-primary px-3">Courses</h6>
             <h1 class="mb-5">Popular Courses</h1>
         </div>
-        <div class="row g-4 justify-content-center">
-            <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.1s">
+        <div class="row g-4  justify-content-center" >
+            <div class="col-lg-3 col-md-6 wow fadeInUp" data-wow-delay="0.1s" >
                 <div class="course-item bg-light">
                     <div class="position-relative overflow-hidden">
                         <img class="img-fluid" src="static/img/course-1.png" alt="">
@@ -549,25 +573,26 @@ span.text {
                         </div>
                     </div>
                     <div class="text-center p-4 pb-0">
-                        <h3 class="mb-0">₹15000.00</h3>
-                        <div class="mb-3">
+                        <!-- <div class="mb-3">
                             <small class="fa fa-star text-primary"></small>
                             <small class="fa fa-star text-primary"></small>
                             <small class="fa fa-star text-primary"></small>
                             <small class="fa fa-star text-primary"></small>
                             <small class="fa fa-star text-primary"></small>
                             <small>(123)</small>
-                        </div>
-                        <h5 class="mb-4">Asp.net MVC with Angular - Full Stack</h5>
+                        </div> -->
+                        <h4 class="mb-1 ">Asp.net MVC with Angular - Full Stack  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;</h4>
+                        <p class="mb-2 ">C# Programming, Object Oriented Development, ASP .Net Web and Windows Application Development, MS SQL, MVC</p>
+                        <h5 class="mb-1 text-center"><b>Course Fee:</b>₹15000.00</h5>
                     </div>
                     <div class="d-flex border-top">
-                        <small class="flex-fill text-center border-end py-2"><b>Next Batch :</b> Apr 10th 2023 (10:30 AM- 12:30 PM)</small>
-                        <small class="flex-fill text-center border-end py-2"><b>Duration : </b> Months, 5 Days a Week, 2 Hours/day</small>
-                        <!-- <small class="flex-fill text-center py-2"><i class="fa fa-user text-primary me-2"></i>30 Students</small> -->
+                        <small class="flex-fill text-center border-end py-3"><b>Next Batch </b> <br>Cochin : April 10th 2023 (Offline & Online)
+                            <br>Calicut : Mar 22nd 2023 (Offline Only)</small>
+                        <small class="flex-fill text-center border-end py-3"><b>Duration  </b> <br>Months, 5 Days a Week, 2 Hours/day</small>
                     </div>
                 </div>
             </div>
-            <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.3s">
+            <div class="col-lg-3 col-md-6 wow fadeInUp " data-wow-delay="0.3s">
                 <div class="course-item bg-light">
                     <div class="position-relative overflow-hidden">
                         <img class="img-fluid" src="static/img/course-2.jpg" alt="">
@@ -577,25 +602,58 @@ span.text {
                         </div>
                     </div>
                     <div class="text-center p-4 pb-0">
-                        <h3 class="mb-0">₹25000.00</h3>
-                        <div class="mb-3">
+                        <!-- <div class="mb-3">
                             <small class="fa fa-star text-primary"></small>
                             <small class="fa fa-star text-primary"></small>
                             <small class="fa fa-star text-primary"></small>
                             <small class="fa fa-star text-primary"></small>
                             <small class="fa fa-star text-primary"></small>
                             <small>(123)</small>
-                        </div>
-                        <h5 class="mb-4">MEA(R)N Stack Web Development Expert - Angular & React</h5>
+                        </div> -->
+                        <h4 class="mb-1 ">MEA(R)N Stack Web Development Expert - Angular & React</h4>
+                        <p class="mb-2 ">HTML, CSS, Bootstrap, Javascript, Typescript, Git, Angular, React.js, Node.js, Express.js & MongoDB  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</p>
+                        <h5 class="mb-1 text-center"><b>Course Fee:</b>₹25000.00</h5>
+
                     </div>
                     <div class="d-flex border-top">
-                        <small class="flex-fill text-center border-end py-2"><b>Next Batch :</b> Apr 10th 2023 (10:30 AM- 12:30 PM)</small>
-                        <small class="flex-fill text-center border-end py-2"><b>Duration : </b> Months, 5 Days a Week, 2 Hours/day</small>
-                        <!-- <small class="flex-fill text-center py-2"><i class="fa fa-user text-primary me-2"></i>30 Students</small> -->
+                        <small class="flex-fill text-center border-end py-3"><b>Next Batch </b> <br>Cochin : April 10th 2023 (Offline & Online)
+                            <br>Calicut : Mar 22nd 2023 (Offline Only)</small>
+                        <small class="flex-fill text-center border-end py-3"><b>Duration  </b> <br>Months, 5 Days a Week, 2 Hours/day</small>
                     </div>
                 </div>
             </div>
-            <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.5s">
+
+            <div class="col-lg-3 col-md-6 wow fadeInUp " data-wow-delay="0.3s" >
+                <div class="course-item bg-light">
+                    <div class="position-relative overflow-hidden">
+                        <img class="img-fluid" src="static/img/course-2.jpg" alt="">
+                        <div class="w-100 d-flex justify-content-center position-absolute bottom-0 start-0 mb-4">
+                            <a href="#" class="flex-shrink-0 btn btn-sm btn-primary px-3 border-end" style="border-radius: 30px 0 0 30px;">Read More</a>
+                            <a href="#" class="flex-shrink-0 btn btn-sm btn-primary px-3" style="border-radius: 0 30px 30px 0;">Join Now</a>
+                        </div>
+                    </div>
+                    <div class="text-center p-4 pb-0">
+                        <!-- <div class="mb-3">
+                            <small class="fa fa-star text-primary"></small>
+                            <small class="fa fa-star text-primary"></small>
+                            <small class="fa fa-star text-primary"></small>
+                            <small class="fa fa-star text-primary"></small>
+                            <small class="fa fa-star text-primary"></small>
+                            <small>(123)</small>
+                        </div> -->
+                        <h4 class="mb-1 ">Data Science - ML - AI - Big Data with Cloud & TABLEAU</h4>
+                        <p class="mb-2 ">Python, Hadoop, Spark, Data Analytics, Linear Algebra, Statistics, Probability Concepts, Machine Learning, Deep Learning,</p>
+                        <h5 class="mb-1 text-center"><b>Course Fee:</b>₹35000.00</h5>
+                    </div>
+                    <div class="d-flex border-top">
+                        <small class="flex-fill text-center border-end py-3"><b>Next Batch </b> <br>Cochin : April 10th 2023 (Offline & Online)
+                            <br>Calicut : Mar 22nd 2023 (Offline Only)</small>
+                        <small class="flex-fill text-center border-end py-3"><b>Duration  </b> <br>Months, 5 Days a Week, 2 Hours/day</small>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-lg-3 col-md-6 wow fadeInUp" data-wow-delay="0.5s" >
                 <div class="course-item bg-light">
                     <div class="position-relative overflow-hidden">
                         <img class="img-fluid" src="static/img/course-3.jpg" alt="">
@@ -605,24 +663,19 @@ span.text {
                         </div>
                     </div>
                     <div class="text-center p-4 pb-0">
-                        <h3 class="mb-0">₹20000.00</h3>
-                        <div class="mb-3">
-                            <small class="fa fa-star text-primary"></small>
-                            <small class="fa fa-star text-primary"></small>
-                            <small class="fa fa-star text-primary"></small>
-                            <small class="fa fa-star text-primary"></small>
-                            <small class="fa fa-star text-primary"></small>
-                            <small>(123)</small>
-                        </div>
-                        <h5 class="mb-4 text-center">&nbsp;&nbsp;&nbsp;&nbsp;Software Testing Specialist &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;</h5>
+                        <h4 class="mb-1 ">Software Testing Specialist  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</h4>
+                        <p class="mb-2 ">Manual Testing , Java foundations, Mobile Testing, Automation Testing, Selenium IDE, Selenium Web driver, Selenium Advanced</p>
+                        <h5 class="mb-1 text-center"><b>Course Fee:</b>₹20000.00</h5>
                     </div>
+                   
                     <div class="d-flex border-top">
-                        <small class="flex-fill text-center border-end py-2"><b>Next Batch :</b> Apr 10th 2023 (10:30 AM- 12:30 PM)</small>
-                        <small class="flex-fill text-center border-end py-2"><b>Duration : </b> Months, 5 Days a Week, 2 Hours/day</small>
-                        <!-- <small class="flex-fill text-center py-2"><i class="fa fa-user text-primary me-2"></i>30 Students</small> -->
+                        <small class="flex-fill text-center border-end py-3"><b>Next Batch </b> <br>Cochin : April 10th 2023 (Offline & Online)
+                            <br>Calicut : Mar 22nd 2023 (Offline Only)</small>
+                        <small class="flex-fill text-center border-end py-3"><b>Duration  </b> <br> Months, 5 Days a Week, 2 Hours/day</small>
                     </div>
                 </div>
             </div>
+
         </div>
     </div>
 </div>
@@ -638,18 +691,22 @@ span.text {
         </div>
         <div class="row counter g-4">
             <div class="container1">
+                <img src="{% static 'img/success.png'%}" width="50px" height="50px" style="margin-left: 40%;">
                 <span class="num" data-val="10">000</span>
                 <span class="text">Years of Experience</span>
             </div>
             <div class="container1">
+                <img src="{% static 'img/job.png'%}" width="50px" height="50px" style="margin-left: 40%;">
                 <span class="num" data-val="500">000</span>
                 <span class="text">Placements</span>
             </div>
             <div class="container1">
+                <img src="{% static 'img/training.png'%}" width="50px" height="50px" style="margin-left: 40%;">
                 <span class="num" data-val="100">000</span>
                 <span class="text">Faculties</span>
             </div>
             <div class="container1">
+                <img src="{% static 'img/learning.png'%}" width="50px" height="50px" style="margin-left: 40%;">
                 <span class="num" data-val="50">000</span>
                 <span class="text">Courses</span>
             </div>
@@ -792,6 +849,11 @@ span.text {
 <!-- Testimonial End -->
 
 
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+
+
 <script>
     window.onload = function() {
       setTimeout(function() {
@@ -820,8 +882,41 @@ span.text {
     }, duration);
     });
 
+                      
+  $(document).ready(function(){
+
+
+    $('#video-carousel').on('slide.bs.carousel', function () {
+      var video = $('video:visible')[0]; // get the currently visible video
+      if (video) {
+        video.pause(); // pause the video if it's playing
+      }
+    });
+
+
+    var videoPlaying = false;
+    var video = $('video:visible')[0];
+    if (video && !video.paused) {
+      videoPlaying = true;
+    }
+    $('#video-carousel').on('slid.bs.carousel', function () {
+      video = $('video:visible')[0];
+      if (video && !video.paused) {
+        videoPlaying = true;
+      } else {
+        videoPlaying = false;
+      }
+    });
+    $('#video-carousel').on('slide.bs.carousel', function (e) {
+      if (videoPlaying) {
+        e.preventDefault(); // prevent the carousel from sliding
+      }
+    });
+    $('#video-carousel').carousel();
+  });
+
+
 
 </script>
-        
 
     {% endblock %}

@@ -1,6 +1,7 @@
 from django.shortcuts import render,redirect
 from django.contrib import messages
 from django.utils.text import capfirst
+from .models import *
 
 def index(request):
     return render(request,'index.html')
@@ -28,3 +29,9 @@ def vision(request):
 
 def blogs(request):
     return render(request,'blog.html')
+
+def subscribe(request):
+    if request.method == 'POST':
+        email = request.POST['email']
+        Subscriber(email = email).save()
+    return redirect('/')

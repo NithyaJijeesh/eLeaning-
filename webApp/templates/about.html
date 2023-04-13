@@ -8,7 +8,6 @@
 <link href="https://fonts.googleapis.com/css2?family=Heebo:wght@400;500;600&family=Nunito:wght@600;700;800&display=swap" rel="stylesheet">
 <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" rel="stylesheet">
 <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css" rel="stylesheet">
-
 <style>
     .row {
   display: flex;
@@ -93,7 +92,7 @@
                 <div class="col-lg-3 col-sm-6 wow fadeInUp" data-wow-delay="0.7s">
                     <div class="service-item text-center pt-3">
                         <div class="p-4">
-                            <i class="fa fa-3x fas fa-chair text-primary mb-4"></i>
+                            <i class="fas fa-chair text-primary mb-4" style="font-size: 50px;"></i>
                             <h5 class="mb-3">Placement Assistance</h5>
                             <p>Diam elitr kasd sed at elitr sed ipsum justo dolor sed clita amet diam</p>
                         </div>
@@ -106,7 +105,7 @@
 
 
     <!-- About Start -->
-    <div class="container-xxl py-5">
+    <!-- <div class="container-xxl py-5">
         <div class="container">
             <div class="row g-5">
                 <div class="col-lg-6 wow fadeInUp" data-wow-delay="0.1s" style="min-height: 400px;">
@@ -143,8 +142,73 @@
                 </div>
             </div>
         </div>
-    </div>
+    </div> -->
     <!-- About End -->
+
+    <!-- About Start -->
+<div class="container-xxl py-5">
+    <div class="container">
+        <div class="row g-5">
+            <div class="col-lg-6 wow fadeInUp" data-wow-delay="0.1s" style="min-height: 400px;">
+                <div class="position-relative h-100">
+                    <div id="video-carousel" class="carousel slide" data-ride="carousel">
+                        <div class="carousel-inner">
+                          <div class="carousel-item active">
+                            <iframe id="video1" width="100%" height="400" src="https://www.youtube.com/embed/Br-rP0tQnuE" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share; muted; loop;" allowfullscreen></iframe>
+                          </div>
+                          <div class="carousel-item">
+                            <iframe id="video1" width="100%" height="400" src="https://www.youtube.com/embed/cdZHQFCqK3g" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share; muted; loop;" allowfullscreen></iframe>
+                           </div>
+                          <div class="carousel-item">
+                            <iframe id="video1" width="100%" height="400" src="https://www.youtube.com/embed/Fy5cFfdZ4p4" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; muted; loop; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe> 
+                          </div>
+                        </div>
+                      </div>
+                    
+            
+                      <a class="carousel-control-prev" href="#video-carousel" role="button" data-slide="prev">
+                        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                        <span class="sr-only">Previous</span>
+                      </a>
+                      <a class="carousel-control-next" href="#video-carousel" role="button" data-slide="next">
+                        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                        <span class="sr-only">Next</span>
+                      </a>
+  
+                    <!-- <img class="img-fluid position-absolute w-100 h-100" src="static/img/about.jpg" alt="" style="object-fit: cover;"> -->
+                </div>
+            </div>
+            <div class="col-lg-6 wow fadeInUp" data-wow-delay="0.3s">
+                <h6 class="section-title bg-white text-start text-primary pe-3">About Us</h6>
+                <h1 class="mb-4">Welcome to Altos Software Institute</h1>
+                <p class="mb-4">Tempor erat elitr rebum at clita. Diam dolor diam ipsum sit. Aliqu diam amet diam et eos. Clita erat ipsum et lorem et sit.</p>
+                <p class="mb-4">Tempor erat elitr rebum at clita. Diam dolor diam ipsum sit. Aliqu diam amet diam et eos. Clita erat ipsum et lorem et sit, sed stet lorem sit clita duo justo magna dolore erat amet</p>
+                <div class="row gy-2 gx-4 mb-4">
+                    <div class="col-sm-6">
+                        <p class="mb-0"><i class="fa fa-arrow-right text-primary me-2"></i>Skilled Instructors</p>
+                    </div>
+                    <div class="col-sm-6">
+                        <p class="mb-0"><i class="fa fa-arrow-right text-primary me-2"></i>Online Classes</p>
+                    </div>
+                    <div class="col-sm-6">
+                        <p class="mb-0"><i class="fa fa-arrow-right text-primary me-2"></i>International Certificate</p>
+                    </div>
+                    <div class="col-sm-6">
+                        <p class="mb-0"><i class="fa fa-arrow-right text-primary me-2"></i>Skilled Instructors</p>
+                    </div>
+                    <div class="col-sm-6">
+                        <p class="mb-0"><i class="fa fa-arrow-right text-primary me-2"></i>Online Classes</p>
+                    </div>
+                    <div class="col-sm-6">
+                        <p class="mb-0"><i class="fa fa-arrow-right text-primary me-2"></i>International Certificate</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- About End -->
+
 
 
     <!-- Team Start -->
@@ -233,6 +297,39 @@
     <!-- Team End -->
 
     
-        
+        <script>
+             $(document).ready(function(){
+
+
+                $('#video-carousel').on('slide.bs.carousel', function () {
+                var video = $('video:visible')[0]; 
+                if (video) {
+                    video.pause();
+                }
+                });
+
+
+                var videoPlaying = false;
+                var video = $('video:visible')[0];
+                if (video && !video.paused) {
+                videoPlaying = true;
+                }
+                $('#video-carousel').on('slid.bs.carousel', function () {
+                video = $('video:visible')[0];
+                if (video && !video.paused) {
+                    videoPlaying = true;
+                } else {
+                    videoPlaying = false;
+                }
+                });
+                $('#video-carousel').on('slide.bs.carousel', function (e) {
+                if (videoPlaying) {
+                    e.preventDefault(); 
+                }
+                });
+                $('#video-carousel').carousel();
+                });
+
+        </script>
 
     {% endblock %}

@@ -12,6 +12,6 @@ urlpatterns = [
     path('placement',views.placement,name="placement"),
     path('blogs',views.blogs,name="blogs"),
     path('vision',views.vision,name="vision"),
-
+    path('subscribe',views.subscribe,name="subscribe"),
 
 ]
