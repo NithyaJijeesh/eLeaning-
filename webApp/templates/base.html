@@ -60,11 +60,26 @@
             z-index: 99;
             background: var(--primary);
         }
-        
+       
+        @media (min-width: 600px)and ( max-width:1000px) {
+            .back-to-top
+             {
+                bottom: 85px;
+                right: 35px;
+            }
+        }
+
+        @media (min-width: 300px)and ( max-width:800px) {
+            .back-to-top
+             {
+                bottom: 95px;
+                right: 35px;
+            }
+        }
 
         .whatsapp-button {
             position: fixed;
-            bottom: 30px;
+            bottom: 0px;
             font-size: 50px;
             left: 20px;
             z-index: 9999;
@@ -74,6 +89,36 @@
             padding: 0px 0px !important;
             margin: 0px;
          }
+
+         @media (min-width: 600px)and ( max-width:1000px) {
+            .whatsapp-button {
+            position: fixed;
+            bottom: 0px;
+            font-size: 50px;
+            left: 20px;
+            z-index: 9999;
+            border-radius: 70%;
+            color: #fff;
+            background-color: #47cc40;
+            padding: 0px 0px !important;
+            margin: 0px;
+         }
+        }
+
+        @media (min-width: 300px)and ( max-width:800px) {
+            .whatsapp-button {
+            position: fixed;
+            bottom: 0px;
+            font-size: 40px;
+            left: 20px;
+            z-index: 9999;
+            border-radius: 70%;
+            color: #fff;
+            background-color: #47cc40;
+            padding: 0px 0px !important;
+            margin: 0px;
+         }
+        }
          
                 
 
@@ -244,7 +289,22 @@
             background: transparent;
             border: 1px solid #FFFFFF;
             font-size: 22px;
-            transition: .5s;
+            transition: .5s ease;
+        }
+        @media (min-width: 300px) and (max-width:900px){
+            .header-carousel .owl-nav .owl-prev,
+            .header-carousel .owl-nav .owl-next {
+                width: 45px;
+                height: 45px;
+                display: flex;
+                color: #FFFFFF;
+                background: transparent;
+                border: 1px solid #FFFFFF;
+                font-size: 15px;
+                transition: .5s ease;
+                margin-top: 0px;
+                
+            }
         }
 
         .header-carousel .owl-nav .owl-prev:hover,
@@ -333,23 +393,20 @@
         .service-item:hover * {
             color: var(--light) !important;
         }
-        /* .service-item h1{
-            color: var(--primary);
-        }*/
-         
-        @media (min-width: 600px) {
+        @media (min-width: 600px)and ( max-width:1000px) {
             .service-item,.service-item:hover
              {
                 height: 300px;
             }
         }
 
-        @media (min-width: 400px) {
+        @media (min-width: 300px)and ( max-width:800px) {
             .service-item,.service-item:hover
              {
                 height: 300px;
             }
         }
+        
 
 
         /*** Categories & Courses ***/
@@ -371,19 +428,23 @@
             color: var(--dark);
         }
         .course-item{
-            height: 600px;
+            height: 700px;
+            overflow:scroll;
         }
-        @media (min-width: 500px) {
+        @media (min-width: 600px)and ( max-width:1000px) {
             .course-item{
-            height: auto;
-        }
+                height: 700px;
+            overflow:scroll;        }
         }
 
-        @media (min-width: 992px) {
+        @media (min-width: 300px)and ( max-width:800px) {
             .course-item{
-            height: auto;
+                height: 700px;
+            overflow:scroll;
         }
         }
+        
+        
 
         /*** Team ***/
         .team-item img {
@@ -399,6 +460,13 @@
 
 
         /*** Testimonial ***/
+
+
+        .testimonial-carousel{
+            background: linear-gradient(to right, rgba(255, 255, 255, 0.4) 0%, rgba(255, 255, 255, 0) 100%);
+            padding: 10px;
+
+        }
         .testimonial-carousel::before {
             position: absolute;
             content: "";
@@ -421,20 +489,21 @@
             z-index: 1;
         }
 
-        @media (min-width: 768px) {
-            .testimonial-carousel::before,
-            .testimonial-carousel::after {
-                width: 200px;
-            }
-        }
-
-        @media (min-width: 992px) {
+        @media (min-width: 600px)and ( max-width:1000px) {
             .testimonial-carousel::before,
             .testimonial-carousel::after {
                 width: 300px;
             }
         }
 
+        @media (min-width: 300px)and ( max-width:800px) {
+            .testimonial-carousel::before,
+            .testimonial-carousel::after {
+                width: 200px;
+            }
+        }
+
+        
         .testimonial-carousel .owl-item .testimonial-text,
         .testimonial-carousel .owl-item.center .testimonial-text * {
             transition: .5s;
@@ -568,7 +637,7 @@
     bottom: 0;
     right: 50px;
     z-index: 9999;
-     box-shadow: -1px -1px 4px #aaa9a9a2,
+    box-shadow: -1px -1px 4px #aaa9a9a2,
               1px 1px 7px rgba(147, 149, 151, 0.671);
     border-radius: 10px 10px 0px 0px;
 }
@@ -721,7 +790,28 @@
     }
 }
 
-@media screen and (max-width:600px) {
+ @media (min-width: 600px)and ( max-width:1000px) {
+    .full-chat-block {
+        width: 50%;
+        border-radius: 0px;
+    }
+    .chat-bar-collapsible {
+        position: fixed;
+        bottom: 0;
+        right: 0;
+        width: 50%;
+    }
+    .collapsible {
+        width: 100%;
+        border: 0px;
+        border-top: 3px solid white;
+        border-radius: 0px;
+        border-radius: 10px 10px 0px 0px;
+        padding: 10px 0px 10px 10px;
+    }
+        } 
+
+ @media (min-width: 300px)and ( max-width:800px) {
     .full-chat-block {
         width: 100%;
         border-radius: 0px;
@@ -730,15 +820,18 @@
         position: fixed;
         bottom: 0;
         right: 0;
-        width: 100%;
+        width: 80%;
     }
     .collapsible {
         width: 100%;
         border: 0px;
         border-top: 3px solid white;
         border-radius: 0px;
+        height: 50%;
     }
 }
+        
+    
         /* endcaht */
 
     </style>
@@ -760,16 +853,18 @@
         <a href="{% url 'index' %}" class="navbar-brand d-flex align-items-center px-4 px-lg-5">
                 <img src="{% static 'img/logo.png' %}"
                      style="width:60px; height:60px;">
-            <h2 class="m-0 text-primary">Altos Software Institute</h2>
+            <h2 class="m-0 text-primary">Altos Institute</h2>
         </a>
-        <button type="button" class="navbar-toggler me-4" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
-            <span class="navbar-toggler-icon"></span>
+        <button type="button" class="navbar-toggler  me-4" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
+            <span class="navbar-toggler-icon bg-primary"></span>
         </button>
         <div class="collapse navbar-collapse" id="navbarCollapse">
        
             <div class="navbar-nav ms-auto p-4 p-lg-0">
                 <a href="{% url 'index' %}" class="nav-item nav-link active">Home</a>
-                <a href="{% url 'vision' %}" class="nav-item nav-link" >Vision</a>
+                <a href="{% url 'about' %}" class="nav-item nav-link" >About</a>
+
+                <!-- <a href="{% url 'vision' %}" class="nav-item nav-link" >Vision</a> -->
                 <div class="nav-item dropdown">
                     <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown" >Courses</a>
                     <div class="dropdown-menu fade-down m-0">
@@ -778,8 +873,6 @@
                     </div>
                 </div>
              
-                <!-- <a href="{% url 'blogs' %}" class="nav-item nav-link">Blogs</a> -->
-                <a href="{% url 'about' %}" class="nav-item nav-link" >About</a>
                 <a href="{% url 'contact'%}" class="nav-item nav-link">Contact</a>
             </div>
           
@@ -789,15 +882,16 @@
 {% block content %}
 {% endblock %}
     <!-- WhatsApp -->
-<a href="https://wa.me/15551234567?text=Hello!" target="_blank">
+<a href="https://wa.me/919074156818" target="_blank">
     <i class="fab fa-whatsapp m-3 whatsapp-button"></i>
 </a>
 <!-- WhatsApp End -->
 
 <!-- chat -->
 <div class="chat-bar-collapsible">
-    <button id="chat-button" type="button" class="collapsible">Talk to us!
+    <button id="chat-button" type="button" class="collapsible ">Talk to us!
         <i id="chat-icon" style="color: #fff;" class="fa fa-fw fa-comments-o"></i>
+        <i id="close-btn" class="fa fa-close " style="margin-left: 130px;"></i>
     </button>
 
     <div class="content">
@@ -914,7 +1008,7 @@
     </div>
     <!-- Footer End -->
 
-    <a href="#" class="btn btn-lg btn-primary btn-lg-square back-to-top"><i class="bi bi-arrow-up"></i></a>
+    <a href="#" class="btn btn-lg btn-primary btn-lg-square back-to-top" id="back-to-top"><i class="bi bi-arrow-up"></i></a>
 
 
     <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
@@ -928,6 +1022,11 @@
 
 
     <script>
+        setTimeout(function() {
+            document.getElementsById("back-to-top").style.display = "block";
+        }, 1000);
+
+
         $('.navbar a').removeClass('active');
        var currentUrl = window.location.pathname;
   
@@ -985,7 +1084,7 @@
 
     // Retrieves the response
     function getHardResponse(userText) {
-        let botResponse = getBotResponse(userText);
+        let botResponse = getBotResponse(userText.toLowerCase());
         let botHtml = '<p class="botText"><span>' + botResponse + '</span></p>';
         $("#chatbox").append(botHtml);
 
@@ -1011,7 +1110,6 @@
 
     }
 
-    // Handles sending text via button clicks
     function buttonSendText(sampleText) {
         let userHtml = '<p class="userText"><span>' + sampleText + '</span></p>';
 
@@ -1041,103 +1139,99 @@
 
 
     function getBotResponse(input) {
-        //rock paper scissors
-        if (input == "rock") {
-            return "paper";
-        } else if (input == "paper") {
-            return "scissors";
-        } else if (input == "scissors") {
-            return "rock";
-        }
-
-        // Simple responses
         if (input == "hello") {
             return "Hello there!";
         } else if (input == "goodbye") {
             return "Talk to you later!";
-        }else if (input == "Hello") {
-            return "Hello there!";
+        } else if (input == "nice talking to you!") {
+            return "I am glad I could help";
+            
         }else if (input == "hi") {
-            return "Hello there!";
-        }else if (input == "Hi") {
             return "Hello there!";
         }else if (input == "internship") {
             return "We are providing internships for Python,React,Digital marketing ,Machine learning. ";
-        }else if (input == "Internship") {
-            return "We are providing internships for Python,React,Digital marketing ,Machine learning. ";
-        }else if (input == "What internship") {
-            return "We are providing internships for Python,React,Digital marketing ,Machine learning.";
         }else if (input == "what internship") {
             return "We are providing internships for Python,React,Digital marketing ,Machine learning.";
-
-        }else if (input == "WFH") {
+        }else if (input == "what internship?") {
+            return "We are providing internships for Python,React,Digital marketing ,Machine learning.";
+        }else if (input == "wfh") {
             return "Currently we are providing Work from home";
-        }else if (input == "Work from home") {
+        }else if (input == "work from home") {
             return "Currently we are providing Work from home";
-
-        }else if (input == "Are you sure that I will get job in this company itself?") {
+        }else if (input == "are you sure that i will get job in this company itself?") {
             return "Yes,you will get job confirmation offer letter within 2 days of your joining.";
-        } else if (input == "Is this work from home or Work from office?") {
+        } else if (input == "is this work from home or work from office?") {
             return "Currently we are providing Work from home";
-        } else if (input == "Will i ever have to come the office for work?") {
+        } else if (input == "will i ever have to come the office for work?") {
             return "According to our rules and regulations if any time relocation is available you have to accept it.";
-        } else if (input == "Is there any bond in your company ?") {
+        } else if (input == "is there any bond in your company ?") {
             return "No";
-        } else if (input == "What about the salary package?") {
+        } else if (input == "what about the salary package?") {
             return "12k to 18k";
-        } else if (input == "What about the working hours?") {
+        } else if (input == "what about the working hours?") {
             return "8 hours";
-
         } else if (input == "salary package?") {
             return "12k to 18k";
-        } else if (input == "working hours?") {
-            return "8 hours";
-        } else if (input == "salary") {
+        }else if (input == "salary") {
             return "12k to 18k";
-        } else if (input == "working hours") {
-            return "8 hours";
+        }else if (input == "salary?") {
+            return "12k to 18k";
 
-        }else if (input == "Will i get work experience certificate from the begining itself?") {
+        }else if (input == "will i get work experience certificate from the begining itself?") {
             return "Yes,you will get work experience certificate for the first 6 months itself.";
         }else if (input == "experience certificate?") {
             return "Yes,you will get work experience certificate for the first 6 months itself.";
         }else if (input == "experience certificate") {
             return "Yes,you will get work experience certificate for the first 6 months itself.";
         }
-        else if (input == "Will I get any proof of  guarantee for the job from 7th month?") {
+        else if (input == "will I get any proof of  guarantee for the job from 7th month?") {
             return "You will get offer letter initially,all the details are mentioned on that.";
-        } else if (input == "Will I get any incentives along with salary?") {
+        } else if (input == "will I get any incentives along with salary?") {
             return "No,for the first 6 months you didn't get any stipend or salary,from month 7 you are eligible to get 12k";
-        }else if (input == "Will you provide any internship for  python?") {
+        }else if (input == "will you provide any internship for  python?") {
             return "Yes,we are providing internships for python based on different durations.";
         }else if (input == "python") {
             return "Yes,we are providing internships for python based on different durations.";
-        }else if (input == "Python?") {
+        }else if (input == "python?") {
             return "Yes,we are providing internships for python based on different durations.";
-        }else if (input == "Python") {
-            return "Yes,we are providing internships for python based on different durations.";
-        }else if (input == "Will I get any placement assistance for this?") {
+        }else if (input == "react") {
+            return "Yes,we are providing internships for React.";
+        }else if (input == "machine learning") {
+            return "Yes,we are providing internships for Machine Learning.";
+        }else if (input == "ml") {
+            return "Yes,we are providing internships for Machine Learning.";
+        }else if (input == "digital marketing") {
+            return "Yes,we are providing internships for Digital Marketing.";
+        }else if (input == "will I get any placement assistance for this?") {
             return "Yes for 6 months OJT we can provide direct hiring to our company as python developer and for other       duration we are providing placement assistance.";
-        }else if (input == "Placement") {
+        }else if (input == "placement?") {
             return "Yes for 6 months OJT we can provide direct hiring to our company as python developer and for other       duration we are providing placement assistance.";
         }else if (input == "placement") {
             return "Yes for 6 months OJT we can provide direct hiring to our company as python developer and for other       duration we are providing placement assistance.";
 
-        } else if (input == "Other than python in which other streams do you provide internships?") {
+        } else if (input == "other than python in which other streams do you provide internships?") {
             return "For React,Digital marketing ,Machine learning.";
-        }else if (input == "How can I apply for this?") {
-            return "Please contact to our HR   <br>contact details <br>+91 1234567890 ";
+        }else if (input == "how can I apply for this?") {
+            return "Please contact to our HR  for more details <br>Contact Number: <br>+91 9074156818";
 
-        }else if (input == "Details") {
-            return "Please contact to our HR   <br>contact details <br>+91 9074156818 ";
-        }else if (input == "Apply") {
-            return "Please contact to our HR   <br>contact details <br>+91 9074156818 ";
+        }else if (input == "details") {
+            return "Please contact to our HR  for more details <br>Contact Number: <br>+91 9074156818";
+        }else if (input == "dpply") {
+            return "Please contact to our HR  for more details <br>Contact Number: <br>+91 9074156818";
         }else if (input == "apply?") {
-            return "Please contact to our HR   <br>contact details <br>+91 9074156818 ";
+            return "Please contact to our HR  for more details <br>Contact Number: <br>+91 9074156818";
         } else {
             return "Please contact to our HR  for more details <br>Contact Number: <br>+91 9074156818";
         }
     }
+
+// // close collapsible
+//         const closeBtn = document.getElementById("close-btn");
+//         const popup = document.querySelector(".collapsible");
+
+//         closeBtn.addEventListener("click", () => {
+//         popup.classList.toggle("collapsed");
+//         });
 
     </script>
 </body>

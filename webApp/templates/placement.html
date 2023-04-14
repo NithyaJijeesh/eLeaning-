@@ -6,52 +6,52 @@
   h1{
     color: var(--light);
   }
-    h3{
-        color:#06BBCC;
+  h4, p{
+      color:var(--dark);
+  }
+  .row {
+    display: flex;
+    flex-wrap: wrap;
+    padding: 0 4px;
+  }
+
+  .column {
+    flex: 33.33%;
+    max-width: 33.33%;
+    padding: 0 4px;
+  }
+
+  .column img {
+    margin-top: 8px;
+    vertical-align: middle;
+    width: 100%;
+  }
+
+  .column p {
+    font-size: 16px;
+    text-align: center;
+  }
+
+  @media screen and (max-width: 800px) {
+    .column {
+      flex: 50%;
+      max-width: 50%;
     }
-    .row {
-		  display: flex;
-		  flex-wrap: wrap;
-		  padding: 0 4px;
-		}
+  }
 
-		.column {
-		  flex: 33.33%;
-		  max-width: 33.33%;
-		  padding: 0 4px;
-		}
-
-		.column img {
-		  margin-top: 8px;
-		  vertical-align: middle;
-		  width: 100%;
-		}
-
-		.column p {
-		  font-size: 16px;
-		  text-align: center;
-		}
-
-		@media screen and (max-width: 800px) {
-		  .column {
-		    flex: 50%;
-		    max-width: 50%;
-		  }
-		}
-
-		@media screen and (max-width: 600px) {
-		  .column {
-		    flex: 100%;
-		    max-width: 100%;
-		  }
-		}
-    .img{
-      background: #F0FBFC;
+  @media screen and (max-width: 600px) {
+    .column {
+      flex: 100%;
+      max-width: 100%;
     }
-    .img:hover {
-            margin-top: -10px;
-            background: #06BBCC;
-        }
+  }
+  .img{
+    background: #F0FBFC;
+  }
+  .img:hover {
+          margin-top: -10px;
+          background: #06BBCC;
+      }
 </style>
 <!-- Header Start -->
 <div class="container-fluid bg-primary py-5 mb-5 page-header">
