@@ -43,6 +43,55 @@ h1{
 .service-item h5{
     color: #181d38;
 }
+
+.about{
+        width: 50%; 
+        justify-content: center; 
+        margin-left: 300px;
+    }
+    .videoblock{
+        min-height: 400px; 
+        justify-content: center; 
+        margin-left: 300px;
+    }
+
+@media screen and (min-width:900px) and (max-width: 1390px) {
+    .about{
+        width: 50%; 
+        justify-content: center; 
+        margin-left: 300px;
+    }
+    .videoblock{
+        min-height: 400px; 
+        justify-content: center; 
+        margin-left: 300px;
+    }
+    }
+ @media screen and (min-width:400px) and (max-width: 900px) {
+    .about{
+        width: 100%; 
+        justify-content: center; 
+        margin-left: 0px;
+    }
+    .videoblock{
+        min-height: 400px; 
+        justify-content: center; 
+        margin-left: 0px;
+    }
+
+ }
+    @media screen and (min-width:280px) and (max-width: 450px) {
+        .about{
+        width: 100%; 
+        justify-content: center; 
+        margin-left: 0px;
+    }
+    .videoblock{
+        min-height: 400px; 
+        justify-content: center; 
+        margin-left: 0px;
+    }
+    }
 </style>
 
     <!-- Header Start -->
@@ -62,6 +111,7 @@ h1{
         </div>
     </div>
     <!-- Header End -->
+
     <!-- About Start -->
 <div class="container-xxl py-5">
     <div class="container mb-5">
@@ -73,7 +123,7 @@ h1{
             <div class="col-lg-12 wow fadeInUp justify-content-center" data-wow-delay="0.3s">
                 
                 <p class="mb-5">Tempor erat elitr rebum at clita. Diam dolor diam ipsum sit. Aliqu diam amet diam et eos. Clita erat ipsum et lorem et sit. Tempor erat elitr rebum at clita. Diam dolor diam ipsum sit. Aliqu diam amet diam et eos. Clita erat ipsum et lorem et sit, sed stet lorem sit clita duo justo magna dolore erat amet</p>
-                <div class="row gy-2 gx-4 mb-5 " style="width: 50%; justify-content: center; margin-left: 300px;">
+                <div class="row gy-2 gx-4 mb-5 about" >
                     
                     <div class="col-sm-6">
                         <p class="mb-0"><i class="fa fa-arrow-right text-primary me-2"></i>Skilled Instructors</p>
@@ -98,7 +148,7 @@ h1{
             </div>
         </div>
     </div>
-        <div class="col-lg-6 wow fadeInUp" data-wow-delay="0.1s" style="min-height: 400px; justify-content: center; margin-left: 300px;">
+        <div class="col-lg-6 wow fadeInUp videoblock" data-wow-delay="0.1s" >
             <div class="position-relative h-100">
                 <div id="video-carousel" class="carousel slide" data-ride="carousel">
                     <div class="carousel-inner">
@@ -294,6 +344,26 @@ h1{
                 });
                 $('#video-carousel').carousel();
                 });
+
+
+
+                // $('.owl-carousel').owlCarousel({
+                //     items:1,
+                //     merge:true,
+                //     loop:true,
+                //     margin:10,
+                //     video:true,
+                //     lazyLoad:true,
+                //     center:true,
+                //     responsive:{
+                //         480:{
+                //             items:2
+                //         },
+                //         600:{
+                //             items:4
+                //         }
+                //     }
+                // });
 
         </script>
 

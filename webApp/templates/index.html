@@ -1,7 +1,8 @@
 {% extends 'base.html'%}
 {% block content %}
 {% load static %}
-
+<script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/lib/owlcarousel/owl.carousel.min.js"></script>
  
 <style>
     .modal p{
@@ -366,6 +367,55 @@ span.text {
     h1{
             color: var(--light);
         }
+    .about{
+        width: 50%; 
+        justify-content: center; 
+        margin-left: 300px;
+    }
+    .videoblock{
+        min-height: 400px; 
+        justify-content: center; 
+        margin-left: 300px;
+    }
+
+@media screen and (min-width:900px) and (max-width: 1390px) {
+    .about{
+        width: 50%; 
+        justify-content: center; 
+        margin-left: 300px;
+    }
+    .videoblock{
+        min-height: 400px; 
+        justify-content: center; 
+        margin-left: 300px;
+    }
+    }
+ @media screen and (min-width:400px) and (max-width: 900px) {
+    .about{
+        width: 100%; 
+        justify-content: center; 
+        margin-left: 0px;
+    }
+    .videoblock{
+        min-height: 400px; 
+        justify-content: center; 
+        margin-left: 0px;
+    }
+
+ }
+    @media screen and (min-width:280px) and (max-width: 450px) {
+        .about{
+        width: 100%; 
+        justify-content: center; 
+        margin-left: 0px;
+    }
+    .videoblock{
+        min-height: 400px; 
+        justify-content: center; 
+        margin-left: 0px;
+    }
+    }
+
 </style>
 
 <!-- Carousel Start -->
@@ -379,7 +429,6 @@ span.text {
                         <div class="col-sm-10 col-lg-8">
                             <h1 class="display-3 text-white animated slideInDown">Best Software Training Institute of Kochi</h1>
                             <h5 class="text-primary text-uppercase mb-3 animated slideInDown">Get the best software training of Kochi for better career</h5>
-                            <!-- <p class="fs-5 text-white mb-4 pb-2">We are focused on providing advanced level software training like Big Data Training, Hadoop Training, Data Science Training, Python Training, Machine Learning Training, Selenium Training in Cochin Kerala.</p> -->
                             <a href="" class="btn btn-primary py-md-3 px-md-5 me-3 animated slideInLeft">Read More</a> 
                             <a href="" class="btn btn-light py-md-3 px-md-5 animated slideInRight">Join Now</a>
                         </div>
@@ -393,7 +442,6 @@ span.text {
                 <div class="container">
                     <div class="row justify-content-start">
                         <div class="col-sm-10 col-lg-8">
-                            <!-- <h5 class="text-primary text-uppercase mb-3 animated slideInDown">Best Online Courses</h5> -->
                             <h1 class="display-3 text-white animated slideInDown">Why do you choose Altos Software Institute ?</h1>
                             <p class="fs-5 text-white mb-4 pb-2">&#10004; &nbsp;&nbsp; Infopark based No.1 Professional Training Center.</p>
                             <p class="fs-5 text-white mb-4 pb-2"> &#10004; &nbsp;&nbsp; Our Students are Well Placed across the Globe.</p>
@@ -421,7 +469,7 @@ span.text {
                 <div class="col-lg-12 wow fadeInUp justify-content-center" data-wow-delay="0.3s">
                     
                     <p class="mb-5">Tempor erat elitr rebum at clita. Diam dolor diam ipsum sit. Aliqu diam amet diam et eos. Clita erat ipsum et lorem et sit. Tempor erat elitr rebum at clita. Diam dolor diam ipsum sit. Aliqu diam amet diam et eos. Clita erat ipsum et lorem et sit, sed stet lorem sit clita duo justo magna dolore erat amet</p>
-                    <div class="row gy-2 gx-4 mb-5 " style="width: 50%; justify-content: center; margin-left: 300px;">
+                    <div class="row gy-2 gx-4 mb-5 about" >
                         
                         <div class="col-sm-6">
                             <p class="mb-0"><i class="fa fa-arrow-right text-primary me-2"></i>Skilled Instructors</p>
@@ -446,7 +494,7 @@ span.text {
                 </div>
             </div>
         </div>
-            <div class="col-lg-6 wow fadeInUp" data-wow-delay="0.1s" style="min-height: 400px; justify-content: center; margin-left: 300px;">
+            <div class="col-lg-6 wow fadeInUp videoblock" data-wow-delay="0.1s" >
                 <div class="position-relative h-100">
                     <div id="video-carousel" class="carousel slide" data-ride="carousel">
                         <div class="carousel-inner">
