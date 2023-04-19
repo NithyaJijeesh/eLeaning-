@@ -56,22 +56,20 @@
 }
 
 /* modal */
- h2{
-        color:var(--dark);
-        margin-left: 200px;
-        top:0;
-    }
+         h2{
+                color:var(--primary);
+                margin-left: 200px;
+                top:0;
+            }
 
         .modal {
             top: 50%;
-            left: 50%;
+            
             transform: translate(-50%, -50%);
             display: none;
             position: fixed;
             z-index: 9999;
-            /* left: 450px;
-            top: 150px; */
-            width: 600px;
+            width: 500px;
             height: 450px;
             overflow: hidden;
             border-radius: 10px 10px 10px 10px;
@@ -80,7 +78,19 @@
               justify-content: center;
               align-content: center;
             }
+        .modal1{
+            left: 50%;
 
+        }
+        .modal2{
+            left: 75%;
+        }
+        .modal3{
+            left: 25%;
+        }
+        .modal4{
+            left: 50%;
+        }
         .modal-content {
             background: var(--light);
             margin: auto;
@@ -89,27 +99,9 @@
             max-width: 600px;
             min-height: 800px;
             margin-left: 100px;
-            
             }
 
-        .close {
-            color: var(--dark);
-            float: right;
-            font-size: 28px;
-            font-weight: bold;
-            padding: auto;
-            }
-
-        .close:hover,
-        .close:focus {
-            color: black;
-            text-decoration: none;
-            cursor: pointer;
-            }
-            .modal-content h2{
-                margin-left: 10px;
-            }
-            /* Media queries */
+        
         @media screen and (min-width:900px) and (max-width: 1200px) {
             .modal{
                 width:100%;
@@ -120,7 +112,6 @@
             .modal-content {
                 width: 100%;
                 max-width: 400px;
-                /* margin-left:5px; */
             }
            
             }
@@ -149,11 +140,7 @@
             }
                 
             .modal-content {
-                /* margin-top: 30px;
-                min-height: 100px;
-                margin:0;
-                align-content: center;
-                width: 200px; */
+               
                 width: 100%;
                 max-width: 500px;
             }
@@ -161,7 +148,7 @@
                 margin-left: 10px;
             }
             
-            }
+            } 
 
             form {
             max-width: 600px;
@@ -415,7 +402,25 @@ span.text {
         margin-left: 0px;
     }
     }
+    .course-item{
+        height: 500px;
+        
+    }
+    @media (min-width: 600px)and ( max-width:1000px) {
+            .course-item{
+                height: 400px;
+                overflow:scroll;        
+            }
+        }
 
+    @media (min-width: 300px)and ( max-width:800px) {
+            .course-item{
+                height: 400px;
+                overflow:scroll;
+        }
+    }
+
+    
 </style>
 
 <!-- Carousel Start -->
@@ -533,7 +538,7 @@ span.text {
     <div class="container">
         <div class="row g-3">
             <div class="col-lg-3 col-sm-6 wow fadeInUp" data-wow-delay="0.1s">
-                <div class="service-item text-center pt-3">
+                <div class="service-item text-center pt-3 service1">
                     <div class="p-4">
                         <i class="fa fa-3x fa-graduation-cap text-primary mb-4"></i>
                         <h5 class="mb-3 " >Skilled Instructors</h5>
@@ -542,7 +547,7 @@ span.text {
                 </div>
             </div>
             <div class="col-lg-3 col-sm-6 wow fadeInUp" data-wow-delay="0.3s">
-                <div class="service-item text-center pt-3">
+                <div class="service-item text-center pt-3 service2">
                     <div class="p-4">
                         <i class="fa fa-3x fa-globe text-primary mb-4"></i>
                         <h5 class="mb-3">Online Classes</h5>
@@ -551,7 +556,7 @@ span.text {
                 </div>
             </div>
             <div class="col-lg-3 col-sm-6 wow fadeInUp" data-wow-delay="0.5s">
-                <div class="service-item text-center pt-3">
+                <div class="service-item text-center pt-3 service3">
                     <div class="p-4">
                         <i class="fa fa-3x fa-home text-primary mb-4"></i>
                         <h5 class="mb-3">Home Projects</h5>
@@ -560,7 +565,7 @@ span.text {
                 </div>
             </div>
             <div class="col-lg-3 col-sm-6 wow fadeInUp" data-wow-delay="0.7s">
-                <div class="service-item text-center pt-3">
+                <div class="service-item text-center pt-3 service4">
                     <div class="p-4">
                         <i class="fas fa-chair text-primary mb-4" style="font-size: 50px;"></i>
                         <h5 class="mb-3">Placement Assistance</h5>
@@ -572,7 +577,73 @@ span.text {
     </div>
 </div>
 <!-- Service End -->
+<!-- Service modal -->
+<div id="modal1" class="modal m-0 modal1" >
+    <div class="modal-content m-0" style="margin-left: 50%;">
+      
+      <p class="m-2 " style=" color: var(--dark); ">Skilled Instructors</p>
+      <h5 class="text-primary text-center text-uppercase mb-3 animated slideInDown m-2" style="color: var(--primary);">50+ Faculties
+        <br><small>We have 50+ internal/external working Faculties from IT companies.</small></h5>
+      <hr style="color:grey">
+      <p class="mt-4 p-3">Qui accusantium deleniti et vero deserunt et tenetur voluptatum non mollitia asperiores.
 
+        Id animi Quis et rerum reprehenderit rem molestiae debitis id obcaecati harum! 33 consequatur recusandae qui ipsam quisquam et deserunt consequuntur nam fugit nemo?
+        
+        Ut tenetur cupiditate qui distinctio esse sit dolores possimus. Ut fugit debitis rem soluta animi sit omnis nulla.</p>
+    </div>
+  </div>
+
+
+  <div id="modal2" class="modal m-0 modal2">
+    <div class="modal-content m-0" style="margin-left: 50%;">
+      
+      <p class="m-2" style="color: var(--dark);">Online Classes</p>
+      <h5 class="text-primary text-center text-uppercase mb-3 animated slideInDown m-2" style="color: var(--primary);">Live online classes <br><small>allow students to interact with their instructors in real time</small> </h5>
+      <hr style="color:grey">
+      <p class="mt-4 p-3">Qui accusantium deleniti et vero deserunt et tenetur voluptatum non mollitia asperiores.
+
+        Id animi Quis et rerum reprehenderit rem molestiae debitis id obcaecati harum! 33 consequatur recusandae qui ipsam quisquam et deserunt consequuntur nam fugit nemo?
+        
+        Ut tenetur cupiditate qui distinctio esse sit dolores possimus. Ut fugit debitis rem soluta animi sit omnis nulla.</p>
+      
+    </div>
+  </div>
+
+
+  <div id="modal3" class="modal m-0 modal3 ">
+    <div class="modal-content m-0" style="margin-left: 50%;">
+      
+      <p class="m-2" style="color: var(--dark);">Home Projects</p>
+      <h5 class="text-primary text-center text-uppercase mb-3 animated slideInDown m-2" style="color: var(--primary);">Skill-based, hands-on learning <br><small>
+        
+        with Expert guidance
+      </small></h5>
+      <hr style="color:grey">
+      <p class="mt-4 p-3">Qui accusantium deleniti et vero deserunt et tenetur voluptatum non mollitia asperiores.
+
+        Id animi Quis et rerum reprehenderit rem molestiae debitis id obcaecati harum! 33 consequatur recusandae qui ipsam quisquam et deserunt consequuntur nam fugit nemo?
+        
+        Ut tenetur cupiditate qui distinctio esse sit dolores possimus. Ut fugit debitis rem soluta animi sit omnis nulla.</p>
+      
+    </div>
+  </div>
+
+  <div id="modal4" class="modal m-0 modal4">
+    <div class="modal-content m-0" style="margin-left: 50%;">
+      
+      <p class="m-2" style="color: var(--dark);">Placement Assistance</p>
+      <h5 class="text-primary text-center text-uppercase mb-3 animated slideInDown m-2" style="color: var(--primary);">20K+ Students<br><small>have been studied and placed.</small></h5>
+    <hr style="color:grey">
+      <p class="mt-4 p-3">Qui accusantium deleniti et vero deserunt et tenetur voluptatum non mollitia asperiores.
+
+        Id animi Quis et rerum reprehenderit rem molestiae debitis id obcaecati harum! 33 consequatur recusandae qui ipsam quisquam et deserunt consequuntur nam fugit nemo?
+        
+        Ut tenetur cupiditate qui distinctio esse sit dolores possimus. Ut fugit debitis rem soluta animi sit omnis nulla.</p>
+
+    </div>
+  </div>
+
+<!-- Modal end -->
 <!-- Categories Start -->
 <div class="container-xxl py-5 category">
     <div class="container">
@@ -626,7 +697,7 @@ span.text {
 
 
 <!-- Courses Start -->
-<div class="container-xxl py-5">
+<div class="container-xxl py-5" >
     <div class="container justify-content-between">
         <div class="text-center wow fadeInUp" data-wow-delay="0.1s">
             <h6 class="section-title bg-white text-center text-primary px-3">Courses</h6>
@@ -634,25 +705,25 @@ span.text {
         </div>
         <div class="row g-4  justify-content-center" >
             <div class="col-lg-3 col-md-6 wow fadeInUp" data-wow-delay="0.1s" >
-                <div class="course-item bg-light">
+                <div class="course-item bg-light" style="height:500px;">
                     <div class="position-relative overflow-hidden">
                         <img class="img-fluid" src="static/img/course-1.png" alt="">
                         <div class="w-100 d-flex justify-content-center position-absolute bottom-0 start-0 mb-4">
-                            <a href="#" class="flex-shrink-0 btn btn-sm btn-primary px-3 border-end" style="border-radius: 30px 0 0 30px;">Read More</a>
+                            <a href="{% url 'courses' %}" class="flex-shrink-0 btn btn-sm btn-primary px-3 border-end" style="border-radius: 30px 0 0 30px;">Read More</a>
                             <a href="#" class="flex-shrink-0 btn btn-sm btn-primary px-3" style="border-radius: 0 30px 30px 0;">Join Now</a>
                         </div>
                     </div>
-                    <div class="text-center p-4 pb-0">
+                    <div class="text-center p-4 pb-0" >
                         
                         <h4 class="mb-1 ">Asp.net MVC with Angular - Full Stack  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;</h4>
                         <p class="mb-2 ">C# Programming, Object Oriented Development, ASP .Net Web and Windows Application Development, MS SQL, MVC</p>
-                        <h5 class="mb-1 text-center"><b>Course Fee:</b>₹15000.00</h5>
+                        <!-- <h5 class="mb-1 text-center"><b>Course Fee:</b>₹15000.00</h5> -->
                     </div>
-                    <div class="d-flex border-top">
+                    <!-- <div class="d-flex border-top">
                         <small class="flex-fill text-center border-end py-3"><b>Next Batch </b> <br>Cochin : April 10th 2023 (Offline & Online)
                             <br>Calicut : Mar 22nd 2023 (Offline Only)</small>
                         <small class="flex-fill text-center border-end py-3"><b>Duration  </b> <br>Months, 5 Days a Week, 2 Hours/day</small>
-                    </div>
+                    </div> -->
                 </div>
             </div>
             <div class="col-lg-3 col-md-6 wow fadeInUp " data-wow-delay="0.3s">
@@ -660,7 +731,7 @@ span.text {
                     <div class="position-relative overflow-hidden">
                         <img class="img-fluid" src="static/img/course-2.jpg" alt="">
                         <div class="w-100 d-flex justify-content-center position-absolute bottom-0 start-0 mb-4">
-                            <a href="#" class="flex-shrink-0 btn btn-sm btn-primary px-3 border-end" style="border-radius: 30px 0 0 30px;">Read More</a>
+                            <a href="{% url 'courses' %}" class="flex-shrink-0 btn btn-sm btn-primary px-3 border-end" style="border-radius: 30px 0 0 30px;">Read More</a>
                             <a href="#" class="flex-shrink-0 btn btn-sm btn-primary px-3" style="border-radius: 0 30px 30px 0;">Join Now</a>
                         </div>
                     </div>
@@ -668,14 +739,14 @@ span.text {
                         
                         <h4 class="mb-1 ">MEA(R)N Stack Web Development Expert - Angular & React</h4>
                         <p class="mb-2 ">HTML, CSS, Bootstrap, Javascript, Typescript, Git, Angular, React.js, Node.js, Express.js & MongoDB  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</p>
-                        <h5 class="mb-1 text-center"><b>Course Fee:</b>₹25000.00</h5>
+                        <!-- <h5 class="mb-1 text-center"><b>Course Fee:</b>₹25000.00</h5> -->
 
                     </div>
-                    <div class="d-flex border-top">
+                    <!-- <div class="d-flex border-top">
                         <small class="flex-fill text-center border-end py-3"><b>Next Batch </b> <br>Cochin : April 10th 2023 (Offline & Online)
                             <br>Calicut : Mar 22nd 2023 (Offline Only)</small>
                         <small class="flex-fill text-center border-end py-3"><b>Duration  </b> <br>Months, 5 Days a Week, 2 Hours/day</small>
-                    </div>
+                    </div> -->
                 </div>
             </div>
 
@@ -684,7 +755,7 @@ span.text {
                     <div class="position-relative overflow-hidden">
                         <img class="img-fluid" src="static/img/course-2.jpg" alt="">
                         <div class="w-100 d-flex justify-content-center position-absolute bottom-0 start-0 mb-4">
-                            <a href="#" class="flex-shrink-0 btn btn-sm btn-primary px-3 border-end" style="border-radius: 30px 0 0 30px;">Read More</a>
+                            <a href="{% url 'courses' %}" class="flex-shrink-0 btn btn-sm btn-primary px-3 border-end" style="border-radius: 30px 0 0 30px;">Read More</a>
                             <a href="#" class="flex-shrink-0 btn btn-sm btn-primary px-3" style="border-radius: 0 30px 30px 0;">Join Now</a>
                         </div>
                     </div>
@@ -692,13 +763,13 @@ span.text {
                         
                         <h4 class="mb-1 ">Data Science - ML - AI - Big Data with Cloud & TABLEAU</h4>
                         <p class="mb-2 ">Python, Hadoop, Spark, Data Analytics, Linear Algebra, Statistics, Probability Concepts, Machine Learning, Deep Learning,</p>
-                        <h5 class="mb-1 text-center"><b>Course Fee:</b>₹35000.00</h5>
+                        <!-- <h5 class="mb-1 text-center"><b>Course Fee:</b>₹35000.00</h5> -->
                     </div>
-                    <div class="d-flex border-top">
+                    <!-- <div class="d-flex border-top">
                         <small class="flex-fill text-center border-end py-3"><b>Next Batch </b> <br>Cochin : April 10th 2023 (Offline & Online)
                             <br>Calicut : Mar 22nd 2023 (Offline Only)</small>
                         <small class="flex-fill text-center border-end py-3"><b>Duration  </b> <br>Months, 5 Days a Week, 2 Hours/day</small>
-                    </div>
+                    </div> -->
                 </div>
             </div>
 
@@ -707,21 +778,21 @@ span.text {
                     <div class="position-relative overflow-hidden">
                         <img class="img-fluid" src="static/img/course-3.jpg" alt="">
                         <div class="w-100 d-flex justify-content-center position-absolute bottom-0 start-0 mb-4">
-                            <a href="#" class="flex-shrink-0 btn btn-sm btn-primary px-3 border-end" style="border-radius: 30px 0 0 30px;">Read More</a>
+                            <a href="{% url 'courses' %}" class="flex-shrink-0 btn btn-sm btn-primary px-3 border-end" style="border-radius: 30px 0 0 30px;">Read More</a>
                             <a href="#" class="flex-shrink-0 btn btn-sm btn-primary px-3" style="border-radius: 0 30px 30px 0;">Join Now</a>
                         </div>
                     </div>
                     <div class="text-center p-4 pb-0">
                         <h4 class="mb-1 ">Software Testing Specialist  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</h4>
                         <p class="mb-2 ">Manual Testing , Java foundations, Mobile Testing, Automation Testing, Selenium IDE, Selenium Web driver, Selenium Advanced</p>
-                        <h5 class="mb-1 text-center"><b>Course Fee:</b>₹20000.00</h5>
+                        <!-- <h5 class="mb-1 text-center"><b>Course Fee:</b>₹20000.00</h5> -->
                     </div>
                    
-                    <div class="d-flex border-top">
+                    <!-- <div class="d-flex border-top">
                         <small class="flex-fill text-center border-end py-3"><b>Next Batch </b> <br>Cochin : April 10th 2023 (Offline & Online)
                             <br>Calicut : Mar 22nd 2023 (Offline Only)</small>
                         <small class="flex-fill text-center border-end py-3"><b>Duration  </b> <br> Months, 5 Days a Week, 2 Hours/day</small>
-                    </div>
+                    </div> -->
                 </div>
             </div>
 
@@ -904,16 +975,7 @@ span.text {
 
 
 <script>
-    window.onload = function() {
-      setTimeout(function() {
-            var modal = document.getElementById("myModal");
-            var close = document.getElementsByClassName("close")[0];
-            modal.style.display = "block";
-            close.onclick = function() {
-            modal.style.display = "none";
-            }
-        }, 5000); 
-    };
+   
 
 
     let valueDisplays = document.querySelectorAll(".num");
@@ -964,7 +1026,108 @@ span.text {
     $('#video-carousel').carousel();
   });
 
-  
+    
+
+//   Service 1 
+   
+    const element1 = $('.service1');
+    const modalPopup1 = $('.modal1');
+    element1.click(  
+        function() {
+            setTimeout(function() {
+                modalPopup1.show();
+            }, 100);
+        });
+        
+    
+    element1.mouseout(  
+        function() {
+            modalPopup1.hide();
+        }
+    
+    );
+    modalPopup1.mouseout(  
+        function() {
+            modalPopup1.hide();
+        }
+    );
+    
+
+
+
+// Servce 2
+
+    const element2 = $('.service2');
+    const modalPopup2 = $('.modal2');
+    element2.click(  
+        function() {
+            setTimeout(function() {
+                modalPopup2.show();
+            }, 100);
+        });
+        
+    
+    element2.mouseout(  
+        function() {
+            modalPopup2.hide();
+        }
+    );
+    modalPopup2.mouseout(  
+        function() {
+            modalPopup1.hide();
+        }
+    );
+
+
+// Servce 3
+
+    const element3 = $('.service3');
+    const modalPopup3 = $('.modal3');
+    element3.click(  
+        
+        function() {
+            console.log(" 3 clicked");
+            setTimeout(function() {
+                modalPopup3.show();
+            }, 100);
+        });
+        
+    
+    element3.mouseout(  
+        function() {
+            modalPopup3.hide();
+        }
+    );
+    modalPopup3.mouseout(  
+        function() {
+            modalPopup1.hide();
+        }
+    );
+
+    // Servce 4
+
+    const element4 = $('.service4');
+    const modalPopup4 = $('.modal4');
+    element4.click(  
+        function() {
+            setTimeout(function() {
+                modalPopup4.show();
+            }, 100);
+        });
+        
+    
+    element4.mouseout(  
+        function() {
+            modalPopup4.hide();
+        }
+    );
+
+    modalPopup4.mouseout(  
+        function() {
+            modalPopup1.hide();
+        }
+    );
+
 </script>
 
     {% endblock %}
