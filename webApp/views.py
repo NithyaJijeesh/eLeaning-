@@ -4,13 +4,34 @@ from django.utils.text import capfirst
 from .models import *
 
 def index(request):
-    return render(request,'index.html')
+    video = about_model.objects.all()
+    courses = course_details.objects.all()
+    mentors = instructors.objects.all()
+    reviews = testimonial.objects.all()
+    context = {
+        'video' : video,
+        'courses' :courses,
+        'mentors' : mentors,
+        'review' :reviews
+    }
+    return render(request,'index.html',context)
 
 def about(request):
-    return render(request,'about.html')
+    video = about_model.objects.all()
+    mentors = instructors.objects.all()
+
+    context = {
+        'video' : video,
+        'mentors' : mentors,
+    }
+    return render(request,'about.html', context)
 
 def courses(request):
-    return render(request,'courses.html')
+    courses = course_details.objects.all()
+    context = {
+        'courses' : courses,
+    }
+    return render(request,'courses.html',context)
 
 def contact(request):
     return render(request,'contact.html')
@@ -18,7 +39,7 @@ def contact(request):
 def team(request):
     return render(request,'team.html')
 
-def testimonial(request):
+def testimonials(request):
     return render(request,'testimonial.html')
 
 def placement(request):

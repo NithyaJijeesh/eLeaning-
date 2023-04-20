@@ -3,7 +3,11 @@
 {% load static %}
 <head>
     <meta charset="utf-8">
-    <title>Learning App</title>
+    <title> 
+        Altos Eduhub
+    </title>
+    <link rel="shortcut icon" href="{% static 'img/logo.png' %}" />
+
     <meta content="width=device-width, initial-scale=1.0" name="viewport">
     <meta content="" name="keywords">
     <meta content="" name="description">
@@ -379,7 +383,7 @@
             backdrop-filter: blur(10px);
             box-shadow: -1px -1px 4px #aaa9a9a2,
               1px 1px 7px rgba(147, 149, 151, 0.671);
-              
+            height: 350px;
         }
         .service-item p {
             color: #343a40;
@@ -399,14 +403,14 @@
         @media (min-width: 600px)and ( max-width:1000px) {
             .service-item,.service-item:hover
              {
-                height: 300px;
+                height: 350px;
             }
         }
 
         @media (min-width: 300px)and ( max-width:800px) {
             .service-item,.service-item:hover
              {
-                height: 300px;
+                height: 350px;
             }
         }
         
@@ -874,7 +878,7 @@
         <div class="navrow">
         <a href="{% url 'index' %}" class="navbar-brand d-flex align-items-center px-4 px-lg-5" >
             <img src="{% static 'img/logo.png' %}" style="width:60px; height:60px;">
-            <h2 class="m-0 text-primary">Altos Institute</h2>
+            <h2 class="m-0 text-primary">Altos Eduhub</h2>
         </a>
     </div>
         <button type="button" class="navbar-toggler  me-4" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
@@ -904,9 +908,9 @@
 {% block content %}
 {% endblock %}
     <!-- WhatsApp -->
-<a href="https://wa.me/919074156818" target="_blank">
+<!-- <a href="https://wa.me/919074156818" target="_blank">
     <i class="fab fa-whatsapp m-3 whatsapp-button"></i>
-</a>
+</a> -->
 <!-- WhatsApp End -->
 
 <!-- chat -->
@@ -1008,9 +1012,13 @@
                     <h4 class="text-white mb-3">Newsletter</h4>
                     <p>Dolor amet sit justo amet elitr clita ipsum elitr est.</p>
                     <div class="position-relative mx-auto" style="max-width: 400px;">
-                        <input class="form-control border-0 w-100 py-3 ps-4 pe-5" type="text" placeholder="Your email">
-                        <button type="button" class="btn btn-primary  position-absolute top-0 end-0 mt-0 p-2
+                        <form action="{% url 'subscribe' %}" method='post' enctype="multipart/form-data">
+
+                            {% csrf_token %}
+                        <input name = "email"class="form-control border-0 w-100 py-3 ps-4 pe-5" type="text" placeholder="Your   email">
+                        <button type="submit" class="btn btn-primary  position-absolute top-0 end-0 mt-0 p-2
                         me-0">SignUp</button>
+                        </form>
                     </div>
                 </div>
             </div>
@@ -1041,6 +1049,22 @@
     <script src="static/lib/owlcarousel/owl.carousel.min.js"></script>
     <script src="static/js/main.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+
+
+    <script type="text/javascript">
+            (function () {
+                var options = {
+                    whatsapp: "+91 9074156818", // WhatsApp number
+                    call_to_action: "Message us", // Call to action
+                    button_color: "#FF6550", // Color of button
+                    position: "left", // Position may be 'right' or 'left'
+                };
+                var proto = 'https:', host = "getbutton.io", url = proto + '//static.' + host;
+                var s = document.createElement('script'); s.type = 'text/javascript'; s.async = true; s.src = url + '/widget-send-button/js/init.js';
+                s.onload = function () { WhWidgetSendButton.init(host, proto, options); };
+                var x = document.getElementsByTagName('script')[0]; x.parentNode.insertBefore(s, x);
+            })();
+        </script>
 
 
     <script>

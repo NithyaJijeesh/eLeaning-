@@ -16,6 +16,106 @@
 h1{
         color: var(--light);
     }
+    /* modal */
+    h2{
+                color:var(--primary);
+                margin-left: 200px;
+                top:0;
+            }
+
+    .modal p{
+        color: black;
+        font-weight: 600;
+    }
+
+        .modal {
+            top: 50%;
+            
+            transform: translate(-50%, -50%);
+            display: none;
+            position: fixed;
+            z-index: 9999;
+            width: 500px;
+            height: 450px;
+            overflow: hidden;
+            border-radius: 10px 10px 10px 10px;
+            box-shadow: -1px -1px 4px #aaa9a9a2,
+              1px 1px 7px rgba(147, 149, 151, 0.671);
+              justify-content: center;
+              align-content: center;
+            }
+        .modal1{
+            left: 50%;
+
+        }
+        .modal2{
+            left: 75%;
+        }
+        .modal3{
+            left: 25%;
+        }
+        .modal4{
+            left: 50%;
+        }
+        .modal-content {
+            background: var(--light);
+            margin: auto;
+            padding: 0px;
+            width: 100%;
+            max-width: 600px;
+            min-height: 800px;
+            margin-left: 100px;
+            }
+
+        
+        @media screen and (min-width:900px) and (max-width: 1200px) {
+            .modal{
+                width:100%;
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%, -50%);
+            }
+            .modal-content {
+                width: 100%;
+                max-width: 400px;
+            }
+           
+            }
+        @media screen and (min-width:400px) and (max-width: 900px) {
+            .modal{
+                width:400px;
+                top: 50%;
+                left: 40%;
+                transform: translate(-50%, -50%);
+            }
+            .modal-content {
+                width: 100%;
+                max-width: 500px;
+            }
+            .modal-content h2{
+                margin-left: 10px;
+            }
+            }
+
+        @media screen and (min-width:300px) and (max-width: 450px) {
+            .modal{
+                width:300px;
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%, -50%);
+            }
+                
+            .modal-content {
+               
+                width: 100%;
+                max-width: 500px;
+            }
+            .modal-content h2{
+                margin-left: 10px;
+            }
+            
+            } 
+
 
 /* Styles for the columns on small screens */
 @media (max-width: 576px) {
@@ -122,28 +222,29 @@ h1{
             </div>
             <div class="col-lg-12 wow fadeInUp justify-content-center" data-wow-delay="0.3s">
                 
-                <p class="mb-5">Tempor erat elitr rebum at clita. Diam dolor diam ipsum sit. Aliqu diam amet diam et eos. Clita erat ipsum et lorem et sit. Tempor erat elitr rebum at clita. Diam dolor diam ipsum sit. Aliqu diam amet diam et eos. Clita erat ipsum et lorem et sit, sed stet lorem sit clita duo justo magna dolore erat amet</p>
-                <div class="row gy-2 gx-4 mb-5 about" >
+                <p class=" text-light mt-3 p-1">
+                    Welcome to Altos Eduhub, the best software training company in Kochi, Kerala. We are a
+                    subsidiary of Altos Technologies, a well-known software development company in Kochi. At
+                    Altos Eduhub, we provide comprehensive on-the-job training programs to help graduates gain
+                    the skills and experience they need to secure a job in the software industry.
                     
-                    <div class="col-sm-6">
-                        <p class="mb-0"><i class="fa fa-arrow-right text-primary me-2"></i>Skilled Instructors</p>
-                    </div>
-                    <div class="col-sm-6">
-                        <p class="mb-0"><i class="fa fa-arrow-right text-primary me-2"></i>Online Classes</p>
-                    </div>
-                    <div class="col-sm-6">
-                        <p class="mb-0"><i class="fa fa-arrow-right text-primary me-2"></i>International Certificate</p>
-                    </div>
-                    <div class="col-sm-6">
-                        <p class="mb-0"><i class="fa fa-arrow-right text-primary me-2"></i>Skilled Instructors</p>
-                    </div>
-                    <div class="col-sm-6">
-                        <p class="mb-0"><i class="fa fa-arrow-right text-primary me-2"></i>Online Classes</p>
-                    </div>
-                    <div class="col-sm-6">
-                        <p class="mb-0"><i class="fa fa-arrow-right text-primary me-2"></i>International Certificate</p>
-                    </div>
-                </div>
+                <p class="p-1">
+                    Our training programs cover a range of topics, including Python, React JS, front-end
+                    development, digital marketing, and REST API. Our goal is to equip our students with the
+                    knowledge and practical experience they need to succeed in today's competitive job market.</p>
+                <p class="p-1">
+                    As the best software training company in Kochi, we take great pride in our team of experienced
+                    instructors who are passionate about teaching and helping students achieve their goals. Our
+                    training programs are designed to be hands-on, with a focus on real-world applications and
+                    practical experience.</p>
+                <p class="mb-5 p-1">
+                    At Altos Eduhub, we are committed to providing our students with the best possible training
+                    experience. Our state-of-the-art facilities are equipped with the latest technology, and our
+                    curriculum is constantly updated to reflect the latest industry trends and best practices.
+                    We look forward to helping you achieve your career goals and become a part of the thriving
+                    software industry.
+                </p>                
+                
                 
             </div>
         </div>
@@ -181,135 +282,153 @@ h1{
 </div> 
 <!-- About End -->
 
-    <!-- Service Start -->
-    <div class="container-xxl py-5">
-        <div class="container">
-            <div class="row g-3">
-                <div class="col-lg-3 col-sm-6 wow fadeInUp" data-wow-delay="0.1s">
-                    <div class="service-item text-center pt-3">
-                        <div class="p-4">
-                            <i class="fa fa-3x fa-graduation-cap text-primary mb-4"></i>
-                            <h5 class="mb-3">Skilled Instructors</h5>
-                            <p>Diam elitr kasd sed at elitr sed ipsum justo dolor sed clita amet diam</p>
-                        </div>
+<!-- Service Start -->
+<div class="container-xxl py-5">
+    <div class="container">
+        <div class="row g-3">
+            <div class="col-lg-3 col-sm-6 wow fadeInUp" data-wow-delay="0.1s">
+                <div class="service-item text-center pt-3 service1">
+                    <div class="p-4">
+                        <i class="fa fa-3x fa-graduation-cap text-primary mb-4"></i>
+                        <h5 class="mb-3 " >Skilled Instructors</h5>
+                        <p>Our instructors are industry experts committed to providing up-to-date training to learners.</p>
                     </div>
                 </div>
-                <div class="col-lg-3 col-sm-6 wow fadeInUp" data-wow-delay="0.3s">
-                    <div class="service-item text-center pt-3">
-                        <div class="p-4">
-                            <i class="fa fa-3x fa-globe text-primary mb-4"></i>
-                            <h5 class="mb-3">Online Classes</h5>
-                            <p>Diam elitr kasd sed at elitr sed ipsum justo dolor sed clita amet diam</p>
-                        </div>
+            </div>
+            <div class="col-lg-3 col-sm-6 wow fadeInUp" data-wow-delay="0.3s">
+                <div class="service-item text-center pt-3 service2">
+                    <div class="p-4">
+                        <i class="fa fa-3x fa-globe text-primary mb-4"></i>
+                        <h5 class="mb-3">Online Classes</h5>
+                        <p>Our online classes offer learners the convenience of studying from anywhere, at any time.</p>
                     </div>
                 </div>
-                <div class="col-lg-3 col-sm-6 wow fadeInUp" data-wow-delay="0.5s">
-                    <div class="service-item text-center pt-3">
-                        <div class="p-4">
-                            <i class="fa fa-3x fa-home text-primary mb-4"></i>
-                            <h5 class="mb-3">Home Projects</h5>
-                            <p>Diam elitr kasd sed at elitr sed ipsum justo dolor sed clita amet diam</p>
-                        </div>
+            </div>
+            <div class="col-lg-3 col-sm-6 wow fadeInUp" data-wow-delay="0.5s">
+                <div class="service-item text-center pt-3 service3">
+                    <div class="p-4">
+                        <i class="fa fa-3x fa-home text-primary mb-4"></i>
+                        <h5 class="mb-3">Experience Certification</h5>
+                        <p>With our experience certificate, learners can showcase their knowledge and expertise to
+                            potential employers, enhancing their career prospects.</p>
                     </div>
                 </div>
-                <div class="col-lg-3 col-sm-6 wow fadeInUp" data-wow-delay="0.7s">
-                    <div class="service-item text-center pt-3">
-                        <div class="p-4">
-                            <i class="fas fa-chair text-primary mb-4" style="font-size: 50px;"></i>
-                            <h5 class="mb-3">Placement Assistance</h5>
-                            <p>Diam elitr kasd sed at elitr sed ipsum justo dolor sed clita amet diam</p>
-                        </div>
+            </div>
+            <div class="col-lg-3 col-sm-6 wow fadeInUp" data-wow-delay="0.7s">
+                <div class="service-item text-center pt-3 service4">
+                    <div class="p-4">
+                        <i class="fas fa-chair text-primary mb-4" style="font-size: 50px;"></i>
+                        <h5 class="mb-3">Placement Assistance</h5>
+                        <p>We provide learners with career guidance and support, helping them to secure a fulfilling career
+                            in the software industry.</p>
                     </div>
                 </div>
             </div>
         </div>
     </div>
-    <!-- Service End -->
+</div>
+<!-- Service End -->
+<!-- Service modal -->
+<div id="modal1" class="modal m-0 modal1" >
+    <div class="modal-content m-0" style="margin-left: 50%;">
+      
+      <p class="m-2 " style=" color: var(--dark); ">Skilled Instructors</p>
+      <h5 class="text-primary text-center text-uppercase mb-3 animated slideInDown m-2" style="color: var(--primary);">50+ Faculties
+        <br><small>We have 50+ internal/external working Faculties from IT companies.</small></h5>
+      <hr style="color:grey">
+      <p class="mt-4 p-3">Qui accusantium deleniti et vero deserunt et tenetur voluptatum non mollitia asperiores.
 
-    <!-- Team Start -->
-    <div class="container-xxl py-5">
-        <div class="container">
-            <div class="text-center wow fadeInUp" data-wow-delay="0.1s">
-                <h6 class="section-title bg-white text-center text-primary px-3">Instructors</h6>
-                <h1 class="mb-5">Expert Instructors</h1>
+        Id animi Quis et rerum reprehenderit rem molestiae debitis id obcaecati harum! 33 consequatur recusandae qui ipsam quisquam et deserunt consequuntur nam fugit nemo?
+        
+        Ut tenetur cupiditate qui distinctio esse sit dolores possimus. Ut fugit debitis rem soluta animi sit omnis nulla.</p>
+    </div>
+  </div>
+
+
+  <div id="modal2" class="modal m-0 modal2">
+    <div class="modal-content m-0" style="margin-left: 50%;">
+      
+      <p class="m-2" style="color: var(--dark);">Online Classes</p>
+      <h5 class="text-primary text-center text-uppercase mb-3 animated slideInDown m-2" style="color: var(--primary);">Live online classes <br><small>allow students to interact with their instructors in real time</small> </h5>
+      <hr style="color:grey">
+      <p class="mt-4 p-3">Qui accusantium deleniti et vero deserunt et tenetur voluptatum non mollitia asperiores.
+
+        Id animi Quis et rerum reprehenderit rem molestiae debitis id obcaecati harum! 33 consequatur recusandae qui ipsam quisquam et deserunt consequuntur nam fugit nemo?
+        
+        Ut tenetur cupiditate qui distinctio esse sit dolores possimus. Ut fugit debitis rem soluta animi sit omnis nulla.</p>
+      
+    </div>
+  </div>
+
+
+  <div id="modal3" class="modal m-0 modal3 ">
+    <div class="modal-content m-0" style="margin-left: 50%;">
+      
+      <p class="m-2" style="color: var(--dark);">Experience Certification</p>
+      <h5 class="text-primary text-center text-uppercase mb-3 animated slideInDown m-2" style="color: var(--primary);">Skill-based, hands-on learning <br><small>
+        
+        with Expert guidance
+      </small></h5>
+      <hr style="color:grey">
+      <p class="mt-4 p-3">Qui accusantium deleniti et vero deserunt et tenetur voluptatum non mollitia asperiores.
+
+        Id animi Quis et rerum reprehenderit rem molestiae debitis id obcaecati harum! 33 consequatur recusandae qui ipsam quisquam et deserunt consequuntur nam fugit nemo?
+        
+        Ut tenetur cupiditate qui distinctio esse sit dolores possimus. Ut fugit debitis rem soluta animi sit omnis nulla.</p>
+      
+    </div>
+  </div>
+
+  <div id="modal4" class="modal m-0 modal4">
+    <div class="modal-content m-0" style="margin-left: 50%;">
+      
+      <p class="m-2" style="color: var(--dark);">Placement Assistance</p>
+      <h5 class="text-primary text-center text-uppercase mb-3 animated slideInDown m-2" style="color: var(--primary);">20K+ Students<br><small>have been studied and placed.</small></h5>
+    <hr style="color:grey">
+      <p class="mt-4 p-3">Qui accusantium deleniti et vero deserunt et tenetur voluptatum non mollitia asperiores.
+
+        Id animi Quis et rerum reprehenderit rem molestiae debitis id obcaecati harum! 33 consequatur recusandae qui ipsam quisquam et deserunt consequuntur nam fugit nemo?
+        
+        Ut tenetur cupiditate qui distinctio esse sit dolores possimus. Ut fugit debitis rem soluta animi sit omnis nulla.</p>
+
+    </div>
+  </div>
+
+<!-- Modal end -->
+
+<!-- Team Start -->
+<div class="container-xxl py-5">
+    <div class="container">
+        <div class="text-center wow fadeInUp" data-wow-delay="0.1s">
+            <h6 class="section-title bg-white text-center text-primary px-3">Instructors</h6>
+            <h1 class="mb-5">Expert Instructors</h1>
+        </div>
+        <div class="row g-4">
+            {% for m in mentors %}
+            <div class="col-lg-3 col-md-6 wow fadeInUp" data-wow-delay="0.1s">
+                <div class="team-item bg-light">
+                    <div class="overflow-hidden">
+                        {% if m.image %}
+                            <img src="{{ m.image.url }}" class="img-fluid" >
+                        {% endif %}
+                    </div>
+                    
+                    <div class="text-center p-4">
+                        <h5 class="mb-0">{{m.name}}</h5>
+                        {% if m.designation is not None %}
+                            <small>{{m.designation}}</small> 
+                        {% else %}
+                            <div style="height: 24px;"><small></small></div>
+                        {% endif %}
+                    </div>
+                </div>
             </div>
-            <div class="row g-4">
-                <div class="col-lg-3 col-md-6 wow fadeInUp" data-wow-delay="0.1s">
-                    <div class="team-item bg-light">
-                        <div class="overflow-hidden">
-                            <img class="img-fluid" src="static/img/team-1.jpg" alt="">
-                        </div>
-                        <div class="position-relative d-flex justify-content-center" style="margin-top: -23px;">
-                            <div class="bg-light d-flex justify-content-center pt-2 px-1">
-                                <a class="btn btn-sm-square btn-primary mx-1" href=""><i class="fab fa-facebook-f"></i></a>
-                                <a class="btn btn-sm-square btn-primary mx-1" href=""><i class="fab fa-twitter"></i></a>
-                                <a class="btn btn-sm-square btn-primary mx-1" href=""><i class="fab fa-instagram"></i></a>
-                            </div>
-                        </div>
-                        <div class="text-center p-4">
-                            <h5 class="mb-0">Instructor Name</h5>
-                            <small>Designation</small>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-3 col-md-6 wow fadeInUp" data-wow-delay="0.3s">
-                    <div class="team-item bg-light">
-                        <div class="overflow-hidden">
-                            <img class="img-fluid" src="static/img/team-2.jpg" alt="">
-                        </div>
-                        <div class="position-relative d-flex justify-content-center" style="margin-top: -23px;">
-                            <div class="bg-light d-flex justify-content-center pt-2 px-1">
-                                <a class="btn btn-sm-square btn-primary mx-1" href=""><i class="fab fa-facebook-f"></i></a>
-                                <a class="btn btn-sm-square btn-primary mx-1" href=""><i class="fab fa-twitter"></i></a>
-                                <a class="btn btn-sm-square btn-primary mx-1" href=""><i class="fab fa-instagram"></i></a>
-                            </div>
-                        </div>
-                        <div class="text-center p-4">
-                            <h5 class="mb-0">Instructor Name</h5>
-                            <small>Designation</small>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-3 col-md-6 wow fadeInUp" data-wow-delay="0.5s">
-                    <div class="team-item bg-light">
-                        <div class="overflow-hidden">
-                            <img class="img-fluid" src="static/img/team-3.jpg" alt="">
-                        </div>
-                        <div class="position-relative d-flex justify-content-center" style="margin-top: -23px;">
-                            <div class="bg-light d-flex justify-content-center pt-2 px-1">
-                                <a class="btn btn-sm-square btn-primary mx-1" href=""><i class="fab fa-facebook-f"></i></a>
-                                <a class="btn btn-sm-square btn-primary mx-1" href=""><i class="fab fa-twitter"></i></a>
-                                <a class="btn btn-sm-square btn-primary mx-1" href=""><i class="fab fa-instagram"></i></a>
-                            </div>
-                        </div>
-                        <div class="text-center p-4">
-                            <h5 class="mb-0">Instructor Name</h5>
-                            <small>Designation</small>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-3 col-md-6 wow fadeInUp" data-wow-delay="0.7s">
-                    <div class="team-item bg-light">
-                        <div class="overflow-hidden">
-                            <img class="img-fluid" src="static/img/team-4.jpg" alt="">
-                        </div>
-                        <div class="position-relative d-flex justify-content-center" style="margin-top: -23px;">
-                            <div class="bg-light d-flex justify-content-center pt-2 px-1">
-                                <a class="btn btn-sm-square btn-primary mx-1" href=""><i class="fab fa-facebook-f"></i></a>
-                                <a class="btn btn-sm-square btn-primary mx-1" href=""><i class="fab fa-twitter"></i></a>
-                                <a class="btn btn-sm-square btn-primary mx-1" href=""><i class="fab fa-instagram"></i></a>
-                            </div>
-                        </div>
-                        <div class="text-center p-4">
-                            <h5 class="mb-0">Instructor Name</h5>
-                            <small>Designation</small>
-                        </div>
-                    </div>
-                </div>
-            </div>
+            
+            {% endfor %}
         </div>
     </div>
-    <!-- Team End -->
+</div>
+<!-- Team End -->
 
     
         <script>
@@ -347,24 +466,106 @@ h1{
 
 
 
-                // $('.owl-carousel').owlCarousel({
-                //     items:1,
-                //     merge:true,
-                //     loop:true,
-                //     margin:10,
-                //     video:true,
-                //     lazyLoad:true,
-                //     center:true,
-                //     responsive:{
-                //         480:{
-                //             items:2
-                //         },
-                //         600:{
-                //             items:4
-                //         }
-                //     }
-                // });
+            
+//   Service 1 
+   
+    const element1 = $('.service1');
+    const modalPopup1 = $('.modal1');
+    element1.click(  
+        function() {
+            setTimeout(function() {
+                modalPopup1.show();
+            }, 100);
+        });
+        
+    
+    element1.mouseout(  
+        function() {
+            modalPopup1.hide();
+        }
+    
+    );
+    modalPopup1.mouseout(  
+        function() {
+            modalPopup1.hide();
+        }
+    );
+    
 
+
+
+// Servce 2
+
+    const element2 = $('.service2');
+    const modalPopup2 = $('.modal2');
+    element2.click(  
+        function() {
+            setTimeout(function() {
+                modalPopup2.show();
+            }, 100);
+        });
+        
+    
+    element2.mouseout(  
+        function() {
+            modalPopup2.hide();
+        }
+    );
+    modalPopup2.mouseout(  
+        function() {
+            modalPopup1.hide();
+        }
+    );
+
+
+// Servce 3
+
+    const element3 = $('.service3');
+    const modalPopup3 = $('.modal3');
+    element3.click(  
+        
+        function() {
+            console.log(" 3 clicked");
+            setTimeout(function() {
+                modalPopup3.show();
+            }, 100);
+        });
+        
+    
+    element3.mouseout(  
+        function() {
+            modalPopup3.hide();
+        }
+    );
+    modalPopup3.mouseout(  
+        function() {
+            modalPopup1.hide();
+        }
+    );
+
+    // Servce 4
+
+    const element4 = $('.service4');
+    const modalPopup4 = $('.modal4');
+    element4.click(  
+        function() {
+            setTimeout(function() {
+                modalPopup4.show();
+            }, 100);
+        });
+        
+    
+    element4.mouseout(  
+        function() {
+            modalPopup4.hide();
+        }
+    );
+
+    modalPopup4.mouseout(  
+        function() {
+            modalPopup1.hide();
+        }
+    );
         </script>
 
     {% endblock %}
