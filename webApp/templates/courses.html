@@ -13,77 +13,50 @@
     h1{
         color: var(--light);
     }
+    p, li,small{
+        font-size: 18px;
+        text-align: justify ;
+        text-justify: distribute;
+    }
+    .course-item{
+
+        height: 750px !important;
+        overflow:scroll;
+    }
+    @media (min-width: 600px)and ( max-width:1000px) {
+
+        .course-item{
+            height: 625px !important;
+            overflow:scroll;        
+        }
+    }
+    @media (min-width: 300px)and ( max-width:800px) {
+
+        .course-item{
+            height: 650px !important;
+            overflow:scroll;
+    }
+    }
 </style>
+
     <!-- Header Start -->
     <div class="container-fluid bg-primary py-5 mb-5 page-header">
         <div class="container py-5">
+            <nav aria-label="breadcrumb">
+                <ol class="breadcrumb justify-content-right">
+                    <li class="breadcrumb-item"><a class="text-white" href="{% url 'index'  %}">Home</a></li>
+                    <li class="breadcrumb-item text-white active" aria-current="page">Courses</li>
+                </ol>
+            </nav>
             <div class="row justify-content-center">
-                <div class="col-lg-10 text-center">
-                    <h1 class="display-3 text-white animated slideInDown">Courses</h1>
-                    <nav aria-label="breadcrumb">
-                        <ol class="breadcrumb justify-content-center">
-                            <li class="breadcrumb-item"><a class="text-white" href="{% url 'index'  %}">Home</a></li>
-                            <!-- <li class="breadcrumb-item"><a class="text-white" href="#">Pages</a></li> -->
-                            <li class="breadcrumb-item text-white active" aria-current="page">Courses</li>
-                        </ol>
-                    </nav>
+                <div class="col-lg-10 text-center wow fadeIn">
+                    <h6 class="section-title bg-white text-center text-white px-3">Courses</h6>
+
                 </div>
             </div>
         </div>
     </div>
     <!-- Header End -->
-
-
-<!-- Categories Start -->
-<!-- <div class="container-xxl py-5 category">
-    <div class="container justify-content-center">
-        <div class="text-center wow fadeInUp" data-wow-delay="0.1s">
-            <h6 class="section-title bg-white text-center text-primary px-3">Categories</h6>
-            <h1 class="mb-5">Courses Categories</h1>
-        </div>
-        <div class="row g-3">
-            <div class="col-lg-9 col-md-6">
-                <div class="row g-3">
-                    <div class="col-lg-6 col-md-12 wow zoomIn" data-wow-delay="0.3s">
-                        <a class="position-relative d-block overflow-hidden" href="">
-                            <img class="img-fluid" src="static/img/cat-1.jpg" alt="">
-                            <div class="bg-white text-center position-absolute bottom-0 end-0 py-2 px-3" style="margin: 1px;">
-                                <h5 class="m-0">Web Design</h5>
-                            </div>
-                        </a>
-                    </div>
-                    <div class="col-lg-6 col-md-12 wow zoomIn" data-wow-delay="0.3s">
-                        <a class="position-relative d-block overflow-hidden" href="">
-                            <img class="img-fluid" src="static/img/cat-2.jpg" alt="">
-                            <div class="bg-white text-center position-absolute bottom-0 end-0 py-2 px-3" style="margin: 1px;">
-                                <h5 class="m-0">Python Training</h5>
-                            </div>
-                        </a>
-                    </div>
-                    <div class="col-lg-6 col-md-12 wow zoomIn" data-wow-delay="0.3s">
-                        <a class="position-relative d-block overflow-hidden" href="">
-                            <img class="img-fluid" src="static/img/cat-3.avif" alt="">
-                            <div class="bg-white text-center position-absolute bottom-0 end-0 py-2 px-3" style="margin: 1px;">
-                                <h5 class="m-0">React JS</h5>
-                            </div>
-                        </a>
-                    </div>
-                    <div class="col-lg-6 col-md-12 wow zoomIn" data-wow-delay="0.3s">
-                        <a class="position-relative d-block overflow-hidden" href="">
-                            <img class="img-fluid" src="static/img/cat-4.png" alt="">
-                            <div class="bg-white text-center position-absolute bottom-0 end-0 py-2 px-3" style="margin: 1px;">
-                                <h5 class="m-0">Machine Learning</h5>
-                            </div>
-                        </a>
-                    </div>
-                    
-                </div>
-            </div>
-            
-        </div>
-    </div>
-</div> -->
-<!-- Categories Start -->
 
 
 <!-- Courses Start -->
@@ -93,19 +66,19 @@
             <h6 class="section-title bg-white text-center text-primary px-3">Courses</h6>
             <h1 class="mb-5">On the Job Training</h1>
             <hr>
-            <p class=" text-light mt-3 p-1">
+            <p class=" text-light mt-3 p-1" style="text-align: justify; text-justify: distribute; font-size: 20px; font-family: 'Nunito',sans-serif;">
                 Welcome to Altos Eduhub - the premier software training company in Kerala, and a subsidiary of
                 Altos Technologies - one of the leading software development companies in Kochi. We offer a
                 range of on-the-job training programs in Python, React JS, Front End Development, REST API,
                 and Digital Marketing. Our courses are designed to equip you with the skills and knowledge you
                 need to succeed in the competitive world of software development.
-                <p class="p-1">
+                <p class="p-1" style="text-align: justify; text-justify: distribute; font-size: 20px; font-family: 'Nunito',sans-serif;">
                 Our training programs are six months in duration, with the first three months focused on
                 fundamental training and the remaining three months dedicated to practical work on live
                 projects. Upon successful completion of the training, you will receive an experience certificate.
                 For Python training, we also offer guaranteed placement at Altos Technologies, while for other
                 programs, we provide placement assistance.</p>
-                <p class="mb-5 p-1">
+                <p class="mb-5 p-1" style="text-align: justify; text-justify: distribute; font-size: 20px; font-family: 'Nunito',sans-serif;">
                 To ensure the best possible training experience for our candidates, we have implemented
                 several measures. As a part of our training program, we provide candidates with access to Altos
                 core software, where they can update their tasks and track their work status efficiently.
@@ -120,7 +93,7 @@
             <div class="row gy-2 gx-4 mb-5 " >
                     
                 <div class="col-sm-6 text-start">
-                    <p class="mb-0"><i class="fa fa-arrow-right text-primary me-2"></i>Experience certificate upon successful completion of training</p>
+                    <p class="mb-0" style="text-align: justify; text-justify: distribute ;"><i class="fa fa-arrow-right text-primary me-2"></i>Experience certificate upon successful completion of training</p>
                 </div>
                 <div class="col-sm-6 text-start">
                     <p class="mb-0"><i class="fa fa-arrow-right text-primary me-2"></i>Assured placement assistance for certain programs</p>
@@ -151,9 +124,10 @@
                 </div>
             </div>
         </div>
+
         <div class="row g-4  justify-content-center" >
             <div class="text-center wow fadeInLeftBig">
-                <h1 class="mb-5 ">Offered Courses</h1>
+                <h1 class="mb-5">Offered Courses</h1>
             </div>
             <hr>
             {% for c in courses %}
@@ -161,10 +135,11 @@
                 <div class="course-item bg-light">
                    
                     <div class="position-relative overflow-hidden">
+
                         {% if c.image %}
-                        <img src="{{ c.image.url }}" class="img-fluid" >
-                        
+                            <img src="{{ c.image.url }}" class="img-fluid" style="width:500px; height: 235px !important;">
                         {% endif %}
+
                         <div class="w-100 d-flex justify-content-center position-absolute bottom-0 start-0 mb-4">
                             <a href="#" class="flex-shrink-0 btn btn-sm btn-primary px-3 border-end" style="border-radius: 30px 0 0 30px;">Read More</a>
                             <a href="#" class="flex-shrink-0 btn btn-sm btn-primary px-3" style="border-radius: 0 30px 30px 0;">Join Now</a>
@@ -179,9 +154,7 @@
                             </p>
                         <ol>
                             {% for li in c.course_description_list_set.all %}
-
-                            <li>{{ li.list_item }}</li>
-
+                                <li>{{ li.list_item }}</li>
                             {%endfor %}
                         </ol>
                         <h5 class="mb-1 text-center"><b>Course Fee:</b>{%if c.fee is not None %} ₹{{c.fee}}.00 {% endif %}</h5>

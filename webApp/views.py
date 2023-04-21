@@ -2,6 +2,9 @@ from django.shortcuts import render,redirect
 from django.contrib import messages
 from django.utils.text import capfirst
 from .models import *
+import random
+
+
 
 def index(request):
     video = about_model.objects.all()
@@ -36,23 +39,23 @@ def courses(request):
 def contact(request):
     return render(request,'contact.html')
 
-def team(request):
-    return render(request,'team.html')
-
-def testimonials(request):
-    return render(request,'testimonial.html')
 
 def placement(request):
     return render(request,'placement.html')
 
-def vision(request):
-    return render(request,'vision.html')
-
-def blogs(request):
-    return render(request,'blog.html')
 
 def subscribe(request):
     if request.method == 'POST':
         email = request.POST['email']
         Subscriber(email = email).save()
     return redirect('/')
+def contactuss(request):
+    if request.method == 'POST':
+        name = request.POST['name']
+        email = request.POST['email']
+        subject = request.POST['subject']
+        message = request.POST['msg']
+    
+        contactus(name = name, email = email, subject = subject, message = message).save()
+
+    return redirect('/contact')

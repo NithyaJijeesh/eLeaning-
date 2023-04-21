@@ -34,3 +34,20 @@ class testimonial(models.Model):
     profession = models.CharField(max_length=255,null=True,blank=True)
     company = models.CharField(max_length=100,null=True,blank=True)
     description = models.CharField(max_length=255,null=True,blank=True)
+
+class contactus(models.Model):
+
+    name = models.CharField(max_length=255, null=True,blank=True)
+    email = models.EmailField(null=True,blank=True)
+    subject = models.CharField(max_length=255,null=True,blank=True)
+    message = models.CharField(max_length=100,null=True,blank=True)
+
+class gallery(models.Model):
+    image = models.ImageField(null=True,blank = True,upload_to = 'img/gallery')
+
+class enquiry(models.Model):
+    name = models.CharField(max_length=255, null=True,blank=True)
+    email = models.CharField(max_length=255,null=True,blank=True)
+    phone = models.CharField(max_length=100,null=True,blank=True)
+    course = models.CharField(max_length=100,null=True,blank=True)
+    message = models.CharField(max_length=255,null=True,blank=True)

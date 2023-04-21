@@ -5,6 +5,11 @@
     <script src="https://cdnjs.cloudflare.com/ajax/lib/owlcarousel/owl.carousel.min.js"></script>
  
 <style>
+    p{
+        font-size: 18px;
+        text-align: justify ;
+        text-justify: distribute;
+    }
     .modal p{
         color: black;
         font-weight: 600;
@@ -420,6 +425,264 @@ span.text {
         }
     }
 
+
+
+     
+    .join-modal input, textarea, select, button {
+  font-size: 15px;
+  color: #666; }
+
+  .join-modal textarea {
+  resize: none; }
+
+  .join-modal :focus {
+  outline: none; }
+
+  .join-modal .wrapper {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  /* background: url("../images/bg-registration-form-6.jpg") no-repeat center center; */
+  background-size: cover; }
+
+  .join-modal .inner {
+  min-width: 861px;
+  transform: translateX(47px);
+  margin: auto;
+  display: flex;
+  background: #fff;
+  border-radius: 20px;
+  padding-top: 35px;
+  padding-bottom: 35px;
+  box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.2);
+  -webkit-box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.2);
+  -moz-box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.2);
+  -ms-box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.2);
+  -o-box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.2); }
+
+  .join-modal .image-holder img {
+  border-radius: 15px;
+  transform: translateX(-94px); }
+
+  .join-modal form {
+  padding-top: 42px;
+  min-width: 63.88%;
+  transform: translateX(-34px); }
+
+  .join-modal h3 {
+  font-size: 25px;
+  text-align: center;
+  margin-bottom: 21px;
+  color: #333;
+  text-transform: uppercase;
+  font-family: "ElMessiri-SemiBold.ttf"; }
+
+  .join-modal .form-control {
+  height: 47px;
+  display: block;
+  border: 1px solid #e6e6e6;
+  background: none;
+  border-radius: 5px;
+  padding: 0 19px; }
+  .join-modal .form-control:focus {
+    border: 1px solid #f4d5cc; }
+    .join-modal .form-control::-webkit-input-placeholder {
+    color: #999; }
+    .join-modal .form-control::-moz-placeholder {
+    color: #999; }
+    .join-modal .form-control:-ms-input-placeholder {
+    color: #999; }
+    .join-modal .form-control:-moz-placeholder {
+    color: #999; }
+
+    .join-modal select.form-control {
+  -moz-appearance: none;
+  -webkit-appearance: none;
+  cursor: pointer;
+  color: #999; }
+  .join-modal select.form-control option[value=""][disabled] {
+    display: none; }
+
+    .join-modal textarea.form-control {
+  width: 100%;
+  padding-top: 13px;
+  padding-bottom: 13px; }
+
+  .join-modal .form-row {
+  display: flex;
+  margin-bottom: 20px; }
+  .join-modal .form-row .form-control {
+    width: 50%; }
+    .join-modal .form-row .form-control:first-child {
+      margin-right: 20px; }
+      .join-modal .form-row .form-holder {
+    width: 50%; }
+    .join-modal .form-row .form-holder .form-control {
+      width: 100%; }
+
+      .join-modal .form-holder {
+  position: relative; }
+  .join-modal .form-holder i {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    right: 20px; }
+
+    .join-modal button {
+  height: 47px;
+  width: 174px;
+  display: flex;
+  border: none;
+  color: #fff;
+  align-items: center;
+  justify-content: center;
+  margin: auto;
+  margin-top: 30px;
+  cursor: pointer;
+  font-family: "Montserrat-Medium";
+  text-transform: uppercase;
+  background: #84cde1;
+  border-radius: 5px;
+  -webkit-transform: perspective(1px) translateZ(0);
+  transform: perspective(1px) translateZ(0);
+  overflow: hidden;
+  -webkit-transition-duration: 0.5s;
+  transition-duration: 0.5s;
+  -webkit-transition-property: color, background-color;
+  transition-property: color, background-color; }
+  .join-modal button i {
+    margin-left: 8px;
+    -webkit-transform: translateZ(0);
+    transform: translateZ(0); }
+    .join-modal button:hover {
+    -webkit-animation-name: hvr-back-pulse;
+    animation-name: hvr-back-pulse;
+    -webkit-animation-duration: 1s;
+    animation-duration: 1s;
+    -webkit-animation-delay: 0.5s;
+    animation-delay: 0.5s;
+    -webkit-animation-timing-function: linear;
+    animation-timing-function: linear;
+    -webkit-animation-iteration-count: infinite;
+    animation-iteration-count: infinite;
+    background-color: #17c8f8;
+    color: white; }
+    .join-modal button:hover i {
+      -webkit-animation-name: hvr-icon-buzz-out;
+      animation-name: hvr-icon-buzz-out;
+      -webkit-animation-duration: 0.75s;
+      animation-duration: 0.75s;
+      -webkit-animation-timing-function: linear;
+      animation-timing-function: linear;
+      -webkit-animation-iteration-count: infinite;
+      animation-iteration-count: infinite; }
+
+@-webkit-keyframes hvr-back-pulse {
+  50% {
+    background-color: rgba(32, 152, 209, 0.75); } }
+@keyframes hvr-back-pulse {
+  50% {
+    background-color: rgba(32, 152, 209, 0.75); } }
+@-webkit-keyframes hvr-icon-buzz-out {
+  10% {
+    -webkit-transform: translateX(3px) rotate(2deg);
+    transform: translateX(3px) rotate(2deg); }
+  20% {
+    -webkit-transform: translateX(-3px) rotate(-2deg);
+    transform: translateX(-3px) rotate(-2deg); }
+  30% {
+    -webkit-transform: translateX(3px) rotate(2deg);
+    transform: translateX(3px) rotate(2deg); }
+  40% {
+    -webkit-transform: translateX(-3px) rotate(-2deg);
+    transform: translateX(-3px) rotate(-2deg); }
+  50% {
+    -webkit-transform: translateX(2px) rotate(1deg);
+    transform: translateX(2px) rotate(1deg); }
+  60% {
+    -webkit-transform: translateX(-2px) rotate(-1deg);
+    transform: translateX(-2px) rotate(-1deg); }
+  70% {
+    -webkit-transform: translateX(2px) rotate(1deg);
+    transform: translateX(2px) rotate(1deg); }
+  80% {
+    -webkit-transform: translateX(-2px) rotate(-1deg);
+    transform: translateX(-2px) rotate(-1deg); }
+  90% {
+    -webkit-transform: translateX(1px) rotate(0);
+    transform: translateX(1px) rotate(0); }
+  100% {
+    -webkit-transform: translateX(-1px) rotate(0);
+    transform: translateX(-1px) rotate(0); } }
+@keyframes hvr-icon-buzz-out {
+  10% {
+    -webkit-transform: translateX(3px) rotate(2deg);
+    transform: translateX(3px) rotate(2deg); }
+  20% {
+    -webkit-transform: translateX(-3px) rotate(-2deg);
+    transform: translateX(-3px) rotate(-2deg); }
+  30% {
+    -webkit-transform: translateX(3px) rotate(2deg);
+    transform: translateX(3px) rotate(2deg); }
+  40% {
+    -webkit-transform: translateX(-3px) rotate(-2deg);
+    transform: translateX(-3px) rotate(-2deg); }
+  50% {
+    -webkit-transform: translateX(2px) rotate(1deg);
+    transform: translateX(2px) rotate(1deg); }
+  60% {
+    -webkit-transform: translateX(-2px) rotate(-1deg);
+    transform: translateX(-2px) rotate(-1deg); }
+  70% {
+    -webkit-transform: translateX(2px) rotate(1deg);
+    transform: translateX(2px) rotate(1deg); }
+  80% {
+    -webkit-transform: translateX(-2px) rotate(-1deg);
+    transform: translateX(-2px) rotate(-1deg); }
+  90% {
+    -webkit-transform: translateX(1px) rotate(0);
+    transform: translateX(1px) rotate(0); }
+  100% {
+    -webkit-transform: translateX(-1px) rotate(0);
+    transform: translateX(-1px) rotate(0); } }
+@media (max-width: 991px) {
+    .join-modal .inner {
+    min-width: auto;
+    max-width: 660px; }
+
+    .join-modal form {
+    padding-top: 0; } }
+@media (max-width: 767px) {
+    .join-modal .inner {
+    display: block;
+    transform: translateX(0);
+    border-radius: 0;
+    box-shadow: none; }
+
+    .join-modal .image-holder img {
+    transform: translateX(0);
+    border-radius: 0; }
+
+    .join-modal form {
+    transform: translateX(0);
+    padding-top: 40px; }
+
+    .join-modal .form-row {
+    display: block; }
+    .join-modal .form-row .form-control, .form-row .form-holder {
+      width: 100%; }
+
+      .join-modal .form-control {
+    margin-bottom: 20px; }
+
+    .join-modal .wrapper {
+    background: none; } }
+
+    .join-modal{
+        width:100%;
+        height: 50%;
+    }
+    
     
 </style>
 
@@ -429,18 +692,18 @@ span.text {
         <div class="owl-carousel-item position-relative">
             <img class="img-fluid" src="static/img/hero1.jpg" alt="">
             <div class="position-absolute top-0 start-0 w-100 h-100 d-flex align-items-center" style="background: rgba(24, 29, 56, .9);">
-                <div class="container">
+                <div class="container" >
                     <div class="row justify-content-start">
-                        <div class="col-sm-10 col-lg-8">
-                            <h1 class="display-3 text-white animated slideInDown">Best Software Training Institute of Kochi</h1>
-                            <h5 class="text-primary text-uppercase mb-3 animated slideInDown">Get the best software training of Kochi for better career</h5>
-                            <p class="fs-5 text-white mb-4 pb-2">Enhance Your Skills with Top-Rated Software Courses in Kochi
+                        <div class="col-sm-10 col-lg-8 p-1  ">
+                            <h1 class="display-3 mb-5 text-white animated slideInDown">Best Software Training Institute of Kochi</h1>
+                            <h4 class="text-primary text-uppercase mb-4 animated slideInDown">Get the best software training of Kochi for better career</h5>
+                            <p class="fs-5 text-white mb-5 pb-2">Enhance Your Skills with Top-Rated Software Courses in Kochi
                                 Altos Eduhub is the best software training institute in Kochi, offering industry-oriented courses to
                                 help students and professionals acquire the skills they need to succeed in their careers.
                             </p>
 
                             <a href="{% url 'courses' %}" class="btn btn-primary py-md-3 px-md-5 me-3 animated slideInLeft">View Courses</a> 
-                            <a href="" class="btn btn-light py-md-3 px-md-5 animated slideInRight">Join Now</a>
+                            <a href="" class="btn btn-light py-md-3 px-md-5 animated slideInRight" data-target="#join-modal" data-toggle="modal">Join Now</a>
                         </div>
                     </div>
                 </div>
@@ -452,10 +715,10 @@ span.text {
                 <div class="container">
                     <div class="row justify-content-start">
                         <div class="col-sm-10 col-lg-8">
-                            <h1 class="display-3 text-white animated slideInDown">Best Software Training Institute of Kochi</h1>
-                            <h5 class="text-primary text-uppercase mb-3 animated slideInDown">Get the best software training of Kochi for better career</h5>
-                            <p class="fs-5 text-white mb-4 pb-2">Empowering Your Tech Career with Expert Guidance.</p>
-                            <p class="fs-5 text-white mb-4 pb-2"> Our experienced trainers guide you through the entire learning process with hands-on training,
+                            <h1 class="display-3 mb-5 text-white animated slideInDown">Best Software Training Institute of Kochi</h1>
+                            <h4 class="text-primary text-uppercase mb-5 animated slideInDown">Get the best software training of Kochi for better career</h5>
+                            <p class="fs-5 text-white mb-5 pb-2">Empowering Your Tech Career with Expert Guidance.</p>
+                            <p class="fs-5 text-white mb-5 pb-2"> Our experienced trainers guide you through the entire learning process with hands-on training,
                                 live projects, and industry-relevant curriculum and personalized attention to help learners
                                 master the subject.
                             </p>
@@ -473,10 +736,10 @@ span.text {
                 <div class="container">
                     <div class="row justify-content-start">
                         <div class="col-sm-10 col-lg-8">
-                            <h1 class="display-3 text-white animated slideInDown">Best Software Training Institute of Kochi</h1>
-                            <h5 class="text-primary text-uppercase mb-3 animated slideInDown">Get the best software training of Kochi for better career</h5>
-                            <h6 class="text-primary text-uppercase mb-3 animated slideInUp">Why Do You Choose Altos Eduhub?</h6>
-                            <p class="fs-5 text-white mb-4 pb-2"> Altos Eduhub offers industry-relevant courses, experienced trainers, hands-on training,
+                            <h1 class="display-3 mb-5 text-white animated slideInDown">Best Software Training Institute of Kochi</h1>
+                            <h4 class="text-primary text-uppercase mb-5 animated slideInDown">Get the best software training of Kochi for better career</h5>
+                            <h5 class="text-primary text-uppercase mb-5 animated slideInUp">Why Do You Choose Altos Eduhub?</h6>
+                            <p class="fs-5 text-white mb-5 pb-2" > Altos Eduhub offers industry-relevant courses, experienced trainers, hands-on training,
                                 personalized attention, and a comprehensive curriculum, making it a top choice for individuals
                                 looking to enhance their technical skills and excel in their careers.
                             </p>
@@ -503,7 +766,7 @@ span.text {
                 </div>
                 <div class="col-lg-12 wow fadeInUp justify-content-center" data-wow-delay="0.3s">
                     
-                    <p class="mb-5"> Altos Eduhub is the best software training institute in Kochi, Kerala, owned by Altos
+                    <p class="mb-5" style="text-align: justify; text-justify: distribute; font-size: 20px; font-family: 'Nunito',sans-serif;"> Altos Eduhub is the best software training institute in Kochi, Kerala, owned by Altos
                         Technologies, a leading software development company in Kerala. We offer top-notch training
                         programs in Python, Front End Development, Digital Marketing, React JS, and REST API. Our
                         institute provides on-the-job training to ensure that learners gain practical experience and are
@@ -550,7 +813,6 @@ span.text {
                         <span class="sr-only">Next</span>
                       </a>
     
-                    <!-- <img class="img-fluid position-absolute w-100 h-100" src="static/img/about.jpg" alt="" style="object-fit: cover;"> -->
                 </div>
             </div>
     
@@ -566,7 +828,7 @@ span.text {
                 <div class="service-item text-center pt-3 service1">
                     <div class="p-4">
                         <i class="fa fa-3x fa-graduation-cap text-primary mb-4"></i>
-                        <h5 class="mb-3 " >Skilled Instructors</h5>
+                        <h5 class="mb-3">Skilled Instructors</h5>
                         <p>Our instructors are industry experts committed to providing up-to-date training to learners.</p>
                     </div>
                 </div>
@@ -608,11 +870,11 @@ span.text {
 <div id="modal1" class="modal m-0 modal1" >
     <div class="modal-content m-0" style="margin-left: 50%;">
       
-      <p class="m-2 " style=" color: var(--dark); ">Skilled Instructors</p>
+      <h6 class="m-2 " style=" color: var(--dark); ">Skilled Instructors</h6>
       <h5 class="text-primary text-center text-uppercase mb-3 animated slideInDown m-2" style="color: var(--primary);">50+ Faculties
         <br><small>We have 50+ internal/external working Faculties from IT companies.</small></h5>
       <hr style="color:grey">
-      <p class="mt-4 p-3">Qui accusantium deleniti et vero deserunt et tenetur voluptatum non mollitia asperiores.
+      <p class="mt-4 p-3" style="text-align: justify; text-justify: distribute; font-size: 16px; font-family: 'Nunito',sans-serif;">Qui accusantium deleniti et vero deserunt et tenetur voluptatum non mollitia asperiores.
 
         Id animi Quis et rerum reprehenderit rem molestiae debitis id obcaecati harum! 33 consequatur recusandae qui ipsam quisquam et deserunt consequuntur nam fugit nemo?
         
@@ -624,10 +886,10 @@ span.text {
   <div id="modal2" class="modal m-0 modal2">
     <div class="modal-content m-0" style="margin-left: 50%;">
       
-      <p class="m-2" style="color: var(--dark);">Online Classes</p>
+      <h6 class="m-2" style="color: var(--dark);">Online Classes</h6>
       <h5 class="text-primary text-center text-uppercase mb-3 animated slideInDown m-2" style="color: var(--primary);">Live online classes <br><small>allow students to interact with their instructors in real time</small> </h5>
       <hr style="color:grey">
-      <p class="mt-4 p-3">Qui accusantium deleniti et vero deserunt et tenetur voluptatum non mollitia asperiores.
+      <p class="mt-4 p-3" style="text-align: justify; text-justify: distribute; font-size: 16px; font-family: 'Nunito',sans-serif;">Qui accusantium deleniti et vero deserunt et tenetur voluptatum non mollitia asperiores.
 
         Id animi Quis et rerum reprehenderit rem molestiae debitis id obcaecati harum! 33 consequatur recusandae qui ipsam quisquam et deserunt consequuntur nam fugit nemo?
         
@@ -640,13 +902,13 @@ span.text {
   <div id="modal3" class="modal m-0 modal3 ">
     <div class="modal-content m-0" style="margin-left: 50%;">
       
-      <p class="m-2" style="color: var(--dark);">Experience Certification</p>
+      <h6 class="m-2" style="color: var(--dark);">Experience Certification</h6>
       <h5 class="text-primary text-center text-uppercase mb-3 animated slideInDown m-2" style="color: var(--primary);">Skill-based, hands-on learning <br><small>
         
         with Expert guidance
       </small></h5>
       <hr style="color:grey">
-      <p class="mt-4 p-3">Qui accusantium deleniti et vero deserunt et tenetur voluptatum non mollitia asperiores.
+      <p class="mt-4 p-3 " style="text-align: justify; text-justify: distribute; font-size: 16px; font-family: 'Nunito',sans-serif;">Qui accusantium deleniti et vero deserunt et tenetur voluptatum non mollitia asperiores.
 
         Id animi Quis et rerum reprehenderit rem molestiae debitis id obcaecati harum! 33 consequatur recusandae qui ipsam quisquam et deserunt consequuntur nam fugit nemo?
         
@@ -658,10 +920,10 @@ span.text {
   <div id="modal4" class="modal m-0 modal4">
     <div class="modal-content m-0" style="margin-left: 50%;">
       
-      <p class="m-2" style="color: var(--dark);">Placement Assistance</p>
+      <h6 class="m-2" style="color: var(--dark);">Placement Assistance</h6>
       <h5 class="text-primary text-center text-uppercase mb-3 animated slideInDown m-2" style="color: var(--primary);">20K+ Students<br><small>have been studied and placed.</small></h5>
     <hr style="color:grey">
-      <p class="mt-4 p-3">Qui accusantium deleniti et vero deserunt et tenetur voluptatum non mollitia asperiores.
+      <p class="mt-4 p-3" style="text-align: justify; text-justify: distribute; font-size: 16px; font-family: 'Nunito',sans-serif;">Qui accusantium deleniti et vero deserunt et tenetur voluptatum non mollitia asperiores.
 
         Id animi Quis et rerum reprehenderit rem molestiae debitis id obcaecati harum! 33 consequatur recusandae qui ipsam quisquam et deserunt consequuntur nam fugit nemo?
         
@@ -735,10 +997,10 @@ span.text {
         <div class="row g-4  justify-content-center" >
             {% for c in courses %}
             <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.1s" >
-                <div class="course-item bg-light" style="height:500px;">
+                <div class="course-item bg-light" style="height:520px !important;">
                     <div class="position-relative overflow-hidden">
                         {% if c.image %}
-                        <img src="{{ c.image.url }}" class="img-fluid" >
+                        <img src="{{ c.image.url }}" class="img-fluid" style="width:500px; height: 235px !important;">
                         
                         {% endif %}
                         <div class="w-100 d-flex justify-content-center position-absolute bottom-0 start-0 mb-4">
@@ -755,8 +1017,6 @@ span.text {
                 </div>
             </div>
             {% endfor %}
-            
-
         </div>
     </div>
 </div>
@@ -840,7 +1100,7 @@ span.text {
             <h6 class="section-title bg-white text-center text-primary px-3">Testimonial</h6>
             <h1 class="mb-5">Our Students Say!</h1>
         </div>
-        <div class="owl-carousel testimonial-carousel position-relative">
+        <div class="owl-carousel testimonial-carousel position-relative ">
             {% for s in review %}
             <div class="testimonial-item text-center">
                 {% if s.image %}
@@ -860,35 +1120,79 @@ span.text {
                 </div>
             </div>
             {% endfor %}
-            <!-- <div class="testimonial-item text-center">
-                <img class="border rounded-circle p-2 mx-auto mb-3" src="static/img/testimonial-2.jpg" style="width: 80px; height: 80px;">
-                <h5 class="mb-0">Client Name</h5>
-                <p>Profession</p>
-                <div class="testimonial-text bg-light text-center p-4">
-                <p class="mb-0">Tempor erat elitr rebum at clita. Diam dolor diam ipsum sit diam amet diam et eos. Clita erat ipsum et lorem et sit.</p>
-                </div>
-            </div> -->
-            <!-- <div class="testimonial-item text-center">
-                <img class="border rounded-circle p-2 mx-auto mb-3" src="static/img/testimonial-3.jpg" style="width: 80px; height: 80px;">
-                <h5 class="mb-0">Client Name</h5>
-                <p>Profession</p>
-                <div class="testimonial-text bg-light text-center p-4">
-                <p class="mb-0">Tempor erat elitr rebum at clita. Diam dolor diam ipsum sit diam amet diam et eos. Clita erat ipsum et lorem et sit.</p>
-                </div>
-            </div> -->
-            <!-- <div class="testimonial-item text-center">
-                <img class="border rounded-circle p-2 mx-auto mb-3" src="static/img/testimonial-4.jpg" style="width: 80px; height: 80px;">
-                <h5 class="mb-0">Client Name</h5>
-                <p>Profession</p>
-                <div class="testimonial-text bg-light text-center p-4">
-                <p class="mb-0">Tempor erat elitr rebum at clita. Diam dolor diam ipsum sit diam amet diam et eos. Clita erat ipsum et lorem et sit.</p>
-                </div>
-            </div> -->
+            
         </div>
     </div>
 </div>
 <!-- Testimonial End -->
 
+<!-- enquiry modal -->
+
+<div id="join-modal" class="join-modal modal m-0">
+    <div class="modal-content m-0" style="margin-left: 50%;">
+      <span class="close">&times;</span>
+      <h2 class=" p-3">Updates</h2>
+      
+      <p class="m-2">Great Things Are Happening</p>
+      <h5 class="text-primary text-uppercase mb-3 animated slideInDown m-2" style="color: var(--dark);">Sign up and be the first to know</h5>
+      <hr style="color:grey">
+      <form action="{% url 'subscribe' %}" method="post" class="p-3">
+        {% csrf_token %}
+        <!-- <div class="form-group">
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="name" required>
+        </div> -->
+        <div class="form-group">
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required>
+        </div>
+        <!-- <div class="form-group">
+            <label for="message">Message:</label>
+            <textarea id="message" name="message" required></textarea>
+        </div> -->
+
+        <input type="submit" class="btn btn-dark py-md-3 px-md-5 animated slideInRight" style="margin-left: 50px;" value="Signup">
+      </form>
+      
+    </div>
+  </div>
+    <div id="join-modal" class=" join-modal modal m-0">
+        <div class="modal-content m-0" style="margin-left: 50%;">
+            <div class="col">
+                <button type="button" class="close align-items-end" data-dismiss="modal" >&times;</button>
+            </div>
+            <div class="wrapper">
+                <div class="inner">
+                    
+                    <form action="">
+                        <h3>Start Learning</h3>
+                        <div class="form-row">
+                            <input type="text" class="form-control" id="name" name="name" placeholder="Name">
+                            <input type="email" class="form-control" id="name" name="name" placeholder="Email">
+                        </div>
+                        <div class="form-row">
+                            <input type="text" class="form-control" id="phone" name="phone" placeholder="Phone">
+                            <div class="form-holder">
+                                <select name="course" id="course" class="form-control">
+                                    <!-- <option value="" disabled selected>Choose Your Course</option>
+                                    <option value="class 01">Class 01</option>
+                                    <option value="class 02">Class 02</option>
+                                    <option value="class 03">Class 03</option> -->
+                                </select>
+                                <i class="zmdi zmdi-chevron-down"></i>
+                            </div>
+                        </div>
+                        <textarea name="message" id="message" placeholder="Message" class="form-control" style="height: 130px;"></textarea>
+                        <button type="submit" data-dismiss="modal">Join
+                            <i class="zmdi zmdi-long-arrow-right"></i>
+                        </button>
+                    </form>
+                    
+                </div>
+            </div>
+        </div>
+    </div>
+ <!-- enquiry modal end -->
 
 <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
@@ -896,7 +1200,6 @@ span.text {
 
 
 <script>
-   
 
 
     let valueDisplays = document.querySelectorAll(".num");
@@ -915,39 +1218,7 @@ span.text {
     });
 
                       
-//   $(document).ready(function(){
 
-
-//     $('#video-carousel').on('slide.bs.carousel', function () {
-//       var video = $('video:visible')[0]; // get the currently visible video
-//       if (video) {
-//         video.pause(); // pause the video if it's playing
-//       }
-//     });
-
-
-//     var videoPlaying = false;
-//     var video = $('video:visible')[0];
-//     if (video && !video.paused) {
-//       videoPlaying = true;
-//     }
-//     $('#video-carousel').on('slid.bs.carousel', function () {
-//       video = $('video:visible')[0];
-//       if (video && !video.paused) {
-//         videoPlaying = true;
-//       } else {
-//         videoPlaying = false;
-//       }
-//     });
-//     $('#video-carousel').on('slide.bs.carousel', function (e) {
-//       if (videoPlaying) {
-//         e.preventDefault(); 
-//       }
-//     });
-//     $('#video-carousel').carousel();
-//   });
-
-    
 
 //   Service 1 
    
@@ -1048,6 +1319,14 @@ span.text {
             modalPopup1.hide();
         }
     );
+
+
+    $(function(){
+	$('.form-holder').delegate("input", "focus", function(){
+		$('.form-holder').removeClass("active");
+		$(this).parent().addClass("active");
+	})
+})
 
 </script>
 
