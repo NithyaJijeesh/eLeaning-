@@ -13,21 +13,37 @@
     h1{
         color: var(--light);
     }
+    nav .breadcrumb{
+        margin-left: 1100px; margin-top: 50px
+    }
+    @media (min-width: 600px)and ( max-width:1000px) {
 
+        nav .breadcrumb{
+        margin-left: 550px; 
+        margin-top: 50px     
+    }
+    }
+    @media (min-width: 300px)and ( max-width:800px) {
+
+        nav .breadcrumb{
+            margin-left: 0px; 
+        margin-top: 0px    
+        }
+        }
 </style>
     <!-- Header Start -->
     <div class="container-fluid bg-primary py-5 mb-5 page-header">
-        <div class="container py-5">
+        <div class="container py-0 ">
+            <nav class ="breadcrumb" aria-label="breadcrumb justify-content-right" >
+                <ol class="breadcrumb ">
+                    <li class="breadcrumb-item"><a class="text-white" href="{% url 'index'  %}">Home</a></li>
+                    <li class="breadcrumb-item text-white active" aria-current="page">Courses</li>
+                </ol>
+            </nav>
             <div class="row justify-content-center">
                 <div class="col-lg-10 text-center">
-                    <h1 class="display-3 text-white animated slideInDown">Contact</h1>
-                    <nav aria-label="breadcrumb">
-                        <ol class="breadcrumb justify-content-center">
-                            <li class="breadcrumb-item"><a class="text-white" href="{% url 'index' %}">Home</a></li>
-                            <!-- <li class="breadcrumb-item"><a class="text-white" href="#">Pages</a></li> -->
-                            <li class="breadcrumb-item text-white active" aria-current="page">Contact</li>
-                        </ol>
-                    </nav>
+                    <h6 class="section-title bg-white text-center text-primary px-3">Contact Us</h6>
+                    <h1 class="mb-5">Contact For Any Query</h1>
                 </div>
             </div>
         </div>
@@ -38,13 +54,13 @@
     <!-- Contact Start -->
     <div class="container-xxl py-5">
         <div class="container">
-            <div class="text-center wow fadeInUp" data-wow-delay="0.1s">
+            <!-- <div class="text-center wow fadeInUp" data-wow-delay="0.1s">
                 <h6 class="section-title bg-white text-center text-primary px-3">Contact Us</h6>
                 <h1 class="mb-5">Contact For Any Query</h1>
-            </div>
+            </div> -->
             <div class="col-lg-12 wow fadeInUp justify-content-center p-3 m-5" data-wow-delay="0.3s">
                 
-                <p class=" text-light mt-3 p-1" style="text-align: justify; text-justify: distribute; font-size: 20px; font-family: 'Nunito',sans-serif;">
+                <p class=" text-light mt-1 p-1" style="text-align: justify; text-justify: distribute; font-size: 20px; font-family: 'Nunito',sans-serif;">
                     Welcome to Altos Eduhub's Contact Us page! We're thrilled that you're interested in our
 on-the-job training programs and would love to hear from you.
  
@@ -57,7 +73,7 @@ experts is here to help you every step of the way.
 
             <div class="row g-4">
                 <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.1s">
-                    <h5>Get In Touch</h5>
+                    <h4>Get In Touch</h4>
                     <p class="mb-4" style="text-align: justify; text-justify: distribute; font-size: 16px; font-family: 'Nunito',sans-serif;">To get in touch with us, simply fill out the contact form on this page or email us at info@Altostechnologies.in . Our team will get back to you as soon as possible to address your inquiry.</a></p>
                     <div class="d-flex align-items-center mb-3">
                         <div class="d-flex align-items-center justify-content-center flex-shrink-0 bg-primary" style="width: 50px; height: 50px;">
@@ -127,7 +143,7 @@ experts is here to help you every step of the way.
                                 </div>
                             </div>
                             <div class="col-12">
-                                <button class="btn btn-primary w-100 py-3" type="submit">Send Message</button>
+                                <button class="btn btn-primary w-100 py-3" type="submit" onclick="sendMessage()">Send Message</button>
                             </div>
                         </div>
                     </form>
@@ -137,5 +153,67 @@ experts is here to help you every step of the way.
     </div>
     <!-- Contact End -->
 
+    <!-- messageBox -->
+    <div id="messageBox">
+        <p id="messageText"></p>
+        <button class="text-center justify-content-center" id="closeButton" onclick="closeMessageBox()">Close</button>
+      </div>
+
+      <!-- end messageBox -->
+      <style>
+
+            #messageBox {
+            position: fixed;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            background-color: var(--primary);
+            border-radius: 10px;
+            padding: 20px;
+            display: none;
+            }
+
+            #messageText {
+            font-size: 20px;
+            font-weight: bold;
+            margin: 0 0 10px 0;
+            color: var(--dark);
+            }
+
+            #closeButton {
+            background-color: var(--dark);
+            color: #fff;
+            border: none;
+            border-radius: 10px;
+            padding: 10px;
+            margin-top: 10px;
+            cursor: pointer;
+            margin-left: 100px;
+            }
+      </style>
+    <script>
+        function sendMessage() {
+
+            var nameInput = document.getElementById("name").value;
+            var emailInput = document.getElementById("email").value;
+            var messageInput = document.getElementById("message").value;
+            var messageBox = document.getElementById("messageBox");
+            var messageText = document.getElementById("messageText");
+            
+            if (nameInput === "" || emailInput === "" || messageInput === "") {
+                messageText.innerText = "Please fill in all fields before sending the message.";
+                messageBox.style.display = "block";
+            } else {
+                messageText.innerText = "We will get back to you as soon as possible";
+                messageBox.style.display = "block";
+            }
+            }
+
+            function closeMessageBox() {
+            var messageBox = document.getElementById("messageBox");
+            messageBox.style.display = "none";
+            }
+
+    </script>
 
     {% endblock %}

@@ -15,7 +15,7 @@
     }
     p, li,small{
         font-size: 18px;
-        text-align: justify ;
+        text-align: justify;
         text-justify: distribute;
     }
     .course-item{
@@ -37,21 +37,22 @@
             overflow:scroll;
     }
     }
+
 </style>
 
     <!-- Header Start -->
     <div class="container-fluid bg-primary py-5 mb-5 page-header">
-        <div class="container py-5">
-            <nav aria-label="breadcrumb">
-                <ol class="breadcrumb justify-content-right">
+        <div class="container py-0 ">
+            <nav class ="breadcrumb" aria-label="breadcrumb justify-content-right" >
+                <ol class="breadcrumb ">
                     <li class="breadcrumb-item"><a class="text-white" href="{% url 'index'  %}">Home</a></li>
                     <li class="breadcrumb-item text-white active" aria-current="page">Courses</li>
                 </ol>
             </nav>
             <div class="row justify-content-center">
-                <div class="col-lg-10 text-center wow fadeIn">
-                    <h6 class="section-title bg-white text-center text-white px-3">Courses</h6>
-
+                <div class="col-lg-10 text-center wow fadeInUp">
+                    <h6 class="section-title bg-dark text-center text-primary px-3">Courses</h6>
+                    <h1 class="mb-5">On the Job Training</h1>
                 </div>
             </div>
         </div>
@@ -63,22 +64,22 @@
 <div class="container-xxl py-5">
     <div class="container justify-content-between">
         <div class="text-center wow fadeInUp" data-wow-delay="0.1s">
-            <h6 class="section-title bg-white text-center text-primary px-3">Courses</h6>
-            <h1 class="mb-5">On the Job Training</h1>
-            <hr>
-            <p class=" text-light mt-3 p-1" style="text-align: justify; text-justify: distribute; font-size: 20px; font-family: 'Nunito',sans-serif;">
+            <!-- <h6 class="section-title bg-white text-justify text-primary px-3">Courses</h6>
+            <h1 class="mb-5">On the Job Training</h1> -->
+            <!-- <hr> -->
+            <p class=" text-light mt-1 p-3" style="text-align: justify;text-justify: distribute; font-size: 20px; font-family: 'Nunito',sans-serif;">
                 Welcome to Altos Eduhub - the premier software training company in Kerala, and a subsidiary of
                 Altos Technologies - one of the leading software development companies in Kochi. We offer a
                 range of on-the-job training programs in Python, React JS, Front End Development, REST API,
                 and Digital Marketing. Our courses are designed to equip you with the skills and knowledge you
                 need to succeed in the competitive world of software development.
-                <p class="p-1" style="text-align: justify; text-justify: distribute; font-size: 20px; font-family: 'Nunito',sans-serif;">
+                <p class="p-1" style="text-align: justify;text-justify: distribute; font-size: 20px; font-family: 'Nunito',sans-serif;">
                 Our training programs are six months in duration, with the first three months focused on
                 fundamental training and the remaining three months dedicated to practical work on live
                 projects. Upon successful completion of the training, you will receive an experience certificate.
                 For Python training, we also offer guaranteed placement at Altos Technologies, while for other
                 programs, we provide placement assistance.</p>
-                <p class="mb-5 p-1" style="text-align: justify; text-justify: distribute; font-size: 20px; font-family: 'Nunito',sans-serif;">
+                <p class="mb-5 p-1" style="text-align: justify;text-justify: distribute; font-size: 20px; font-family: 'Nunito',sans-serif;">
                 To ensure the best possible training experience for our candidates, we have implemented
                 several measures. As a part of our training program, we provide candidates with access to Altos
                 core software, where they can update their tasks and track their work status efficiently.
@@ -87,47 +88,51 @@
                 clearing section that is available 24 hours a day, seven days a week.
             </p>
         </div>
+
+        <style>
+            ul {
+                list-style-type: none;
+            }
+            ul li{
+                color: var(--light);
+            }
+            ul li::before {
+                content: "-►";
+                color: var(--primary);
+                font-size: 20px;
+                margin-right: 5px;
+            }
+        </style>
         <div class="text-center animated slideInRight" data-wow-delay="0.1s">
-            <h1 class="mb-5">Why Altos Eduhub ?</h1>
+            <h3 class="mb-5 animated slideInLeft">Why Altos Eduhub ?</h3>
             <hr>
             <div class="row gy-2 gx-4 mb-5 " >
                     
-                <div class="col-sm-6 text-start">
-                    <p class="mb-0" style="text-align: justify; text-justify: distribute ;"><i class="fa fa-arrow-right text-primary me-2"></i>Experience certificate upon successful completion of training</p>
+                <div class="col-sm-6 text-center m-0 p-0" style="margin-right: 0;">
+                    <ul>
+                        <li class="p-1" style="text-align: justify;text-justify: distribute ;">Experience certificate upon successful completion of training</li>
+                        <li class="p-1" style="text-align: justify;text-justify: distribute ;">Assured placement assistance for certain programs</li>
+                        <li class="p-1" style="text-align: justify;text-justify: distribute ;">24-hour doubt clearing assistance for all candidates</li>
+                        <li class="p-1" style="text-align: justify;text-justify: distribute ;">Training on live projects to gain hands-on experience</li>
+                        <li class="p-1" style="text-align: justify;text-justify: distribute ;">Career development guidance to help candidates achieve their career goals</li>
+                    </ul>
                 </div>
-                <div class="col-sm-6 text-start">
-                    <p class="mb-0"><i class="fa fa-arrow-right text-primary me-2"></i>Assured placement assistance for certain programs</p>
+                <div class="col-sm-6 text-center m-0 p-0" style="margin-left: 0;">
+                    <ul>
+                        <li class="p-1" style="text-align: justify;text-justify: distribute ;">Highly experienced trainers with years of industry experience</li>
+                        <li class="p-1" style="text-align: justify;text-justify: distribute ;">Access to Altos core software for tracking training progress and work status</li>
+                        <li class="p-1" style="text-align: justify;text-justify: distribute ;">Weekly meetings to evaluate work and performance</li>
+                        <li class="p-1" style="text-align: justify;text-justify: distribute ;">Convenient EMI payment options for training program fees</li>
+                        <li class="p-1" style="text-align: justify;text-justify: distribute ;">Located in Infopark, Kochi - a premier technology park with state-of-the-art facilities</li>
+                    </ul>
                 </div>
-                <div class="col-sm-6 text-start">
-                    <p class="mb-0"><i class="fa fa-arrow-right text-primary me-2"></i>24-hour doubt clearing assistance for all candidates</p>
-                </div>
-                <div class="col-sm-6 text-start">
-                    <p class="mb-0"><i class="fa fa-arrow-right text-primary me-2"></i>Training on live projects to gain hands-on experience</p>
-                </div>
-                <div class="col-sm-6 text-start">
-                    <p class="mb-0"><i class="fa fa-arrow-right text-primary me-2"></i>Career development guidance to help candidates achieve their career goals</p>
-                </div>
-                <div class="col-sm-6 text-start">
-                    <p class="mb-0"><i class="fa fa-arrow-right text-primary me-2"></i>Highly experienced trainers with years of industry experience</p>
-                </div>
-                <div class="col-sm-6 text-start">
-                    <p class="mb-0"><i class="fa fa-arrow-right text-primary me-2"></i>Access to Altos core software for tracking training progress and work status</p>
-                </div>
-                <div class="col-sm-6 text-start">
-                    <p class="mb-0"><i class="fa fa-arrow-right text-primary me-2"></i>Weekly meetings to evaluate work and performance</p>
-                </div>
-                <div class="col-sm-6 text-start">
-                    <p class="mb-0"><i class="fa fa-arrow-right text-primary me-2"></i>Convenient EMI payment options for training program fees</p>
-                </div>
-                <div class="col-sm-6 text-start">
-                    <p class="mb-0"><i class="fa fa-arrow-right text-primary me-2"></i>Located in Infopark, Kochi - a premier technology park with state-of-the-art facilities</p>
-                </div>
+
             </div>
         </div>
 
         <div class="row g-4  justify-content-center" >
             <div class="text-center wow fadeInLeftBig">
-                <h1 class="mb-5">Offered Courses</h1>
+                <h3 class="mb-5">Offered Courses</h3>
             </div>
             <hr>
             {% for c in courses %}
@@ -153,11 +158,11 @@
                             offered as part of the program are:
                             </p>
                         <ol>
-                            {% for li in c.course_description_list_set.all %}
-                                <li>{{ li.list_item }}</li>
-                            {%endfor %}
+                            {% for s in c.course_description_list_set.all %}
+                                <li>{{ s.list_item }}</li>
+                            {% endfor %}
                         </ol>
-                        <h5 class="mb-1 text-center"><b>Course Fee:</b>{%if c.fee is not None %} ₹{{c.fee}}.00 {% endif %}</h5>
+                        <h5 class="mb-1 text-left"><b>Course Fee:</b>{%if c.fee is not None %} ₹{{c.fee}}.00 {% endif %}</h5>
                     </div>
                     <div class="d-flex border-top">
                         <small class="flex-fill text-center border-end py-3"><b>Next Batch </b> <br>{%if c.start_date is not None %} {{c.start_date}} {% endif %}</small>

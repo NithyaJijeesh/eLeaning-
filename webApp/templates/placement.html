@@ -52,19 +52,23 @@
           margin-top: -10px;
           background: #06BBCC;
       }
+
+    
 </style>
 <!-- Header Start -->
 <div class="container-fluid bg-primary py-5 mb-5 page-header">
-    <div class="container py-5">
+  <div class="container py-0 ">
+    <nav class ="breadcrumb" aria-label="breadcrumb justify-content-right" >
+        <ol class="breadcrumb ">
+            <li class="breadcrumb-item"><a class="text-white" href="{% url 'index'  %}">Home</a></li>
+            <li class="breadcrumb-item text-white active" aria-current="page">Courses</li>
+        </ol>
+    </nav>
         <div class="row justify-content-center">
             <div class="col-lg-10 text-center">
-                <h1 class="display-3 text-white animated slideInDown">Placements</h1>
-                <nav aria-label="breadcrumb">
-                    <ol class="breadcrumb justify-content-center">
-                        <li class="breadcrumb-item"><a class="text-white" href="{% url 'index' %}">Home</a></li>
-                        <li class="breadcrumb-item text-white active" aria-current="page">Placements</li>
-                    </ol>
-                </nav>
+              <h6 class="section-title text-center text-primary px-3 bg-dark">Placements</h6>
+              <h1 class="mb-5">Take the Next Step</h1>
+                
             </div>
         </div>
     </div>
@@ -78,19 +82,19 @@
 
 <div class="container">
   
-    <div class="text-center wow fadeInRight" data-wow-delay="0.1s">
+    <!-- <div class="text-center wow fadeInRight" data-wow-delay="0.1s">
         <h6 class="section-title bg-white text-center text-primary px-3">Placements</h6>
         <h1 class="mb-5">Take the Next Step</h1>
     </div>
-    <hr>
-    <p class=" text-light m-5 p-5" style="text-align: justify; text-justify: distribute; font-size: 20px; font-family: 'Nunito',sans-serif;">
+    <hr> -->
+    <p class=" text-light mt-1 p-3" style="text-align: justify; text-justify: distribute; font-size: 20px; font-family: 'Nunito',sans-serif;">
       At Altos Eduhub, we take immense pride in the success of our students. With a strong focus on
       skill-building and practical experience, our training programs have enabled countless graduates
       to secure top positions in leading companies.
       </p>
 
     <div class="text-center wow fadeInLeft" data-wow-delay="0.1s">
-        <h1 class="mb-5">Students Placed in 2022-2023</h1>
+        <h3 class="mb-3">Students Placed in 2022-2023</h3>
     </div>
     <div class="row p-5" style="display: flex; flex-wrap: wrap;">
         <div class="col-md-3"  style="margin-bottom: 5px; display:flex; flex-grow: 1;">
