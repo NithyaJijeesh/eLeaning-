@@ -17,6 +17,7 @@ class course_details(models.Model):
     fee = models.IntegerField(null=True,blank=True)
     duration = models.CharField(max_length=100,null=True,blank=True)
     start_date = models.DateField(null=True,blank=True)
+    # course_url = models.URLField(max_length=200,null=True,blank=True)
 
 class course_description_list(models.Model):
     list_item = models.CharField(max_length=100)

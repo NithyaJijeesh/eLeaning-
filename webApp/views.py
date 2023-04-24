@@ -59,3 +59,32 @@ def contactuss(request):
         contactus(name = name, email = email, subject = subject, message = message).save()
 
     return redirect('/contact')
+
+
+def python_dev(request):
+    return render(request,'python.html')
+
+# def react_dev(request):
+#     return render(request,'react.html')
+
+# def rest_api(request):
+#     return render(request,'restapi.html')
+
+# def digital_marketing(request):
+#     return render(request,'digital.html')
+
+# def frontend_dev(request):
+#     return render(request,'frontend.html')
+
+def course_select(request,pk):
+
+    # if pk == 1:
+    return redirect('python_dev')
+    # elif pk == 2:
+    #     return render(request,'react.html')
+    # elif pk == 3:
+    #     return render(request,'frontend.html')
+    # elif pk == 4:
+    #     return render(request,'restapi.html')
+    # else:
+    #     return render(request,'digital.html')
