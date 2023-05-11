@@ -57,9 +57,7 @@
   }
 }
 
-.service-item h5{
-    color: #181d38;
-}
+
 
 /* modal */
          h2{
@@ -220,7 +218,8 @@
  backdrop-filter: blur(10px);
  box-shadow: -1px -1px 4px #aaa9a9a2,
               1px 1px 7px rgba(147, 149, 151, 0.671);
- background: #F0FBFC;
+ background: transparent;
+ color: var(--light);
 }
 .container1:hover {
  width: 28vmin;
@@ -244,19 +243,27 @@
  text-align: center;
 }
 span.num {
- color: #181d38;
+ color: var(--light);
  display: grid;
  place-items: center;
  font-weight: 600;
  font-size: 3em;
 }
 span.text {
- color: #181d38;
+ color: var(--light);
  font-size: 1em;
  text-align: center;
  pad: 0.7em 0;
  font-weight: 400;
  line-height: 0;
+}
+span.num:hover
+{
+    color: var(--dark);
+}
+span.text:hover
+{
+    color: var(--dark);
 }
 .container1 img{
     margin-left: 40%;
@@ -274,19 +281,27 @@ span.text {
     margin-left: 40%;
 }
 span.num {
- color: #181d38;
+ color: var(--light);
  display: grid;
  place-items: center;
  font-weight: 600;
  font-size: 5em;
 }
 span.text {
- color: #181d38;
+ color: var(--light);
  font-size: 2em;
  text-align: center;
  pad: 0.7em 0;
  font-weight: 400;
  line-height: 0;
+}
+span.num:hover
+{
+    color: var(--dark);
+}
+span.text:hover
+{
+    color: var(--dark);
 }
 }
 @media screen and (max-width: 768px) {
@@ -302,19 +317,27 @@ span.text {
   font-size: 14px;
 }
 span.num {
- color: #181d38;
+ color: var(--light);
  display: grid;
  place-items: center;
  font-weight: 600;
  font-size: 5em;
 }
 span.text {
- color: #181d38;
+ color: var(--light);
  font-size: 2em;
  text-align: center;
  pad: 0.7em 0;
  font-weight: 400;
  line-height: 0;
+}
+span.num:hover
+{
+    color: var(--dark);
+}
+span.text:hover
+{
+    color: var(--dark);
 }
 }
 @media screen and (max-width: 480px) {
@@ -333,19 +356,27 @@ span.text {
         margin-left: 160px;
     }
 span.num {
- color: #181d38;
+ color: var(--light);
  display: grid;
  place-items: center;
  font-weight: 600;
  font-size: 5em;
 }
 span.text {
- color: #181d38;
+ color: var(--light);
  font-size: 2em;
  text-align: center;
  pad: 0.7em 0;
  font-weight: 400;
  line-height: 0;
+}
+span.num:hover
+{
+    color: var(--dark);
+}
+span.text:hover
+{
+    color: var(--dark);
 }
 }
 
@@ -507,11 +538,16 @@ span.text {
     .join-modal{
         left: 50%;
         width: 600px;
-        height: 700px;
+        height: 600px;
         background: none;
         display:none;
-        overflow: visible;
+        overflow-y: hidden;
+        overflow: hidden;
         
+    }
+    .join-modal .modal-content ::-webkit-scrollbar{
+        display: none;
+        background: transparent;
     }
     .join-modal .modal-content{
         width: 100%;
@@ -551,7 +587,7 @@ span.text {
     font-family: "ElMessiri-SemiBold.ttf"; }
 
   .join-modal .form-control {
-  height: 47px;
+  height: 40px;
   display: block;
   border: 1px solid #e6e6e6;
   background: none;
@@ -740,6 +776,21 @@ span.text {
 }
 
     /* end enquiry modal */
+
+    .about-section p{
+        text-align: justify; 
+        text-justify: distribute; 
+        font-size: 18px; 
+        color: var(--light);
+        line-height: 2rem;
+    }
+
+    .enrlbtn{
+        background: var(--primary);
+        border-radius: 5px;
+        font-weight: 600;
+    }
+    
     
 </style>
 
@@ -759,16 +810,16 @@ span.text {
                                 Altos Eduhub is the best software training institute in Kochi, offering industry-oriented courses to
                                 help students and professionals acquire the skills they need to succeed in their careers.
                             </p> -->
-                            <ul class="fs-5 text-white mb-5 pb-2">
-                                <li>Cutting-Edge Technologies</li>
-                                <li>Flexible Learning Options</li>
+                            <ul class="fs-5 text-white mb-5 pb-2" >
+                                <li class="mb-3">Cutting-Edge Technologies</li>
+                                <li class="mb-3">Flexible Learning Options</li>
 
-                                <li>Technology Enabled Learning</li>
+                                <li class="mb-3">Technology Enabled Learning</li>
 
                             </ul>
 
                             <a href="{% url 'courses' %}" class="btn btn-primary py-md-3 px-md-5 me-3 animated slideInLeft">View Courses</a> 
-                            <a href="" class="btn btn-light py-md-3 px-md-5 animated slideInRight" data-target="#join-modal" data-toggle="modal"  onclick="showModal();">Join Now</a>
+                            <a href="" class="btn btn-light py-md-3 px-md-5 animated slideInRight"   onclick="showModal();">Join Now</a>
                         </div>
                     </div>
                 </div>
@@ -790,12 +841,12 @@ span.text {
                                 master the subject.
                             </p> -->
                             <ul class="fs-5 text-white mb-5 pb-2">
-                                <li>Experienced and Qualified Faculty</li>
-                                <li>Customizable Learning</li>
-                                <li>Career Support & Guidance</li>
+                                <li class="mb-3">Experienced and Qualified Faculty</li>
+                                <li class="mb-3">Customizable Learning</li>
+                                <li class="mb-3">Career Support & Guidance</li>
                             </ul>
                             <a href="{% url 'courses' %}" class="btn btn-primary py-md-3 px-md-5 me-3 animated slideInLeft">View Courses</a> 
-                            <a href="" class="btn btn-light py-md-3 px-md-5 animated slideInRight" data-target="#join-modal" data-toggle="modal" onclick="showModal();">Join Now</a>
+                            <a href="" class="btn btn-light py-md-3 px-md-5 animated slideInRight"  onclick="showModal();">Join Now</a>
                         </div>
                     </div>
                 </div>
@@ -816,14 +867,14 @@ span.text {
                                 looking to enhance their technical skills and excel in their careers.
                             </p> -->
                             <ul class="fs-5 text-white mb-5 pb-2">
-                                <li>
+                                <li class="mb-3">
                                     Comprehensive Learning Experience
                                 </li>
-                                <li>Placement Assistance</li>
-                                <li>Recognition and Accreditation</li>
+                                <li class="mb-3">Placement Assistance</li>
+                                <li class="mb-3">Recognition and Accreditation</li>
                             </ul>
                             <a href="{% url 'courses' %}" class="btn btn-primary py-md-3 px-md-5 me-3 animated slideInLeft">View Courses</a> 
-                            <a href="" class="btn btn-light py-md-3 px-md-5 animated slideInRight" data-target="#join-modal" data-toggle="modal" onclick="showModal();">Join Now</a>
+                            <a href="" class="btn btn-light py-md-3 px-md-5 animated slideInRight"  onclick="showModal();">Join Now</a>
                         </div>
                     </div>
                 </div>
@@ -835,7 +886,7 @@ span.text {
 
     <!-- About Start -->
     <div class="container-xxl py-5">
-        <div class="container mb-5">
+        <div class="container about-section mb-5">
             <div class="row g-5">
                 <div class="text-center wow fadeInUp" data-wow-delay="0.1s">
                     <h6 class="section-title bg-white text-center text-primary px-3">About Us</h6>
@@ -843,7 +894,7 @@ span.text {
                 </div>
                 <div class="col-lg-12 wow fadeInUp justify-content-center" data-wow-delay="0.3s">
                     
-                    <p class="mb-5" style="text-align: justify; text-justify: distribute; font-size: 20px; font-family: 'Nunito',sans-serif;"> Altos Eduhub is the best software training institute in Kochi, Kerala, owned by Altos
+                    <p class="mb-5" > Altos Eduhub is the best software training institute in Kochi, Kerala, owned by Altos
                         Technologies, a leading software development company in Kerala. We offer top-notch training
                         programs in Python, Front End Development, Digital Marketing, React JS, and REST API. Our
                         institute provides on-the-job training to ensure that learners gain practical experience and are
@@ -858,25 +909,17 @@ span.text {
                 <div class="position-relative h-100">
                     <div id="video-carousel" class="carousel slide" data-ride="carousel">
                         <div class="carousel-inner">
-                            <!-- {% for v in video%}
+                            
+                            
                             <div class="carousel-item active">
-                                <video controls style="width: 100%; height: 300px">
-                                    <source src="{{v.video_file.url}}" type="video/quicktime" />
-                                    <source src="{{v.video_file.url}}" type="video/webm">
-                                    <source src="{{v.video_file.url}}" type="video/ogg">
-                                    <source src="{{v.video_file.url}}" type="video/mp4">
-                                </video>
-                            </div> -->
-                            {% endfor %}
-                          <div class="carousel-item active">
-                            <iframe id="video1" width="100%" height="300px" src="https://www.youtube.com/embed/Br-rP0tQnuE" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share; muted; loop;" allowfullscreen></iframe>
-                          </div>
-                          <div class="carousel-item">
+                                <iframe id="video1" width="100%" height="300px" src="{% static 'img/v1.mp4' %}" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share; loop;" allowfullscreen></iframe>
+                              </div>
+                          <!-- <div class="carousel-item">
                             <iframe id="video1" width="100%" height="300px" src="https://www.youtube.com/embed/cdZHQFCqK3g" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share; muted; loop;" allowfullscreen></iframe>
                            </div>
                           <div class="carousel-item">
                             <iframe id="video1" width="100%" height="300px" src="https://www.youtube.com/embed/Fy5cFfdZ4p4" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; muted; loop; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe> 
-                          </div>
+                          </div> -->
                         </div>
                       </div>
                     
@@ -900,7 +943,7 @@ span.text {
 
 
 <!-- Service Start -->
-<div class="container-xxl py-5">
+<!-- <div class="container-xxl py-5">
     <div class="container">
         <div class="row g-3">
             <div class="col-lg-3 col-sm-6 wow fadeInUp" data-wow-delay="0.1s">
@@ -943,71 +986,93 @@ span.text {
             </div>
         </div>
     </div>
-</div>
-<!-- Service End -->
+</div> -->
 
-
-    <!-- slider -->
-    <!-- <div class="container-xxl py-5">
-        <div class="container mb-5">
-          <div class="slider">
-              <div class="slide-track">
-                  <div class="slide">
-                      <h4 class="slide p-3 m-2">
-                          Sed ut perspiciatis unde omnis 
-                      </h4>
-                  </div>
-                  <div class="slide p-3 m-2">
-                      <h4>
-                          Sed ut perspiciatis unde omnis 
-                      </h4>            </div>
-                  <div class="slide p-3 m-2">
-                      <h4>
-                          Sed ut perspiciatis unde omnis 
-                      </h4>            </div>
-                  <div class="slide p-3 m-2">
-                      <h4>
-                          Sed ut perspiciatis unde omnis 
-                      </h4>            </div>
-                  <div class="slide p-3 m-2">
-                      <h4 height="100" width="250">
-                          Sed ut perspiciatis unde omnis
-                          
-                      </h4>            
-                  </div> -->
-                  <!--<div class="slide">
-                      <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/557257/6.png" height="100" width="250" alt="" />
-                  </div>
-                  <div class="slide">
-                      <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/557257/7.png" height="100" width="250" alt="" />
-                  </div>
-                  <div class="slide">
-                      <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/557257/1.png" height="100" width="250" alt="" />
-                  </div>
-                  <div class="slide">
-                      <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/557257/2.png" height="100" width="250" alt="" />
-                  </div>
-                  <div class="slide">
-                      <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/557257/3.png" height="100" width="250" alt="" />
-                  </div>
-                  <div class="slide">
-                      <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/557257/4.png" height="100" width="250" alt="" />
-                  </div>
-                  <div class="slide">
-                      <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/557257/5.png" height="100" width="250" alt="" />
-                  </div>
-                  <div class="slide">
-                      <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/557257/6.png" height="100" width="250" alt="" />
-                  </div>
-                  <div class="slide">
-                      <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/557257/7.png" height="100" width="250" alt="" />
-                  </div> -->
-              </div>
-          </div>
+<div class="container-xxl py-5">
+    <div class="container">
+        <div class="row g-3">
+            <div class="col-lg-3 col-sm-6 wow fadeInUp" data-wow-delay="0.1s">
+                <div class="service-item text-center pt-3 service1" >
+                    <div class="p-4">
+                        <!-- <i class="fa fa-3x fa-graduation-cap text-primary mb-4"></i> -->
+                        <h5 class="mb-4">Jumpstart Your IT Career</h5>
+                        <p>Launch Your IT Career with our Training Program for Fresh Graduates!</p>
+                        <ol>
+                            <li>On-the-job training with real-world experience to prepare you for IT roles</li>
+                            <li>Access to experienced IT professionals who can provide guidance and mentorship</li>
+                            <li>A comprehensive curriculum that covers essential IT skills and technologies</li>
+                            <li>Opportunities to build your professional network and gain industry insights</li>
+                            <li>A portfolio-based approach to showcase your skills and experience to potential employers</li>
+                            <li>Customized career guidance and support to help you find the right IT job after completing the
+                                program.</li>
+                        </ol>
+                        <button class="btn enrlbtn" type="button" onclick="showModal();">Enroll Now </button>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-3 col-sm-6 wow fadeInUp" data-wow-delay="0.3s">
+                <div class="service-item text-center pt-3 service1">
+                    <div class="p-4">
+                        <h5 class="mb-4">Transitioning to IT</h5>
+                        <p>Switch to IT with our Career Training Program!</p>
+                        <ol>
+                            <li>A program designed to help you transition smoothly from a non-IT field to the IT industry</li>
+                            <li>Comprehensive training that covers all the essential IT skills and technologies</li>
+                            <li>Real-world experience with hands-on training and project-based learning</li>
+                            <li>Access to experienced IT professionals who can provide mentorship and guidance</li>
+                            <li>Customized career support, including resume and interview coaching, to help you land your
+                                dream IT job after completing the program</li>
+                            <li>Opportunities to build your professional network and gain valuable insights into the IT industry.</li>
+                        </ol>
+                        <button class="btn enrlbtn" type="button" onclick="showModal();">Enroll Now </button>
+                    </div>
+                    
+                </div>
+            </div>
+            <div class="col-lg-3 col-sm-6 wow fadeInUp" data-wow-delay="0.5s">
+                <div class="service-item text-center pt-3 service1">
+                    <div class="p-4">
+                        <h5 class="mb-4">Bridging the Gap</h5>
+                        <p>Revive Your IT Career with our Training Program for Career Breakers!</p>
+                        <ol>
+                            <li>A program designed specifically for individuals who have taken a break in their IT careers</li>
+                            <li>Hands-on training and real-world experience to help you update your skills and knowledge</li>
+                            <li>Customized career support and guidance to help you find the right IT job after the program</li>
+                            <li>Access to experienced IT professionals who can provide mentorship and career advice</li>
+                            <li>A comprehensive curriculum that covers all the essential IT skills and technologies </li>
+                            <li>Opportunities to build your professional network and gain valuable insights into the latest trends
+                                and developments in the IT industry.</li>
+                        </ol>
+                        <button class="btn enrlbtn" type="button" onclick="showModal();">Enroll Now </button>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-3 col-sm-6 wow fadeInUp" data-wow-delay="0.7s">
+                <div class="service-item text-center pt-3 service1">
+                    <div class="p-4">
+                        <h5 class="mb-4">Restart Your IT Career</h5>
+                        <p>Boost Your IT Career with our Job-Focused Training Program for Experienced Learners!</p>
+                        <ol>
+                            <li>A program designed to help experienced learners advance their IT careers and land their dream
+                                job</li>
+                            <li>Hands-on training with a focus on job-relevant skills and technologies
+                            </li>
+                            <li>Customized career support, including resume and interview coaching, to help you stand out to
+                                potential employers</li>
+                            <li>Access to experienced IT professionals who can provide mentorship and career guidance
+                            </li>
+                            <li>Opportunities to build your professional network and gain valuable insights into the latest trends
+                                and developments in the IT industry</li>
+                            <li>A portfolio-based approach to showcase your skills and experience to potential employers.
+                            </li>
+                        </ol>
+                        <button class="btn enrlbtn" type="button" onclick="showModal();">Enroll Now </button>
+                    </div>
+                </div>
+            </div>
         </div>
-      </div>
-          <!-- end slider -->
-      
+    </div>
+</div>
 <!-- Service modal -->
 <div id="modal1" class="modal m-0 modal1" >
     <div class="modal-content m-0" style="margin-left: 50%;">
@@ -1016,7 +1081,7 @@ span.text {
       <h5 class="text-primary text-center text-uppercase mb-3 animated slideInDown m-2" style="color: var(--primary);">50+ Faculties
         <br><small>We have 50+ internal/external working Faculties from IT companies.</small></h5>
       <hr style="color:grey">
-      <p class="mt-4 p-3" style="text-align: justify; text-justify: distribute; font-size: 16px; font-family: 'Nunito',sans-serif;">Qui accusantium deleniti et vero deserunt et tenetur voluptatum non mollitia asperiores.
+      <p class="mt-4 p-3" style="text-align: justify; text-justify: distribute; font-size: 16px; ">Qui accusantium deleniti et vero deserunt et tenetur voluptatum non mollitia asperiores.
 
         Id animi Quis et rerum reprehenderit rem molestiae debitis id obcaecati harum! 33 consequatur recusandae qui ipsam quisquam et deserunt consequuntur nam fugit nemo?
         
@@ -1031,7 +1096,7 @@ span.text {
       <h6 class="m-2" style="color: var(--dark);">Online Classes</h6>
       <h5 class="text-primary text-center text-uppercase mb-3 animated slideInDown m-2" style="color: var(--primary);">Live online classes <br><small>allow students to interact with their instructors in real time</small> </h5>
       <hr style="color:grey">
-      <p class="mt-4 p-3" style="text-align: justify; text-justify: distribute; font-size: 16px; font-family: 'Nunito',sans-serif;">Qui accusantium deleniti et vero deserunt et tenetur voluptatum non mollitia asperiores.
+      <p class="mt-4 p-3" style="text-align: justify; text-justify: distribute; font-size: 16px; ">Qui accusantium deleniti et vero deserunt et tenetur voluptatum non mollitia asperiores.
 
         Id animi Quis et rerum reprehenderit rem molestiae debitis id obcaecati harum! 33 consequatur recusandae qui ipsam quisquam et deserunt consequuntur nam fugit nemo?
         
@@ -1050,7 +1115,7 @@ span.text {
         with Expert guidance
       </small></h5>
       <hr style="color:grey">
-      <p class="mt-4 p-3 " style="text-align: justify; text-justify: distribute; font-size: 16px; font-family: 'Nunito',sans-serif;">Qui accusantium deleniti et vero deserunt et tenetur voluptatum non mollitia asperiores.
+      <p class="mt-4 p-3 " style="text-align: justify; text-justify: distribute; font-size: 16px; ">Qui accusantium deleniti et vero deserunt et tenetur voluptatum non mollitia asperiores.
 
         Id animi Quis et rerum reprehenderit rem molestiae debitis id obcaecati harum! 33 consequatur recusandae qui ipsam quisquam et deserunt consequuntur nam fugit nemo?
         
@@ -1065,7 +1130,7 @@ span.text {
       <h6 class="m-2" style="color: var(--dark);">Placement Assistance</h6>
       <h5 class="text-primary text-center text-uppercase mb-3 animated slideInDown m-2" style="color: var(--primary);">20K+ Students<br><small>have been studied and placed.</small></h5>
     <hr style="color:grey">
-      <p class="mt-4 p-3" style="text-align: justify; text-justify: distribute; font-size: 16px; font-family: 'Nunito',sans-serif;">Qui accusantium deleniti et vero deserunt et tenetur voluptatum non mollitia asperiores.
+      <p class="mt-4 p-3" style="text-align: justify; text-justify: distribute; font-size: 16px; ">Qui accusantium deleniti et vero deserunt et tenetur voluptatum non mollitia asperiores.
 
         Id animi Quis et rerum reprehenderit rem molestiae debitis id obcaecati harum! 33 consequatur recusandae qui ipsam quisquam et deserunt consequuntur nam fugit nemo?
         
@@ -1171,7 +1236,7 @@ span.text {
                         {% endif %}
                         <div class="w-100 d-flex justify-content-center position-absolute bottom-0 start-0 mb-4 course-item-link" style="z-index: 1;" id = "{{c.id}}">
                             <a href="" class="flex-shrink-0 btn btn-sm btn-primary px-3 border-end" style="border-radius: 30px 0 0 30px;">Read More</a>
-                            <a href="#" class="flex-shrink-0 btn btn-sm btn-primary px-3" style="border-radius: 0 30px 30px 0;" data-target="#join-modal" data-toggle="modal">Join Now</a>
+                            <a href="#" class="flex-shrink-0 btn btn-sm btn-primary px-3" style="border-radius: 0 30px 30px 0;"  onclick="showModal();">Join Now</a>
                         </div>
                     </div>
                     <div class="text-center p-4 pb-0" >
@@ -1196,7 +1261,7 @@ span.text {
             <h6 class="section-title bg-white text-center text-primary px-3">Numbers</h6>
             <h1 class="mb-5">We Take Pride in Our Numbers</h1>
         </div>
-        <div class="row counter g-4">
+        <div class="numberrow row counter g-4">
             <div class="container1">
                 <img src="{% static 'img/success.png'%}" width="50px" height="50px" >
                 <span class="num" data-val="10">000</span>
@@ -1233,7 +1298,7 @@ span.text {
         </div>
         <div class="row g-4">
             {% for m in mentors %}
-            <div class="col-lg-3 col-md-6 wow fadeInUp" data-wow-delay="0.1s">
+            <div class="col-lg-3 col-md-6 col-sm-1 wow fadeInUp" data-wow-delay="0.1s">
                 <div class="team-item bg-light">
                     <div class="overflow-hidden">
                         {% if m.image %}
@@ -1281,7 +1346,7 @@ span.text {
                     <div style="height: 24px;"><p></p></div>
                 {% endif %}
 
-                <div class="testimonial-text bg-light text-center p-4" style="height: 140px;">
+                <div class="testimonial-text bg-light text-center p-4" style="height: 150px;">
                     <p class="mb-0">"{{s.description}}"</p>
                 </div>
             </div>
@@ -1295,10 +1360,10 @@ span.text {
 <!-- enquiry modal -->
 
 
-<div id="join-modal" class="join-modal modal m-0" data-dismiss="modal">
+<div id="join-modal" class="join-modal modal m-0">
     <div class="modal-content m-0" >
-        <button type="button" class="close" data-dismiss="modal" style="margin-left: 500px;">&times;</button>
-        <h3 class=" p-3">Start Learning</h3>
+        <button type="button" class="close" onclick="closeModal();" style="margin-left: 500px;">&times;</button>
+        <h3 class=" p-1">Start Learning</h3>
       <hr style="color:grey">
       <form action="" method="post" class="p-3">
         <div class="form-row">
@@ -1342,7 +1407,9 @@ span.text {
     function showModal(){
         document.getElementById("join-modal").style.display= "block";
     }
-
+    function closeModal(){
+        $('#join-modal').hide();
+    }
 
 
     let valueDisplays = document.querySelectorAll(".num");
@@ -1365,103 +1432,92 @@ span.text {
 
 //   Service 1 
    
-    const element1 = $('.service1');
-    const modalPopup1 = $('.modal1');
-    element1.click(  
-        function() {
-            setTimeout(function() {
-                modalPopup1.show();
-            }, 100);
-        });
+    // const element1 = $('.service1');
+    // const modalPopup1 = $('#join-modal');
+    // element1.click(  
+    //     function() {
+    //         showModal();
+    //     });
         
     
-    element1.mouseout(  
-        function() {
-            modalPopup1.hide();
-        }
     
-    );
-    modalPopup1.mouseout(  
-        function() {
-            modalPopup1.hide();
-        }
-    );
+   
     
 
 
 
 // Servce 2
 
-    const element2 = $('.service2');
-    const modalPopup2 = $('.modal2');
-    element2.click(  
-        function() {
-            setTimeout(function() {
-                modalPopup2.show();
-            }, 100);
-        });
+    // const element2 = $('.service1');
+    // const modalPopup2 = $('join-modal');
+    // element2.click(  
+    //     function() {
+    //         setTimeout(function() {
+    //             modalPopup2.show();
+    //         }, 100);
+    //     });
         
     
-    element2.mouseout(  
-        function() {
-            modalPopup2.hide();
-        }
-    );
-    modalPopup2.mouseout(  
-        function() {
-            modalPopup1.hide();
-        }
-    );
+    // element2.mouseout(  
+    //     function() {
+    //         modalPopup2.hide();
+    //     }
+    // );
+    // modalPopup2.mouseout(  
+    //     function() {
+    //         modalPopup1.hide();
+    //     }
+    // );
 
 
 // Servce 3
 
-    const element3 = $('.service3');
-    const modalPopup3 = $('.modal3');
-    element3.click(  
+    // const element3 = $('.service3');
+    // const modalPopup3 = $('join-modal');
+    // element3.click(  
         
-        function() {
-            console.log(" 3 clicked");
-            setTimeout(function() {
-                modalPopup3.show();
-            }, 100);
-        });
+    //     function() {
+    //         console.log(" 3 clicked");
+    //         setTimeout(function() {
+    //             modalPopup3.show();
+    //         }, 100);
+    //     });
         
     
-    element3.mouseout(  
-        function() {
-            modalPopup3.hide();
-        }
-    );
-    modalPopup3.mouseout(  
-        function() {
-            modalPopup1.hide();
-        }
-    );
+    // element3.mouseout(  
+    //     function() {
+    //         modalPopup3.hide();
+    //     }
+    // );
+    // modalPopup3.mouseout(  
+    //     function() {
+    //         modalPopup1.hide();
+    //     }
+    // );
 
     // Servce 4
 
-    const element4 = $('.service4');
-    const modalPopup4 = $('.modal4');
-    element4.click(  
-        function() {
-            setTimeout(function() {
-                modalPopup4.show();
-            }, 100);
-        });
+    // const element4 = $('.service4');
+    // const modalPopup4 = $('join-modal');
+    // element4.click(  
+    //     function() {
+    //         setTimeout(function() {
+    //             modalPopup4.show();
+    //         }, 100);
+    //     });
         
     
-    element4.mouseout(  
-        function() {
-            modalPopup4.hide();
-        }
-    );
+    // element4.mouseout(  
+    //     function() {
+    //         modalPopup4.hide();
+    //     }
+    // );
 
-    modalPopup4.mouseout(  
-        function() {
-            modalPopup1.hide();
-        }
-    );
+    // modalPopup4.mouseout(  
+    //     function() {
+    //         modalPopup1.hide();
+    //     }
+    // );
 
 
     $(function(){

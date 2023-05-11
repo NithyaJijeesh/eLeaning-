@@ -192,32 +192,22 @@ h1{
         margin-left: 0px;
     }
     }
-    nav .breadcrumb{
-        margin-left: 1100px; margin-top: 50px
+    .about-section p{
+        text-align: justify; 
+        text-justify: distribute; 
+        font-size: 17px; 
+        color: var(--light);
+        line-height: 2rem;
     }
-    @media (min-width: 600px)and ( max-width:1000px) {
-
-        nav .breadcrumb{
-        margin-left: 550px; 
-        margin-top: 50px     
-    }
-    }
-    @media (min-width: 300px)and ( max-width:800px) {
-
-        nav .breadcrumb{
-            margin-left: 0px; 
-            margin-top: 0px     
-        }
-        }
 </style>
 
     <!-- Header Start -->
     <div class="container-fluid bg-primary py-5 mb-5 page-header">
-        <div class="container py-0 ">
+        <div class="container  py-0 ">
             <nav class ="breadcrumb" aria-label="breadcrumb justify-content-right" >
                 <ol class="breadcrumb ">
                     <li class="breadcrumb-item"><a class="text-white" href="{% url 'index'  %}">Home</a></li>
-                    <li class="breadcrumb-item text-white active" aria-current="page">Courses</li>
+                    <li class="breadcrumb-item text-white active" aria-current="page">About Us</li>
                 </ol>
             </nav>
             <div class="row justify-content-center">
@@ -233,7 +223,7 @@ h1{
     <!-- About Start -->
   
 <div class="container-xxl py-5">
-    <div class="container mb-5">
+    <div class="container about-section mb-5">
         <div class="row g-5">
             <!-- <div class="text-center wow fadeInUp" data-wow-delay="0.1s">
                 <h6 class="section-title bg-white text-center text-primary px-3">About Us</h6>
@@ -241,22 +231,22 @@ h1{
             </div> -->
             <div class="col-lg-12 wow fadeInUp justify-content-center" data-wow-delay="0.3s">
                 
-                <p class=" text-light mt-1 p-1" style="text-align: justify; text-justify: distribute; font-size: 20px; font-family: 'Nunito',sans-serif;">
+                <p class="mt-1 p-1" >
                     Welcome to Altos Eduhub, the best software training company in Kochi, Kerala. We are a
                     subsidiary of Altos Technologies, a well-known software development company in Kochi. At
                     Altos Eduhub, we provide comprehensive on-the-job training programs to help graduates gain
                     the skills and experience they need to secure a job in the software industry.
                     
-                <p class="m-1 p-1" style="text-align: justify; text-justify: distribute; font-size: 20px; font-family: 'Nunito',sans-serif;">
+                <p class="my-2 p-1">
                     Our training programs cover a range of topics, including Python, React JS, front-end
                     development, digital marketing, and REST API. Our goal is to equip our students with the
                     knowledge and practical experience they need to succeed in today's competitive job market.</p>
-                <p class="m-1 p-1" style="text-align: justify; text-justify: distribute; font-size: 20px; font-family: 'Nunito',sans-serif;">
+                <p class="my-2 p-1">
                     As the best software training company in Kochi, we take great pride in our team of experienced
                     instructors who are passionate about teaching and helping students achieve their goals. Our
                     training programs are designed to be hands-on, with a focus on real-world applications and
                     practical experience.</p>
-                <p class="mb-5 p-1"style="text-align: justify; text-justify: distribute; font-size: 20px; font-family: 'Nunito',sans-serif;">
+                <p class="mb-4 p-1">
                     At Altos Eduhub, we are committed to providing our students with the best possible training
                     experience. Our state-of-the-art facilities are equipped with the latest technology, and our
                     curriculum is constantly updated to reflect the latest industry trends and best practices.
@@ -272,15 +262,15 @@ h1{
             <div class="position-relative h-100">
                 <div id="video-carousel" class="carousel slide" data-ride="carousel">
                     <div class="carousel-inner">
-                      <div class="carousel-item active">
-                        <iframe id="video1" width="100%" height="300px" src="https://www.youtube.com/embed/Br-rP0tQnuE" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share; muted; loop;" allowfullscreen></iframe>
-                      </div>
-                      <div class="carousel-item">
+                        <div class="carousel-item active">
+                            <iframe id="video1" width="100%" height="300px" src="{% static 'img/v1.mp4' %}" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share; loop;" allowfullscreen></iframe>
+                          </div>
+                      <!-- <div class="carousel-item">
                         <iframe id="video1" width="100%" height="300px" src="https://www.youtube.com/embed/cdZHQFCqK3g" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share; muted; loop;" allowfullscreen></iframe>
                        </div>
                       <div class="carousel-item">
                         <iframe id="video1" width="100%" height="300px" src="https://www.youtube.com/embed/Fy5cFfdZ4p4" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; muted; loop; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe> 
-                      </div>
+                      </div> -->
                     </div>
                   </div>
                 
@@ -302,81 +292,52 @@ h1{
 <!-- About End -->
 
 <!-- Service Start -->
-<div class="container-xxl py-4">
-    <div class="container">
-       
-        <!-- <div class="row g-3">
-            <div class="col-lg-12 col-md-6 wow fadeInUp bg-light m-1" data-wow-delay="0.1s" style="height:200px !important; overflow: scroll;">
-                <h5 class="text-primary text-center text-uppercase mb-3 animated slideInDown m-2" style="color: var(--primary);">Skill-based, hands-on learning <br><small>
-                    with Expert guidance
-                </small></h5> -->
-                <!-- <hr style="color:grey">
-                <p class="mt-4 p-3 text-dark" style="text-align: justify; text-justify: distribute; font-size: 20px; font-family: 'Nunito',sans-serif;">Qui accusantium deleniti et vero deserunt et tenetur voluptatum non mollitia asperiores.
+<style>
+    .service-section p{
+        text-align: justify; 
+        text-justify:distribute-all-lines; font-size: 15px; 
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+          
+    }
+</style>
+<div class="container-xxl py-0">
+    <div class="container service-section">
 
-                    Id animi Quis et rerum reprehenderit rem molestiae debitis id obcaecati harum! 33 consequatur recusandae qui ipsam quisquam et deserunt consequuntur nam fugit nemo?
-                    
-                    Ut tenetur cupiditate qui distinctio esse sit dolores possimus. Ut fugit debitis rem soluta animi sit omnis nulla.</p> -->
-            <!-- </div>   
-        </div>
-        <div class="row g-3">
-            <div class="col-lg-12 col-md-6 wow fadeInUp bg-light m-1" data-wow-delay="0.1s" style="height: 500px !important; overflow: scroll;"> -->
-                <!-- <p class="m-2 " style=" color: var(--dark); ">Skilled Instructors</p> -->
-                <!-- <h5 class="text-primary text-center text-uppercase mb-3 animated slideInDown m-2" style="color: var(--primary);">50+ Faculties
-                  <br><small>We have 50+ internal/external working Faculties from IT companies.</small></h5> -->
-                <!-- <hr style="color:grey">
-                <p class="mt-4 p-3 text-dark"  style="text-align: justify; text-justify: distribute; font-size: 20px; font-family: 'Nunito',sans-serif;">Qui accusantium deleniti et vero deserunt et tenetur voluptatum non mollitia asperiores.
-          
-                  Id animi Quis et rerum reprehenderit rem molestiae debitis id obcaecati harum! 33 consequatur recusandae qui ipsam quisquam et deserunt consequuntur nam fugit nemo?
-                  
-                  Ut tenetur cupiditate qui distinctio esse sit dolores possimus. Ut fugit debitis rem soluta animi sit omnis nulla.</p> -->
-            <!-- </div>   
-        </div>
-        <div class="row g-3">
-            <div class="col-lg-12 col-md-6 wow fadeInUp bg-light m-1" data-wow-delay="0.1s" style="height: 500px !important; overflow: scroll;"> -->
-                <!-- <p class="m-2" style="color: var(--dark);">Placement Assistance</p> -->
-             <!-- <hr style="color:grey">
-                <p class="mt-4 p-3 text-dark" style="text-align: justify; text-justify: distribute; font-size: 20px; font-family: 'Nunito',sans-serif;">Qui accusantium deleniti et vero deserunt et tenetur voluptatum non mollitia asperiores.
-          
-                  Id animi Quis et rerum reprehenderit rem molestiae debitis id obcaecati harum! 33 consequatur recusandae qui ipsam quisquam et deserunt consequuntur nam fugit nemo?
-                  
-                  Ut tenetur cupiditate qui distinctio esse sit dolores possimus. Ut fugit debitis rem soluta animi sit omnis nulla.</p> -->
-            <!-- </div>   
-        </div> -->
-        <div class="row m-0 p-0 g-3">
-            <div class="col-lg-6 col-md-6 wow fadeInLeftBig mt-5 px-5 pt-3" data-wow-delay="0.1s" style="height: 500px !important;overflow: hidden;">
-                <h5 class="text-primary text-center text-uppercase animated slideInDown m-2 p-5" style="color: var(--primary);">50+ Faculties
-                    <br><small>We have 50+ internal/external working Faculties from IT companies.</small></h5>
+        <div class="row m-0 p-0">
+            <div class="col-lg-6 col-md-6 wow fadeInLeftBig mt-3 px-0 py-0 my-0" data-wow-delay="0.1s" style="height: 500px !important;overflow: hidden;">
+                <h6 class="text-primary text-center text-uppercase animated slideInDown m-2 p-5" style="color: var(--primary);">50+ Faculties
+                    <br><small>We have 50+ internal/external working Faculties from IT companies.</small></h6>
               </div>  
-            <div class="col-lg-6 col-md-6 wow fadeInRightBig px-5 pt-3" data-wow-delay="0.1s" style="height: 500px !important; overflow: hidden;">
-                <p class="mt-4 p-3 text-light justify-content-center" style="text-align: justify; text-justify: distribute; font-size: 20px; font-family: 'Nunito',sans-serif;">Qui accusantium deleniti et vero deserunt et tenetur voluptatum non mollitia asperiores.
+            <div class="col-lg-6 col-md-6 wow fadeInRightBig px-0 py-0 my-0" data-wow-delay="0.1s" style="height: 500px !important; overflow: hidden;">
+                <p class="mt-4 p-3 text-light justify-content-center" >Qui accusantium deleniti et vero deserunt et tenetur voluptatum non mollitia asperiores.
           
                   Id animi Quis et rerum reprehenderit rem molestiae debitis id obcaecati harum! 33 consequatur recusandae qui ipsam quisquam et deserunt consequuntur nam fugit nemo?
                   
                   Ut tenetur cupiditate qui distinctio esse sit dolores possimus. Ut fugit debitis rem soluta animi sit omnis nulla.</p>
             </div>  
         </div>
-        <div class="row m0 p-0 g-3">
-            <div class="col-lg-6 col-md-6 wow fadeInLeftBig px-5 pt-3" data-wow-delay="0.1s" style="height: 500px !important; overflow: hidden;">
-                <p class="mt-4 p-3 text-light justify-content-center" style="text-align: justify; text-justify: distribute; font-size: 20px; font-family: 'Nunito',sans-serif;">Qui accusantium deleniti et vero deserunt et tenetur voluptatum non mollitia asperiores.
+        <div class="row m-0 p-0">
+            <div class="col-lg-6 col-md-6 wow fadeInLeftBig px-0 py-0 my-0" data-wow-delay="0.1s" style="height: 500px !important; overflow: hidden;">
+                <p class="mt-4 p-3 text-light justify-content-center" >Qui accusantium deleniti et vero deserunt et tenetur voluptatum non mollitia asperiores.
           
                   Id animi Quis et rerum reprehenderit rem molestiae debitis id obcaecati harum! 33 consequatur recusandae qui ipsam quisquam et deserunt consequuntur nam fugit nemo?
                   
                   Ut tenetur cupiditate qui distinctio esse sit dolores possimus. Ut fugit debitis rem soluta animi sit omnis nulla.</p>
             </div>
-            <div class="col-lg-6 col-md-6 wow fadeInRightBig mt-5 px-5 pt-3" data-wow-delay="0.1s" style="height: 500px !important;overflow: hidden;">
-                <h5 class="text-primary text-center text-uppercase animated slideInDown m-2 p-5" style="color: var(--primary);">Skill-based, hands-on learning <br><small>
+            <div class="col-lg-6 col-md-6 wow fadeInRightBig mt-3 px-0 py-0 my-0" data-wow-delay="0.1s" style="height: 500px !important;overflow: hidden;">
+                <h6 class="text-primary text-center text-uppercase animated slideInDown m-2 p-5" style="color: var(--primary);">Skill-based, hands-on learning <br><small>
                     with Expert guidance
-                </small></h5>
+                </small></h6>
             </div>  
               
         </div>
         <div class="row m-0 p-0">
              
-            <div class="col-lg-6 col-md-6 wow fadeInLeftBig mt-5 px-5 pt-0" data-wow-delay="0.1s" style="height: 500px !important;overflow: hidden;">
-                <h5 class="text-primary text-center text-uppercase m-2 p-5 animated slideInDown " style="color: var(--primary);">20K+ Students<br><small>have been studied and placed.</small></h5>
+            <div class="col-lg-6 col-md-6 wow fadeInLeftBig mt-3 px-0 py-0 my-0" data-wow-delay="0.1s" style="height: 500px !important;overflow: hidden;">
+                <h6 class="text-primary text-center text-uppercase m-2 p-5 animated slideInDown " style="color: var(--primary);">20K+ Students<br><small>have been studied and placed.</small></h6>
             </div>  
-            <div class="col-lg-6 col-md-6 wow fadeInRightBig px-5 pt-0" data-wow-delay="0.1s" style="height: 500px !important; overflow: hidden;">
-                <p class="mt-4 p-3 text-light justify-content-center" style="text-align: justify; text-justify: distribute; font-size: 20px; font-family: 'Nunito',sans-serif;">Qui accusantium deleniti et vero deserunt et tenetur voluptatum non mollitia asperiores.
+            <div class="col-lg-6 col-md-6 wow fadeInRightBig px-0 py-0 my-0" data-wow-delay="0.1s" style="height: 500px !important; overflow: hidden;">
+                <p class="mt-4 p-3 text-light justify-content-center">Qui accusantium deleniti et vero deserunt et tenetur voluptatum non mollitia asperiores.
           
                   Id animi Quis et rerum reprehenderit rem molestiae debitis id obcaecati harum! 33 consequatur recusandae qui ipsam quisquam et deserunt consequuntur nam fugit nemo?
                   
@@ -384,15 +345,15 @@ h1{
             </div> 
         </div>
         <div class="row m-0 p-0">
-            <div class="col-lg-6 col-md-6 wow fadeInLeftBig px-5 pt-0" data-wow-delay="0.1s" style="height: 500px !important; overflow: hidden;">
-                <p class="mt-4 p-3 text-light justify-content-center" style="text-align: justify; text-justify: distribute; font-size: 20px; font-family: 'Nunito',sans-serif;">Qui accusantium deleniti et vero deserunt et tenetur voluptatum non mollitia asperiores.
+            <div class="col-lg-6 col-md-6 wow fadeInLeftBig my-0 px-0 py-0" data-wow-delay="0.1s" style="height: 500px !important; overflow: hidden;">
+                <p class="mt-4 p-3 text-light justify-content-center" >Qui accusantium deleniti et vero deserunt et tenetur voluptatum non mollitia asperiores.
           
                   Id animi Quis et rerum reprehenderit rem molestiae debitis id obcaecati harum! 33 consequatur recusandae qui ipsam quisquam et deserunt consequuntur nam fugit nemo?
                   
                   Ut tenetur cupiditate qui distinctio esse sit dolores possimus. Ut fugit debitis rem soluta animi sit omnis nulla.</p>
             </div> 
-            <div class="col-lg-6 col-md-6 wow fadeInRightBig mt-5 px-5 pt-0" data-wow-delay="0.1s" style="height: 500px !important;overflow: hidden;">
-                <h5 class="text-primary text-center text-uppercase justify-content-center m-2 p-5" style="color: var(--primary);">Live online classes <br><small>allow students to interact with their instructors in real time</small> </h5>
+            <div class="col-lg-6 col-md-6 wow fadeInRightBig my-0 mt-3 px-0 py-0" data-wow-delay="0.1s" style="height: 500px !important;overflow: hidden;">
+                <h6 class="text-primary text-center text-uppercase justify-content-center m-2 p-5" style="color: var(--primary);">Live online classes <br><small>allow students to interact with their instructors in real time</small> </h6>
             </div>  
             
         </div>

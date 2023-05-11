@@ -18,7 +18,9 @@ urlpatterns = [
     path('digital_marketing',views.digital_marketing,name="digital_marketing"),
     
     path('frontend_dev',views.frontend_dev,name="frontend_dev"),
-    path('course_select/<pk>',views.course_select,name = "course_select")
+    path('course_select/<pk>',views.course_select,name = "course_select"),
 
-
+    path('ojt',views.ojt,name="ojt"),
+    path('internships',views.internships,name="internships"),
+    path('short_term',views.short_term,name="short_term"),
 ]

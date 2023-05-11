@@ -13,23 +13,41 @@
     h1{
         color: var(--light);
     }
-    nav .breadcrumb{
-        margin-left: 1100px; margin-top: 50px
+    .contact-section p{
+        text-align: justify; 
+        text-justify: distribute; 
+        font-size: 18px; 
+        color: var(--light);
+        line-height: 1rem;
     }
-    @media (min-width: 600px)and ( max-width:1000px) {
+    iframe{
+        height: 350px; 
+        width: 350px; 
+        border:0;
+    }
+    @media screen and (min-width:900px) and (max-width: 1390px) {
+        iframe{
+        height: 350px; 
+        width: 350px; 
+        border:0;
+    }
+}
+ @media screen and (min-width:400px) and (max-width: 900px) {
+    iframe{
+        height: 350px; 
+        width: 350px; 
+        border:0;
+    }
 
-        nav .breadcrumb{
-        margin-left: 550px; 
-        margin-top: 50px     
+ }
+    @media screen and (min-width:280px) and (max-width: 450px) {
+        iframe{
+        height: 350px; 
+        width: 300px; 
+        border:0;
     }
     }
-    @media (min-width: 300px)and ( max-width:800px) {
 
-        nav .breadcrumb{
-            margin-left: 0px; 
-        margin-top: 0px    
-        }
-        }
 </style>
     <!-- Header Start -->
     <div class="container-fluid bg-primary py-5 mb-5 page-header">
@@ -37,7 +55,7 @@
             <nav class ="breadcrumb" aria-label="breadcrumb justify-content-right" >
                 <ol class="breadcrumb ">
                     <li class="breadcrumb-item"><a class="text-white" href="{% url 'index'  %}">Home</a></li>
-                    <li class="breadcrumb-item text-white active" aria-current="page">Courses</li>
+                    <li class="breadcrumb-item text-white active" aria-current="page">Contact Us</li>
                 </ol>
             </nav>
             <div class="row justify-content-center">
@@ -53,18 +71,18 @@
 
     <!-- Contact Start -->
     <div class="container-xxl py-5">
-        <div class="container">
+        <div class="container contact-section">
             <!-- <div class="text-center wow fadeInUp" data-wow-delay="0.1s">
                 <h6 class="section-title bg-white text-center text-primary px-3">Contact Us</h6>
                 <h1 class="mb-5">Contact For Any Query</h1>
             </div> -->
-            <div class="col-lg-12 wow fadeInUp justify-content-center p-3 m-5" data-wow-delay="0.3s">
+            <div class="col-lg-12 wow fadeInUp justify-content-center p-1 m-1" data-wow-delay="0.3s">
                 
-                <p class=" text-light mt-1 p-1" style="text-align: justify; text-justify: distribute; font-size: 20px; font-family: 'Nunito',sans-serif;">
+                <p class=" text-light mt-1 p-1" >
                     Welcome to Altos Eduhub's Contact Us page! We're thrilled that you're interested in our
 on-the-job training programs and would love to hear from you.
  
-                <p class="mb-5 p-1" style="text-align: justify; text-justify: distribute; font-size: 20px; font-family: 'Nunito',sans-serif;">
+                <p class="mb-5 p-1">
                     Whether you have questions about our training programs or are ready to enroll, our team of
 experts is here to help you every step of the way.
 
@@ -110,7 +128,7 @@ experts is here to help you every step of the way.
                         frameborder="0" style="min-height: 300px; border:0;" allowfullscreen="" aria-hidden="false"
                         tabindex="0"></iframe> -->
                         <iframe src="https://www.google.com/maps/embed?pb=!1m19!1m8!1m3!1d2012604.068571148!2d76.524882!3d9.861497!3m2!1i1024!2i768!4f13.1!4m8!3e0!4m0!4m5!1s0x3b080d9bfaa6db61%3A0xa5df6acfc2d1e5fd!2sALTOS%20Technologies%2C%201st%20floor%2C%20Thapasaya%20Building%2C%20Infopark%2C%20Kakanad%2C%20Kochi%2C%20Kerala%20682042!3m2!1d10.0107422!2d76.36069859999999!5e0!3m2!1sen!2sin!4v1682016534785!5m2!1sen!2sin" 
-                        style="height: 350px; width: 350px; border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                         allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
                 </div>
                 <div class="col-lg-4 col-md-12 wow fadeInUp" data-wow-delay="0.5s">
                     <form action="{% url 'contactuss' %}" method='post' enctype="multipart/form-data">

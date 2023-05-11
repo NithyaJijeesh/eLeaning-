@@ -106,3 +106,13 @@ def saveEnquiry(request):
     return redirect('index')
 
 
+def ojt(request):
+    return render(request,'ojt.html')
+
+def internships(request):
+    return render(request,'internships.html')
+
+def short_term(request):
+    return render(request,'short_term.html')
+
+
