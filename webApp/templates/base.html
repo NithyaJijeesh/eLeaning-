@@ -220,11 +220,14 @@
             text-transform: uppercase;
             outline: none;
             font-weight: 500;
+            text-decoration: none;
         }
 
         .navbar-light .navbar-nav .nav-link:hover,
         .navbar-light .navbar-nav .nav-link.active {
-            color: var(--primary)
+            background: var(--dark);
+            color: var(--primary);
+            text-decoration: none;
         }
 
         @media (max-width: 991.98px) {
@@ -270,7 +273,7 @@
             transition: .5s;
             opacity: 1;
         }
-        .navbar .dropdown-menu span a{
+        /* .navbar .dropdown-menu span a{
             display:block;width:100%;padding:.25rem 1rem;
             clear:both;font-weight:400;color:var(--light);
             text-align:inherit;white-space:nowrap;
@@ -280,7 +283,7 @@
             color:var(--light);background-color:var(--primary)}
             .navbar .dropdown-menu span a.active,.navbar .dropdown-menu span a:active{
                 color:#fff;text-decoration:none;background-color:var(--primary)}
-        
+         */
         .navbar .dropdown-menu .dropdown-submenu {
             display: none;
             margin-top: 0;
@@ -1504,7 +1507,18 @@
         .site-mobile-menu .site-nav-wrap[data-class="social"] > li:first-child a {
           padding-left: 15px !important; }
 
+    .navbar-brand img{
+        width:90%; 
+        height:45px;
 
+    }
+    @media screen and (min-width:280px) and (max-width: 655px)  {
+        .navbar-brand img{
+            width:50%; 
+            height:45px;
+
+    }
+    }
 
     </style>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
@@ -1530,7 +1544,7 @@
     <!-- Navbar Start -->
     <nav class="navbar navbar-expand-lg bg-white navbar-light shadow sticky-top p-0">
         <a href="{% url 'index' %}" class="navbar-brand d-flex align-items-center px-4 px-lg-5" >
-            <img src="{% static 'img/logo1.png' %}" style="width:90%; height:45px;">
+            <img src="{% static 'img/logo1.png' %}" >
             <!-- <h3 class="m-1 text-primary">Altos Eduhub</h3> -->
         </a>
         <button type="button" class="navbar-toggler  me-4" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
@@ -1543,9 +1557,9 @@
                 <a href="{% url 'about' %}" class="nav-item nav-link" >About</a>
                 <div class="nav-item dropdown">
                     <span class="nav-link nav-item dropdown-toggle" >Courses</span>
-                    <div class="dropdown-menu fade-down m-0" >
-                        <span  class="nav-item dropdown-item dropdown-toggle" > 
-                            <a href="{% url 'courses' %}">Courses</a>
+                    <div class="nav-item dropdown-menu fade-down m-0" >
+                        <span  class="nav-link dropdown-toggle" > 
+                            <a href="{% url 'courses' %}" style=" text-decoration: none;">Courses</a>
                         </span>
                         <div class="dropdown-submenu fade-down m-0" >
                             <a href="{% url 'python_dev' %}" class="nav-item dropdown-item" >OJT Program</a>

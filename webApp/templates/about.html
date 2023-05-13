@@ -154,7 +154,12 @@ h1{
         justify-content: center; 
         margin-left: 300px;
     }
+    .video-carousel .carousel-item{
+        width: 300px ;
+        height:300px;
 
+    }
+    
 @media screen and (min-width:900px) and (max-width: 1390px) {
     .about{
         width: 50%; 
@@ -165,6 +170,11 @@ h1{
         min-height: 400px; 
         justify-content: center; 
         margin-left: 300px;
+    }
+    .video-carousel .carousel-item{
+        width:200px ;
+        height:300px;
+
     }
     }
  @media screen and (min-width:400px) and (max-width: 900px) {
@@ -178,6 +188,11 @@ h1{
         justify-content: center; 
         margin-left: 0px;
     }
+    .video-carousel .carousel-item{
+        width:200px ;
+        height:200px;
+
+    }
 
  }
     @media screen and (min-width:280px) and (max-width: 450px) {
@@ -190,6 +205,11 @@ h1{
         min-height: 400px; 
         justify-content: center; 
         margin-left: 0px;
+    }
+    .video-carousel .carousel-item{
+        width:150px ;
+        height:200px;
+
     }
     }
     .about-section p{
@@ -299,9 +319,36 @@ h1{
         font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
           
     }
+    .large-screen {
+        display: block;
+        }
+
+        .small-screen {
+        display: none;
+        }
+    
+        @media screen and (min-width:400px) and (max-width: 900px) {
+            .large-screen {
+        display: none;
+        }
+
+        .small-screen {
+        display: block;
+        }
+
+ }
+    @media screen and (min-width:280px) and (max-width: 450px) {
+        .large-screen {
+        display: none;
+        }
+
+        .small-screen {
+        display: block;
+        }
+    }
 </style>
 <div class="container-xxl py-0">
-    <div class="container service-section">
+    <div class="container service-section large-screen">
 
         <div class="row m-0 p-0">
             <div class="col-lg-6 col-md-6 wow fadeInLeftBig mt-3 px-0 py-0 my-0" data-wow-delay="0.1s" style="height: 500px !important;overflow: hidden;">
@@ -331,7 +378,7 @@ h1{
             </div>  
               
         </div>
-        <div class="row m-0 p-0">
+        <div class="row m-0 p-0 ">
              
             <div class="col-lg-6 col-md-6 wow fadeInLeftBig mt-3 px-0 py-0 my-0" data-wow-delay="0.1s" style="height: 500px !important;overflow: hidden;">
                 <h6 class="text-primary text-center text-uppercase m-2 p-5 animated slideInDown " style="color: var(--primary);">20K+ Students<br><small>have been studied and placed.</small></h6>
@@ -356,6 +403,68 @@ h1{
                 <h6 class="text-primary text-center text-uppercase justify-content-center m-2 p-5" style="color: var(--primary);">Live online classes <br><small>allow students to interact with their instructors in real time</small> </h6>
             </div>  
             
+        </div>
+    </div>
+
+
+
+    <div class="container service-section small-screen">
+
+        <div class="row m-0 p-0">
+            <div class="col-lg-6 col-md-6 wow fadeInLeftBig mt-3 px-0 py-0 my-0" data-wow-delay="0.1s" style="height: 500px !important;overflow: hidden;">
+                <h6 class="text-primary text-center text-uppercase animated slideInDown m-2 p-5" style="color: var(--primary);">50+ Faculties
+                    <br><small>We have 50+ internal/external working Faculties from IT companies.</small></h6>
+              </div>  
+            <div class="col-lg-6 col-md-6 wow fadeInRightBig px-0 py-0 my-0" data-wow-delay="0.1s" style="height: 500px !important; overflow: hidden;">
+                <p class="mt-4 p-3 text-light justify-content-center" >Qui accusantium deleniti et vero deserunt et tenetur voluptatum non mollitia asperiores.
+          
+                  Id animi Quis et rerum reprehenderit rem molestiae debitis id obcaecati harum! 33 consequatur recusandae qui ipsam quisquam et deserunt consequuntur nam fugit nemo?
+                  
+                  Ut tenetur cupiditate qui distinctio esse sit dolores possimus. Ut fugit debitis rem soluta animi sit omnis nulla.</p>
+            </div>  
+        </div>
+        <div class="row m-0 p-0">
+            <div class="col-lg-6 col-md-6 wow fadeInRightBig mt-3 px-0 py-0 my-0" data-wow-delay="0.1s" style="height: 500px !important;overflow: hidden;">
+                <h6 class="text-primary text-center text-uppercase animated slideInDown m-2 p-5" style="color: var(--primary);">Skill-based, hands-on learning <br><small>
+                    with Expert guidance
+                </small></h6>
+            </div>  
+            <div class="col-lg-6 col-md-6 wow fadeInLeftBig px-0 py-0 my-0" data-wow-delay="0.1s" style="height: 500px !important; overflow: hidden;">
+                <p class="mt-4 p-3 text-light justify-content-center" >Qui accusantium deleniti et vero deserunt et tenetur voluptatum non mollitia asperiores.
+          
+                  Id animi Quis et rerum reprehenderit rem molestiae debitis id obcaecati harum! 33 consequatur recusandae qui ipsam quisquam et deserunt consequuntur nam fugit nemo?
+                  
+                  Ut tenetur cupiditate qui distinctio esse sit dolores possimus. Ut fugit debitis rem soluta animi sit omnis nulla.</p>
+            </div>
+            
+              
+        </div>
+        <div class="row m-0 p-0 ">
+             
+            <div class="col-lg-6 col-md-6 wow fadeInLeftBig mt-3 px-0 py-0 my-0" data-wow-delay="0.1s" style="height: 500px !important;overflow: hidden;">
+                <h6 class="text-primary text-center text-uppercase m-2 p-5 animated slideInDown " style="color: var(--primary);">20K+ Students<br><small>have been studied and placed.</small></h6>
+            </div>  
+            <div class="col-lg-6 col-md-6 wow fadeInRightBig px-0 py-0 my-0" data-wow-delay="0.1s" style="height: 500px !important; overflow: hidden;">
+                <p class="mt-4 p-3 text-light justify-content-center">Qui accusantium deleniti et vero deserunt et tenetur voluptatum non mollitia asperiores.
+          
+                  Id animi Quis et rerum reprehenderit rem molestiae debitis id obcaecati harum! 33 consequatur recusandae qui ipsam quisquam et deserunt consequuntur nam fugit nemo?
+                  
+                  Ut tenetur cupiditate qui distinctio esse sit dolores possimus. Ut fugit debitis rem soluta animi sit omnis nulla.</p>
+            </div> 
+        </div>
+        <div class="row m-0 p-0">
+            <div class="col-lg-6 col-md-6 wow fadeInRightBig my-0 mt-3 px-0 py-0" data-wow-delay="0.1s" style="height: 500px !important;overflow: hidden;">
+                <h6 class="text-primary text-center text-uppercase justify-content-center m-2 p-5" style="color: var(--primary);">Live online classes <br><small>allow students to interact with their instructors in real time</small> </h6>
+            </div>  
+            
+            <div class="col-lg-6 col-md-6 wow fadeInLeftBig my-0 px-0 py-0" data-wow-delay="0.1s" style="height: 500px !important; overflow: hidden;">
+                <p class="mt-4 p-3 text-light justify-content-center" >Qui accusantium deleniti et vero deserunt et tenetur voluptatum non mollitia asperiores.
+          
+                  Id animi Quis et rerum reprehenderit rem molestiae debitis id obcaecati harum! 33 consequatur recusandae qui ipsam quisquam et deserunt consequuntur nam fugit nemo?
+                  
+                  Ut tenetur cupiditate qui distinctio esse sit dolores possimus. Ut fugit debitis rem soluta animi sit omnis nulla.</p>
+            </div> 
+           
         </div>
     </div>
 </div>
