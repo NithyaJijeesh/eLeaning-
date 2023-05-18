@@ -1,0 +1,511 @@
+{% extends 'base.html'%}
+{% block content %}
+{% load static %}
+
+<link href="static/img/favicon.ico" rel="icon">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Heebo:wght@400;500;600&family=Nunito:wght@600;700;800&display=swap" rel="stylesheet">
+<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" rel="stylesheet">
+<link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css" rel="stylesheet">
+
+<style>
+    h1{
+        color: var(--light);
+    }
+    p, li,small{
+        font-size: 18px;
+        text-align: justify;
+        text-justify: distribute;
+    }
+    .course-item{
+
+        height: 750px !important;
+        overflow:scroll;
+        
+    }
+    @media (min-width: 600px)and ( max-width:1000px) {
+
+        .course-item{
+            height: 625px !important;
+            overflow:scroll;        
+        }
+    }
+    @media (min-width: 300px)and ( max-width:800px) {
+
+        .course-item{
+            height: 650px !important;
+            overflow:scroll;
+    }
+    }
+    ::-webkit-scrollbar-track {
+            background: transparent;
+        }
+
+        ::-webkit-scrollbar-thumb {
+        background: transparent;
+        }
+
+        ::-webkit-scrollbar-thumb:hover {
+        background:transparent;
+        }
+    p{
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        text-align: justify; 
+        text-justify: distribute; 
+        font-size: 17px; 
+        color: var(--light);
+        line-height: 2rem;
+    }
+
+</style>
+
+    <!-- Header Start -->
+    <div class="container-fluid bg-primary py-5 mb-5 page-header">
+        <div class="container py-0 ">
+            <nav class ="breadcrumb" aria-label="breadcrumb justify-content-right" >
+                <ol class="breadcrumb ">
+                    <li class="breadcrumb-item"><a class="text-white" href="{% url 'index'  %}">Home</a></li>
+                    <li class="breadcrumb-item text-white active" aria-current="page">Courses</li>
+                </ol>
+            </nav>
+            <div class="row justify-content-center">
+                <div class="col-lg-10 text-center wow fadeInUp">
+                    <h6 class="section-title bg-dark text-center text-primary px-3">Courses</h6>
+                    <h1 class="mb-5">Internship Programs</h1>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Header End -->
+
+
+<!-- Courses Start -->
+<div class="container-xxl py-5">
+    <div class="container courses-section justify-content-between">
+        <div class="text-center wow fadeInUp" data-wow-delay="0.1s">
+            <!-- <h6 class="section-title bg-white text-justify text-primary px-3">Courses</h6>
+            <h1 class="mb-5">On the Job Training</h1> -->
+            <!-- <hr> -->
+            <p class=" text-light mt-1 p-1">
+                We're excited to offer 3 month internship opportunities to students who are looking to gain
+                real-world experience in their field of study.
+                Our internships are designed to provide you with hands-on experience, industry knowledge, and
+                professional development opportunities. We offer internships in a variety of fields, including
+                software development, digital marketing, and design.
+                During your 3 month internship, you'll spend the half of the month learning fundamental
+                concepts and practical skills related to your field. Then, in the coming month, you'll have the
+                opportunity to work on real projects alongside experienced professionals, allowing you to apply
+                your classroom knowledge to real-world situations.</p>
+
+            </div>
+
+        <style>
+            .points ol {
+                /* list-style-type: none; */
+                color: var(--primary);
+            }
+            .points ol li{
+                font-size: 17px; 
+                color: var(--light);
+                line-height: 2rem;
+                text-align: justify;
+                text-justify: distribute-all-lines;
+            }
+            .points ol li::before {
+                
+                color: var(--primary);
+                font-size: 20px;
+                margin-right: 5px;
+            }
+        </style>
+        <div class="text-center animated slideInRight points" data-wow-delay="0.1s">
+            <h3 class="mb-5 animated slideInLeft">Why to choose us for an Internship</h3>
+            <hr>
+            <div class="row gy-2 gx-4 mb-5 " >
+                    
+                <div class="col-sm-6 text-center m-0 p-0" style="margin-right: 0;">
+                    <ol>
+                        <li class="p-1" >Live project training that provides practical skills and real-world experience</li>
+                        <li class="p-1">Experienced mentors who provide individualized guidance and feedback</li>
+                        <li class="p-1">Opportunity to collaborate with experienced professionals in the industry</li>
+                        <li class="p-1" >Flexible program options ranging from 2 days to 1 month</li>
+                        <li class="p-1" >Valuable internship certificate highlighting skills and experience</li>
+                    </ol>
+                </div>
+                <div class="col-sm-6 text-center m-0 p-0" style="margin-left: 0;">
+                    <ol start="6">
+                        <li class="p-1" >Chance to build connections and gain a competitive edge in the job market</li>
+                        <li class="p-1" >Enhance academic and professional careers with our immersive program</li>
+                        <li class="p-1" >Practical application of classroom theories and concepts</li>
+                        <li class="p-1" >Opportunity to network with professionals in the industry</li>
+                        <li class="p-1" >Interns will receive academic points for their participation in our program</li>
+                    </ol>
+                </div>
+
+            </div>
+        </div>
+
+        <div class="row g-4  justify-content-center" >
+            <div class="text-center wow fadeInLeftBig">
+                <h3 class="mb-5">Offered Courses</h3>
+            </div>
+            <hr>
+           
+            <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.1s" >
+                <div class="course-item bg-light">
+                   
+                    <div class="position-relative overflow-hidden">
+
+                        {% if c.image %}
+                            <img src="{{ c.image.url }}" class="img-fluid" style="width:500px; height: 235px !important;">
+                        {% endif %}
+
+                        <div class="w-100 d-flex justify-content-center position-absolute bottom-0 start-0 mb-4">
+                            <a href="#" class="flex-shrink-0 btn btn-sm btn-primary px-3 border-end" style="border-radius: 30px 0 0 30px;">Read More</a>
+                            <a href="#" class="flex-shrink-0 btn btn-sm btn-primary px-3" style="border-radius: 0 30px 30px 0;">Join Now</a>
+                        </div>
+                    </div>
+                    <div class="text-center p-4 pb-0">
+                      
+                        <h4 class="mb-1 text-center ">Python Development  </h4>
+                        
+                        <p class="mb-2 p-2 text-dark">The Python internship program offered by Altos Eduhub covers a wide range of tools and
+                            technologies to provide students with a comprehensive understanding of the Python
+                            programming language and its applications. Some of the tools and technologies that can be
+                            offered as part of the program are:
+                            
+                            </p>
+                        <ol>
+                                <li>Python programming fundamentals</li>
+                                <li>Object-Oriented Programming concepts</li>
+                                <li>Web development using Flask and Django frameworks</li>
+                                <li>Relational database management using SQL</li>
+                                <li>Data analysis and visualization using pandas, NumPy, and matplotlib libraries</li>
+                                <li>Machine learning and artificial intelligence using Scikit-learn and TensorFlow libraries</li>
+                                <li>Git version control system for collaboration on code</li>
+                                <li>Agile development methodology for software development</li>
+                                <li>Testing and debugging techniques for Python applications</li>
+
+                        </ol>
+                        <h5 class="mb-1 text-left"><b>Course Fee:</b></h5>
+                    </div>
+                    <div class="d-flex border-top">
+                        <small class="flex-fill text-center border-end py-3"><b>Duration  </b> <br>3 Months</small>
+                        <small class="flex-fill text-center border-end py-3"><b>Next Batch </b> <br></small>
+                    </div>
+                    
+                </div>
+            </div>
+          
+            <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.1s" >
+                <div class="course-item bg-light">
+                   
+                    <div class="position-relative overflow-hidden">
+
+                        {% if c.image %}
+                            <img src="{{ c.image.url }}" class="img-fluid" style="width:500px; height: 235px !important;">
+                        {% endif %}
+
+                        <div class="w-100 d-flex justify-content-center position-absolute bottom-0 start-0 mb-4">
+                            <a href="#" class="flex-shrink-0 btn btn-sm btn-primary px-3 border-end" style="border-radius: 30px 0 0 30px;">Read More</a>
+                            <a href="#" class="flex-shrink-0 btn btn-sm btn-primary px-3" style="border-radius: 0 30px 30px 0;">Join Now</a>
+                        </div>
+                    </div>
+                    <div class="text-center p-4 pb-0">
+                      
+                        <h4 class="mb-1 text-center ">React JS Development  </h4>
+                        
+                        <p class="mb-2 p-2 text-dark">The React JS internship program offered by Altos Eduhub covers a wide range of tools and
+                            technologies to provide students with a comprehensive understanding of the React JS library
+                            and its applications. Some of the tools and technologies that can be offered as part of the
+                            program are:
+                            
+                            
+                            </p>
+                        <ol>
+                                <li>React JS library for building user interfaces</li>
+                                <li>HTML, CSS, and JavaScript for web development</li>
+                                <li>Redux library for state management</li>
+                                <li>React Router library for navigation</li>
+                                <li>Axios or Fetch for making API calls
+                                </li>
+                                <li>Firebase for real-time database management</li>
+                                <li>Jest and Enzyme for testing React applications
+                                </li>
+                                <li>Git version control system for collaboration on code</li>
+                                <li>Visual Studio Code or WebStorm for Integrated Development Environment (IDE)</li>
+                                <li>Agile development methodology for software development
+                                </li>
+
+                        </ol>
+                        <h5 class="mb-1 text-left"><b>Course Fee:</b></h5>
+                    </div>
+                    <div class="d-flex border-top">
+                        <small class="flex-fill text-center border-end py-3"><b>Duration  </b> <br>3 Months</small>
+                        <small class="flex-fill text-center border-end py-3"><b>Next Batch </b> <br></small>
+                    </div>
+                    
+                </div>
+            </div>
+
+            <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.1s" >
+                <div class="course-item bg-light">
+                   
+                    <div class="position-relative overflow-hidden">
+
+                        {% if c.image %}
+                            <img src="{{ c.image.url }}" class="img-fluid" style="width:500px; height: 235px !important;">
+                        {% endif %}
+
+                        <div class="w-100 d-flex justify-content-center position-absolute bottom-0 start-0 mb-4">
+                            <a href="#" class="flex-shrink-0 btn btn-sm btn-primary px-3 border-end" style="border-radius: 30px 0 0 30px;">Read More</a>
+                            <a href="#" class="flex-shrink-0 btn btn-sm btn-primary px-3" style="border-radius: 0 30px 30px 0;">Join Now</a>
+                        </div>
+                    </div>
+                    <div class="text-center p-4 pb-0">
+                      
+                        <h4 class="mb-1 text-center ">Front end Development
+                        </h4>
+                        
+                        <p class="mb-2 p-2 text-dark">The Front End Development internship program offered by Altos Eduhub covers a wide range of
+                            tools and technologies to provide students with a comprehensive understanding of front-end
+                            web development and its applications. Some of the tools and technologies that can be offered
+                            as part of the program are:
+                            
+                            </p>
+                        <ol>
+                                <li>HTML, CSS, and JavaScript for web development
+                                </li>
+                                <li>Responsive design using Bootstrap or Material UI frameworks</li>
+                                <li>Version control with Git
+                                </li>
+                                <li>JavaScript frameworks like React JS, Angular, or Vue JS for building modern web
+                                    applications</li>
+                                <li>SASS or LESS for CSS preprocessing</li>
+                                <li>Gulp or Grunt for task automation
+                                </li>
+                                <li>Adobe Photoshop or Sketch for designing web layouts</li>
+                                <li>RESTful API integration with AJAX or Fetch
+                                </li>
+                                <li>Browser developer tools for debugging and testing</li>
+                                <li>Agile development methodology for software development</li>
+
+                        </ol>
+                        <h5 class="mb-1 text-left"><b>Course Fee:</b></h5>
+                    </div>
+                    <div class="d-flex border-top">
+                        <small class="flex-fill text-center border-end py-3"><b>Duration  </b> <br>3 Months</small>
+                        <small class="flex-fill text-center border-end py-3"><b>Next Batch </b> <br></small>
+                    </div>
+                    
+                </div>
+            </div>
+
+            <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.1s" >
+                <div class="course-item bg-light">
+                   
+                    <div class="position-relative overflow-hidden">
+
+                        {% if c.image %}
+                            <img src="{{ c.image.url }}" class="img-fluid" style="width:500px; height: 235px !important;">
+                        {% endif %}
+
+                        <div class="w-100 d-flex justify-content-center position-absolute bottom-0 start-0 mb-4">
+                            <a href="#" class="flex-shrink-0 btn btn-sm btn-primary px-3 border-end" style="border-radius: 30px 0 0 30px;">Read More</a>
+                            <a href="#" class="flex-shrink-0 btn btn-sm btn-primary px-3" style="border-radius: 0 30px 30px 0;">Join Now</a>
+                        </div>
+                    </div>
+                    <div class="text-center p-4 pb-0">
+                      
+                        <h4 class="mb-1 text-center ">Rest API Development </h4>
+                        
+                        <p class="mb-2 p-2 text-dark">The REST API Development internship program offered by Altos Eduhub covers various tools
+                            and technologies to provide students with a comprehensive understanding of REST API
+                            development and its applications. Some of the tools and technologies that can be offered as
+                            part of the program are:
+                            
+                            </p>
+                        <ol>
+                                <li>Understanding HTTP requests and responses</li>
+                                <li>Building and testing APIs with Postman or Insomnia
+                                </li>
+                                <li>RESTful web service development using Node.js and Express.js</li>
+                                <li>Creating and manipulating data with MongoDB or MySQL databases</li>
+                                <li>Authentication and authorization using JSON Web Tokens (JWT)</li>
+                                <li>Integrating third-party APIs such as Google Maps or Stripe</li>
+                                <li>Documenting APIs with Swagger or OpenAPI</li>
+                                <li>API deployment using platforms such as Heroku or AWS Lambda</li>
+                                <li>API security and best practices for production-ready APIs</li>
+                                <li>Version control with Git</li>
+
+                        </ol>
+                        <h5 class="mb-1 text-left"><b>Course Fee:</b></h5>
+                    </div>
+                    <div class="d-flex border-top">
+                        <small class="flex-fill text-center border-end py-3"><b>Duration  </b> <br>3 Months</small>
+                        <small class="flex-fill text-center border-end py-3"><b>Next Batch </b> <br></small>
+                    </div>
+                    
+                </div>
+            </div>
+
+            <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.1s" >
+                <div class="course-item bg-light">
+                   
+                    <div class="position-relative overflow-hidden">
+
+                        {% if c.image %}
+                            <img src="{{ c.image.url }}" class="img-fluid" style="width:500px; height: 235px !important;">
+                        {% endif %}
+
+                        <div class="w-100 d-flex justify-content-center position-absolute bottom-0 start-0 mb-4">
+                            <a href="#" class="flex-shrink-0 btn btn-sm btn-primary px-3 border-end" style="border-radius: 30px 0 0 30px;">Read More</a>
+                            <a href="#" class="flex-shrink-0 btn btn-sm btn-primary px-3" style="border-radius: 0 30px 30px 0;">Join Now</a>
+                        </div>
+                    </div>
+                    <div class="text-center p-4 pb-0">
+                      
+                        <h4 class="mb-1 text-center ">Digital Marketing  </h4>
+                        
+                        <p class="mb-2 p-2 text-dark">The Digital Marketing internship program offered by Altos Eduhub covers various tools and
+                            technologies to provide students with a comprehensive understanding of digital marketing and
+                            its applications. Some of the tools and technologies that can be offered as part of the program
+                            are:
+                            
+                            </p>
+                        <ol>
+                                <li>Understanding the basics of digital marketing, including SEO, SEM, PPC, and email
+                                    marketing
+                                    </li>
+                                <li>Google Analytics for analyzing website traffic and user behavior</li>
+                                <li>Social media marketing using platforms such as Facebook, Instagram, Twitter, and
+                                    LinkedIn</li>
+                                <li>Content creation and optimization for websites and social media</li>
+                                <li> Search Engine Optimization (SEO) techniques to improve website rankings on search
+                                    engines</li>
+                                <li>Google AdWords and PPC campaigns for driving website traffic and generating leads</li>
+                                <li>Email marketing using platforms such as Mailchimp or Constant Contact</li>
+                                <li>Google Tag Manager for tracking website events and conversions</li>
+                                <li>Landing page optimization and A/B testing using tools such as Unbounce or Optimizely</li>
+                                <li>Marketing automation using tools such as HubSpot or Marketo</li>
+
+                        </ol>
+                        <h5 class="mb-1 text-left"><b>Course Fee:</b></h5>
+                    </div>
+                    <div class="d-flex border-top">
+                        <small class="flex-fill text-center border-end py-3"><b>Duration  </b> <br>3 Months</small>
+                        <small class="flex-fill text-center border-end py-3"><b>Next Batch </b> <br></small>
+                    </div>
+                    
+                </div>
+            </div>
+
+            <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.1s" >
+                <div class="course-item bg-light">
+                   
+                    <div class="position-relative overflow-hidden">
+
+                        {% if c.image %}
+                            <img src="{{ c.image.url }}" class="img-fluid" style="width:500px; height: 235px !important;">
+                        {% endif %}
+
+                        <div class="w-100 d-flex justify-content-center position-absolute bottom-0 start-0 mb-4">
+                            <a href="#" class="flex-shrink-0 btn btn-sm btn-primary px-3 border-end" style="border-radius: 30px 0 0 30px;">Read More</a>
+                            <a href="#" class="flex-shrink-0 btn btn-sm btn-primary px-3" style="border-radius: 0 30px 30px 0;">Join Now</a>
+                        </div>
+                    </div>
+                    <div class="text-center p-4 pb-0">
+                      
+                        <h4 class="mb-1 text-center ">Machine Learning</h4>
+                        
+                        <p class="mb-2 p-2 text-dark">Our machine learning internship program covers a range of topics, including data
+                            preprocessing, model selection, and evaluation, supervised and unsupervised learning, deep
+                            learning, and natural language processing. By the end of the program, interns will have gained
+                            practical skills and knowledge in machine learning, preparing them for a career in this rapidly
+                            growing field.
+                            
+                            
+                            </p>
+                        <ol>
+                                <li>Introduction to machine learning and its applications</li>
+                                <li>Data preprocessing and feature engineering</li>
+                                <li>Supervised learning algorithms, such as regression, decision trees, and random forests</li>
+                                <li>Unsupervised learning algorithms, such as clustering and dimensionality reduction</li>
+                                <li>Deep learning concepts, including neural networks and convolutional neural networks</li>
+                                <li>Natural language processing (NLP) techniques, such as sentiment analysis and
+                                    language generation</li>
+                                <li>Model selection, evaluation, and optimization techniques
+                                </li>
+                                <li>Ethical and social considerations in machine learning</li>
+                                <li>Industry-specific applications of machine learning, such as healthcare and finance
+                                </li>
+                                <li>Hands-on projects and exercises to reinforce concepts.</li>
+                        </ol>
+                        <h5 class="mb-1 text-left"><b>Course Fee:</b></h5>
+                    </div>
+                    <div class="d-flex border-top">
+                        <small class="flex-fill text-center border-end py-3"><b>Duration  </b> <br>3 Months</small>
+                        <small class="flex-fill text-center border-end py-3"><b>Next Batch </b> <br></small>
+                    </div>
+                    
+                </div>
+            </div>
+
+            <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.1s" >
+                <div class="course-item bg-light">
+                   
+                    <div class="position-relative overflow-hidden">
+
+                        {% if c.image %}
+                            <img src="{{ c.image.url }}" class="img-fluid" style="width:500px; height: 235px !important;">
+                        {% endif %}
+
+                        <div class="w-100 d-flex justify-content-center position-absolute bottom-0 start-0 mb-4">
+                            <a href="#" class="flex-shrink-0 btn btn-sm btn-primary px-3 border-end" style="border-radius: 30px 0 0 30px;">Read More</a>
+                            <a href="#" class="flex-shrink-0 btn btn-sm btn-primary px-3" style="border-radius: 0 30px 30px 0;">Join Now</a>
+                        </div>
+                    </div>
+                    <div class="text-center p-4 pb-0">
+                      
+                        <h4 class="mb-1 text-center ">3D Modeling  </h4>
+                        
+                        <p class="mb-2 p-2 text-dark">Our 3D modeling internship program covers a range of topics including 3D modeling software,
+                            modeling techniques, texturing, lighting, and rendering. Interns will have the opportunity to work
+                            on real-world projects, collaborate with professionals, and receive feedback and guidance from
+                            experienced mentors.
+                            
+                            </p>
+                        <ol>
+                                <li>Introduction to 3D modeling software
+                                </li>
+                                <li>Basic 3D modeling concepts and terminology</li>
+                                <li>Modeling techniques for different objects (e.g., characters, environments, vehicles)</li>
+                                <li>Texturing and UV mapping</li>
+                                <li>Lighting and shading</li>
+                                <li>Rendering and compositing</li>
+                                <li>Animation and rigging</li>
+                                <li>Workflow and pipeline management
+                                </li>
+                                <li>Industry-specific applications of 3D modeling (e.g., gaming, film, architecture)</li>
+                                <li> Portfolio development and presentation skills.</li>
+
+                        </ol>
+                        <h5 class="mb-1 text-left"><b>Course Fee:</b></h5>
+                    </div>
+                    <div class="d-flex border-top">
+                        <small class="flex-fill text-center border-end py-3"><b>Duration  </b> <br>3 Months</small>
+                        <small class="flex-fill text-center border-end py-3"><b>Next Batch </b> <br></small>
+                    </div>
+                    
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- Courses End -->
+
+
+
+        
+    {% endblock %}

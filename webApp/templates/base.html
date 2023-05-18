@@ -1521,7 +1521,10 @@
     }
 
     </style>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/boxicons@latest/css/boxicons.min.css">
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 </head>
 
 <body>
@@ -1562,17 +1565,12 @@
                             <a href="{% url 'courses' %}" style=" text-decoration: none;">Courses</a>
                         </span>
                         <div class="dropdown-submenu fade-down m-0" >
-                            <a href="{% url 'python_dev' %}" class="nav-item dropdown-item" >OJT Program</a>
-                            <a href="" class="nav-item dropdown-item" >Internships Program</a>
-                            <a href="" class="nav-item dropdown-item" >Short Term Internships</a>
+                            <a href="{% url 'ojt' %}" class="nav-item dropdown-item" >OJT Program</a>
+                            <a href="{% url 'internships' %}" class="nav-item dropdown-item" >Internships Program</a>
+                            <a href="{% url 'short_term' %}" class="nav-item dropdown-item" >Short Term Internships</a>
                             
                         </div>
-                        <!-- <a href="{% url 'python_dev' %}" class="nav-item dropdown-item" >OJT Program</a>
-                        <a href="" class="nav-item dropdown-item" >Internships Program</a>
-                        <a href="" class="nav-item dropdown-item" >Short Term Internships</a> -->
-                        <!-- <a href="" class="nav-item dropdown-item" >Digital Marketing</a>
-                        <a href="" class="nav-item dropdown-item" >Frontend Development</a> -->
-                        
+                    
 
                     </div>
                 </div>
@@ -1593,29 +1591,390 @@
 <!-- WhatsApp End -->
 
 
+<!-- new chat -->
+
+
+<style>
+    #chat-circle {
+  position: fixed;
+  bottom: 90px;
+  right: 20px;
+  background: var(--primary);
+  width: 78px;
+  height: 78px;  
+  border-radius: 50%;
+  color: white;
+  padding: 28px;
+  cursor: pointer;
+  box-shadow: 0px 3px 16px 0px rgba(0, 0, 0, 0.6), 0 3px 1px -2px rgba(0, 0, 0, 0.2), 0 1px 5px 0 rgba(0, 0, 0, 0.12);
+  text-align: center;
+  z-index: 99999;
+}
+#chat-circle i{
+    font-size: 30px;
+}
+
+.btn#my-btn {
+     background: white;
+    /* padding-top: 13px; */
+    /* padding-bottom: 12px; */
+    border-radius: 45px;
+    /* padding-right: 40px;
+    padding-left: 40px; */
+    color: var(--primary);
+    text-align: center;
+}
+#chat-overlay {
+    background: rgba(255,255,255,0.1);
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    display: none;
+}
+
+
+.chat-box {
+  display:none;
+  background: #efefef;
+  position:fixed;
+  right:30px;
+  bottom:50px;  
+  width:350px;
+  max-width: 85vw;
+  max-height:100vh;
+  border-radius:5px;  
+/*   box-shadow: 0px 5px 35px 9px #464a92; */
+  /* box-shadow: 0px 5px 15px 9px #ccc; */
+
+  z-index: 99999;
+}
+.chat-box-toggle {
+  float:right;
+  margin-right:15px;
+  cursor:pointer;
+}
+.chat-box-header {
+  background: var(--primary);
+  height:70px;
+  border-top-left-radius:5px;
+  border-top-right-radius:5px; 
+  color:white;
+  text-align:center;
+  font-size:20px;
+  padding-top:17px;
+}
+.chat-box-body {
+  position: relative;  
+  height:370px;  
+  height:auto;
+  border:1px solid #ccc;  
+  overflow: hidden;
+}
+.chat-box-body:after {
+  content: "";
+  background-image: url('data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMjAwIiBoZWlnaHQ9IjIwMCIgdmlld0JveD0iMCAwIDIwMCAyMDAiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PGcgdHJhbnNmb3JtPSJ0cmFuc2xhdGUoMTAgOCkiIGZpbGw9Im5vbmUiIGZpbGwtcnVsZT0iZXZlbm9kZCI+PGNpcmNsZSBzdHJva2U9IiMwMDAiIHN0cm9rZS13aWR0aD0iMS4yNSIgY3g9IjE3NiIgY3k9IjEyIiByPSI0Ii8+PHBhdGggZD0iTTIwLjUuNWwyMyAxMW0tMjkgODRsLTMuNzkgMTAuMzc3TTI3LjAzNyAxMzEuNGw1Ljg5OCAyLjIwMy0zLjQ2IDUuOTQ3IDYuMDcyIDIuMzkyLTMuOTMzIDUuNzU4bTEyOC43MzMgMzUuMzdsLjY5My05LjMxNiAxMC4yOTIuMDUyLjQxNi05LjIyMiA5LjI3NC4zMzJNLjUgNDguNXM2LjEzMSA2LjQxMyA2Ljg0NyAxNC44MDVjLjcxNSA4LjM5My0yLjUyIDE0LjgwNi0yLjUyIDE0LjgwNk0xMjQuNTU1IDkwcy03LjQ0NCAwLTEzLjY3IDYuMTkyYy02LjIyNyA2LjE5Mi00LjgzOCAxMi4wMTItNC44MzggMTIuMDEybTIuMjQgNjguNjI2cy00LjAyNi05LjAyNS0xOC4xNDUtOS4wMjUtMTguMTQ1IDUuNy0xOC4xNDUgNS43IiBzdHJva2U9IiMwMDAiIHN0cm9rZS13aWR0aD0iMS4yNSIgc3Ryb2tlLWxpbmVjYXA9InJvdW5kIi8+PHBhdGggZD0iTTg1LjcxNiAzNi4xNDZsNS4yNDMtOS41MjFoMTEuMDkzbDUuNDE2IDkuNTIxLTUuNDEgOS4xODVIOTAuOTUzbC01LjIzNy05LjE4NXptNjMuOTA5IDE1LjQ3OWgxMC43NXYxMC43NWgtMTAuNzV6IiBzdHJva2U9IiMwMDAiIHN0cm9rZS13aWR0aD0iMS4yNSIvPjxjaXJjbGUgZmlsbD0iIzAwMCIgY3g9IjcxLjUiIGN5PSI3LjUiIHI9IjEuNSIvPjxjaXJjbGUgZmlsbD0iIzAwMCIgY3g9IjE3MC41IiBjeT0iOTUuNSIgcj0iMS41Ii8+PGNpcmNsZSBmaWxsPSIjMDAwIiBjeD0iODEuNSIgY3k9IjEzNC41IiByPSIxLjUiLz48Y2lyY2xlIGZpbGw9IiMwMDAiIGN4PSIxMy41IiBjeT0iMjMuNSIgcj0iMS41Ii8+PHBhdGggZmlsbD0iIzAwMCIgZD0iTTkzIDcxaDN2M2gtM3ptMzMgODRoM3YzaC0zem0tODUgMThoM3YzaC0zeiIvPjxwYXRoIGQ9Ik0zOS4zODQgNTEuMTIybDUuNzU4LTQuNDU0IDYuNDUzIDQuMjA1LTIuMjk0IDcuMzYzaC03Ljc5bC0yLjEyNy03LjExNHpNMTMwLjE5NSA0LjAzbDEzLjgzIDUuMDYyLTEwLjA5IDcuMDQ4LTMuNzQtMTIuMTF6bS04MyA5NWwxNC44MyA1LjQyOS0xMC44MiA3LjU1Ny00LjAxLTEyLjk4N3pNNS4yMTMgMTYxLjQ5NWwxMS4zMjggMjAuODk3TDIuMjY1IDE4MGwyLjk0OC0xOC41MDV6IiBzdHJva2U9IiMwMDAiIHN0cm9rZS13aWR0aD0iMS4yNSIvPjxwYXRoIGQ9Ik0xNDkuMDUgMTI3LjQ2OHMtLjUxIDIuMTgzLjk5NSAzLjM2NmMxLjU2IDEuMjI2IDguNjQyLTEuODk1IDMuOTY3LTcuNzg1LTIuMzY3LTIuNDc3LTYuNS0zLjIyNi05LjMzIDAtNS4yMDggNS45MzYgMCAxNy41MSAxMS42MSAxMy43MyAxMi40NTgtNi4yNTcgNS42MzMtMjEuNjU2LTUuMDczLTIyLjY1NC02LjYwMi0uNjA2LTE0LjA0MyAxLjc1Ni0xNi4xNTcgMTAuMjY4LTEuNzE4IDYuOTIgMS41ODQgMTcuMzg3IDEyLjQ1IDIwLjQ3NiAxMC44NjYgMy4wOSAxOS4zMzEtNC4zMSAxOS4zMzEtNC4zMSIgc3Ryb2tlPSIjMDAwIiBzdHJva2Utd2lkdGg9IjEuMjUiIHN0cm9rZS1saW5lY2FwPSJyb3VuZCIvPjwvZz48L3N2Zz4=');
+  opacity: 0.1;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  height:100%;
+  position: absolute;
+  z-index: -1;   
+}
+#chat-input {
+  background: #f4f7f9;
+  width:100%; 
+  position:relative;
+  height:47px;  
+  padding-top:10px;
+  padding-right:50px;
+  padding-bottom:10px;
+  padding-left:15px;
+  border:none;
+  resize:none;
+  outline:none;
+  border:1px solid #ccc;
+  color:#888;
+  border-top:none;
+  border-bottom-right-radius:5px;
+  border-bottom-left-radius:5px;
+  overflow:hidden;  
+}
+.chat-input > form {
+    margin-bottom: 0;
+}
+#chat-input::-webkit-input-placeholder { /* Chrome/Opera/Safari */
+  color: #ccc;
+}
+#chat-input::-moz-placeholder { /* Firefox 19+ */
+  color: #ccc;
+}
+#chat-input:-ms-input-placeholder { /* IE 10+ */
+  color: #ccc;
+}
+#chat-input:-moz-placeholder { /* Firefox 18- */
+  color: #ccc;
+}
+.chat-submit {  
+  position:absolute;
+  bottom:5px;
+  right:10px;
+  background: transparent;
+  box-shadow:none;
+  border:none;
+  border-radius:50%;
+  color:var(--primary);
+  font-weight: 900;
+  width :50px;
+  height:50px;  
+  text-align: center;
+}
+.chat-submit i{
+    bottom: 20px;
+}
+.chat-logs {
+  padding:15px; 
+  height:370px;
+  overflow-y:scroll;
+}
+
+.chat-logs::-webkit-scrollbar-track
+{
+  -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3);
+  background-color: #F5F5F5;
+}
+
+.chat-logs::-webkit-scrollbar
+{
+  width: 5px;  
+  background-color: #F5F5F5;
+}
+
+.chat-logs::-webkit-scrollbar-thumb
+{
+  background-color: var(--primary);
+}
+
+
+
+@media only screen and (max-width: 500px) {
+   .chat-logs {
+        height:40vh;
+    }
+}
+
+.chat-msg.user > .msg-avatar img {
+  width:45px;
+  height:45px;
+  border-radius:50%;
+  float:left;
+  width:15%;
+}
+.chat-msg.self > .msg-avatar img {
+  width:45px;
+  height:45px;
+  border-radius:50%;
+  float:right;
+  width:15%;
+}
+.cm-msg-text {
+  background:white;
+  padding:10px 15px 10px 15px;  
+  color:#666;
+  max-width:75%;
+  float:left;
+  margin-left:10px; 
+  position:relative;
+  margin-bottom:20px;
+  border-radius:30px;
+}
+.chat-msg {
+  clear:both;    
+}
+.chat-msg.self > .cm-msg-text {  
+  float:right;
+  margin-right:10px;
+  background: var(--primary);
+  color:white;
+}
+.cm-msg-button>ul>li {
+  list-style:none;
+  float:left;
+  width:50%;
+}
+.cm-msg-button {
+    clear: both;
+    margin-bottom: 70px;
+}
+
+@media (min-width:250px) and (max-width: 800px) {
+    #chat-circle {
+        width: 80px;
+        height: 80px;  
+    }
+    #chat-circle i {
+        margin-top: 0;
+        font-size: 30px;
+    }
+
+}
+
+</style>
+<link href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet">
+<div id="chat-circle" class="btn btn-raised">
+    <div id="chat-overlay"></div>
+    <i class="bx bxs-chat" ></i>
+</div>
+
+<div class="chat-box">
+<div class="chat-box-header">
+  Talk with us!
+  <span class="chat-box-toggle"><i class="material-icons">close</i></span>
+</div>
+<div class="chat-box-body">
+  <div class="chat-box-overlay">   
+  </div>
+  <div class="chat-logs">
+  </div>
+</div>
+<div class="chat-input">      
+  <form>
+    <input type="text" id="chat-input" placeholder="Send a message..."/>
+    <button type="submit" class="chat-submit" id="chat-submit" >
+        <i class="material-icons">send</i>
+    </button>
+  </form>      
+</div>
+</div>
+
+<script>
+$(function() {
+  var INDEX = 0; 
+  $("#chat-submit").click(function(e) {
+    e.preventDefault();
+    var msg = $("#chat-input").val(); 
+    if(msg.trim() == ''){
+      return false;
+    }
+    generate_message(msg, 'self');
+    var buttons = [
+        {
+          name: 'Existing User',
+          value: 'existing'
+        },
+        {
+          name: 'New User',
+          value: 'new'
+        }
+      ];
+    setTimeout(function() {      
+      generate_message(msg, 'user');  
+    }, 1000)
+    
+  })
+  
+  function generate_message(msg, type) {
+    INDEX++;
+    var str="";
+    str += "<div id='cm-msg-"+INDEX+"' class=\"chat-msg "+type+"\">";
+    // str += "          <span class=\"msg-avatar\">";
+    // str += "            <img src=\"https:\/\/image.crisp.im\/avatar\/operator\/196af8cc-f6ad-4ef7-afd1-c45d5231387c\/240\/?483361727745\">";
+    // str += "          <\/span>";
+    str += "          <div class=\"cm-msg-text\">";
+    str += msg;
+    str += "          <\/div>";
+    str += "        <\/div>";
+    $(".chat-logs").append(str);
+    $("#cm-msg-"+INDEX).hide().fadeIn(300);
+    if(type == 'self'){
+     $("#chat-input").val(''); 
+    }    
+    $(".chat-logs").stop().animate({ scrollTop: $(".chat-logs")[0].scrollHeight}, 1000);    
+  }  
+  
+//   function generate_button_message(msg, buttons){    
+//     //  Buttons should be object array 
+//     //   [
+//     //     {
+//     //       name: 'Existing User',
+//     //       value: 'existing'
+//     //     },
+//     //     {
+//     //       name: 'New User',
+//     //       value: 'new'
+//     //     }
+//     //   ]
+    
+//     INDEX++;
+//     var btn_obj = buttons.map(function(button) {
+//        return  "              <li class=\"button\"><a href=\"javascript:;\" class=\"btn btn-primary chat-btn\" chat-value=\""+button.value+"\">"+button.name+"<\/a><\/li>";
+//     }).join('');
+//     var str="";
+//     str += "<div id='cm-msg-"+INDEX+"' class=\"chat-msg user\">";
+//     // str += "          <span class=\"msg-avatar\">";
+//     // str += "            <img src=\"https:\/\/image.crisp.im\/avatar\/operator\/196af8cc-f6ad-4ef7-afd1-c45d5231387c\/240\/?1483361727745\">";
+//     str += "          <\/span>";
+//     str += "          <div class=\"cm-msg-text\">";
+//     str += msg;
+//     str += "          <\/div>";
+//     str += "          <div class=\"cm-msg-button\">";
+//     str += "            <ul>";   
+//     str += btn_obj;
+//     str += "            <\/ul>";
+//     str += "          <\/div>";
+//     str += "        <\/div>";
+//     $(".chat-logs").append(str);
+//     $("#cm-msg-"+INDEX).hide().fadeIn(300);   
+//     $(".chat-logs").stop().animate({ scrollTop: $(".chat-logs")[0].scrollHeight}, 1000);
+//     $("#chat-input").attr("disabled", true);
+//   }
+  
+  $(document).delegate(".chat-btn", "click", function() {
+    var value = $(this).attr("chat-value");
+    var name = $(this).html();
+    $("#chat-input").attr("disabled", false);
+    generate_message(name, 'self');
+  })
+  
+  $("#chat-circle").click(function() {    
+    $("#chat-circle").toggle('scale');
+    $(".chat-box").toggle('scale');
+  })
+  
+  $(".chat-box-toggle").click(function() {
+    $("#chat-circle").toggle('scale');
+    $(".chat-box").toggle('scale');
+  })
+  
+})
+
+</script>
+<!-- end chat -->
 
 <!-- chat -->
-<div class="chat-bar-collapsible">
-    <button id="chat-button" type="button" class="collapsible ">Talk to us!
-        <i id="chat-icon" style="color: #fff;" class="fa fa-fw fa-comments-o" ></i>
+<!-- <div class="chat-bar-collapsible">
+    <button id="chat-button" type="button" class="collapsible">Talk to us!
+        <i id="chat-icon" style="color: #fff;" class=" bx bxs-chat" ></i>
         <i id="close-btn" class="fa fa-close justify-content-around" ></i>
     </button>
 
     <div class="content">
         <div class="full-chat-block">
-            <!-- Message Container -->
             <div class="outer-container">
                 <div class="chat-container">
-                    <!-- Messages -->
                     <div id="chatbox">
                         <h5 id="chat-timestamp"></h5>
                         <p id="botStarterMessage" class="botText"><span>Loading...</span></p>
                     </div>
 
-                    <!-- User input box -->
                     <div class="chat-bar-input-block">
                         <div id="userInput">
-                            <input id="textInput" class="input-box" type="text" name="msg"
+                            <input id="chat-input" class="input-box" type="text" name="msg"
                                 placeholder="Type your queries here">
                             <p></p>
                         </div>
@@ -1636,7 +1995,7 @@
         </div>
     </div>
 
-</div>
+</div> -->
 <!-- chat end -->
 
 
@@ -1664,32 +2023,8 @@
                         <a class="btn btn-outline-light btn-social" href="https://www.linkedin.com/mwlite/company/altos-technologies-kochi"><i class="fab fa-linkedin-in"></i></a>
                     </div>
                 </div>
-                <!-- <div class="col-lg-3 col-md-6">
-                    <h4 class="text-white mb-3">Gallery</h4>
-                    <div class="row g-2 pt-2">
-                        
-                        <div class="col-4">
-                            <img class="img-fluid bg-light p-1" src="static/img/course-1.jpg" alt="">
-                        </div>
-                        <div class="col-4">
-                            <img class="img-fluid bg-light p-1" src="static/img/course-2.jpg" alt="">
-                        </div>
-                        <div class="col-4">
-                            <img class="img-fluid bg-light p-1" src="static/img/cat-3.avif" alt="">
-                        </div>
-                        <div class="col-4">
-                            <img class="img-fluid bg-light p-1" src="static/img/cat-2.jpg" alt="">
-                        </div>
-                        <div class="col-4">
-                            <img class="img-fluid bg-light p-1" src="static/img/course-3.jpg" alt="">
-                        </div>
-                        <div class="col-4">
-                            <img class="img-fluid bg-light p-1" src="static/img/course-1.png" alt="">
-                        </div>
-                    </div>
-                </div> -->
+                
                 <div class="col-lg-4 col-md-6">
-                    <!-- <h4 class="text-white">Newsletter</h4> -->
                     <p class="m-2 " style=" color: var(--light); ">Great Things Are Happening</p>
                     <h5 class="text-primary text-center text-uppercase mb-3 animated slideInDown m-2" style="color: var(--primary);">Sign up and be the first to know</h5>
               
@@ -1834,49 +2169,49 @@
 </script>
 
 <script>
-    var coll = document.getElementsByClassName("collapsible");
+    // var coll = document.getElementsByClassName("collapsible");
 
-    for (let i = 0; i < coll.length; i++) {
-        coll[i].addEventListener("click", function () {
-            this.classList.toggle("active");
+    // for (let i = 0; i < coll.length; i++) {
+    //     coll[i].addEventListener("click", function () {
+    //         this.classList.toggle("active");
 
-            var content = this.nextElementSibling;
+    //         var content = this.nextElementSibling;
 
-            if (content.style.maxHeight) {
-                content.style.maxHeight = null;
-            } 
-            else {
-                content.style.maxHeight = content.scrollHeight + "px";
-            }
+    //         if (content.style.maxHeight) {
+    //             content.style.maxHeight = null;
+    //         } 
+    //         else {
+    //             content.style.maxHeight = content.scrollHeight + "px";
+    //         }
 
-        });
-    }
+    //     });
+    // }
 
-    function getTime() {
-        let today = new Date();
-        hours = today.getHours();
-        minutes = today.getMinutes();
+    // function getTime() {
+    //     let today = new Date();
+    //     hours = today.getHours();
+    //     minutes = today.getMinutes();
 
-        if (hours < 10) {
-            hours = "0" + hours;
-        }
+    //     if (hours < 10) {
+    //         hours = "0" + hours;
+    //     }
 
-        if (minutes < 10) {
-            minutes = "0" + minutes;
-        }
+    //     if (minutes < 10) {
+    //         minutes = "0" + minutes;
+    //     }
 
-        let time = hours + ":" + minutes;
-        return time;
-    }
+    //     let time = hours + ":" + minutes;
+    //     return time;
+    // }
 
     // Gets the first message
     function firstBotMessage() {
-        let firstMessage = "How's it going?"
+        let firstMessage = "Welcome to Altos Eduhub! 👋 Ask your queries here"
         document.getElementById("botStarterMessage").innerHTML = '<p class="botText"><span>' + firstMessage + '</span></p>';
 
-        let time = getTime();
+        // let time = getTime();
 
-        $("#chat-timestamp").append(time);
+        // $("#chat-timestamp").append(time);
         document.getElementById("userInput").scrollIntoView(false);
     }
 
@@ -1886,13 +2221,13 @@
     function getHardResponse(userText) {
         let botResponse = getBotResponse(userText.toLowerCase());
         let botHtml = '<p class="botText"><span>' + botResponse + '</span></p>';
-        $("#chatbox").append(botHtml);
+        $("#chat-logs").append(botHtml);
 
         document.getElementById("chat-bar-bottom").scrollIntoView(true);
     }
 
     function getResponse() {
-        let userText = $("#textInput").val();
+        let userText = $("#chat-input").val();
 
         if (userText == "") {
             userText = "Nice talking to you!";
@@ -1900,8 +2235,8 @@
 
         let userHtml = '<p class="userText"><span>' + userText + '</span></p>';
 
-        $("#textInput").val("");
-        $("#chatbox").append(userHtml);
+        $("#chat-input").val("");
+        $("#chat-logs").append(userHtml);
         document.getElementById("chat-bar-bottom").scrollIntoView(true);
 
         setTimeout(() => {
@@ -1913,8 +2248,8 @@
     function buttonSendText(sampleText) {
         let userHtml = '<p class="userText"><span>' + sampleText + '</span></p>';
 
-        $("#textInput").val("");
-        $("#chatbox").append(userHtml);
+        $("#chat-input").val("");
+        $("#chat-logs").append(userHtml);
         document.getElementById("chat-bar-bottom").scrollIntoView(true);
 
     }
@@ -1923,7 +2258,7 @@
         getResponse();
     }
 
-    $("#textInput").keypress(function (e) {
+    $("#chat-input").keypress(function (e) {
         if (e.which == 13) {
             getResponse();
         }
@@ -2016,48 +2351,9 @@
             return "Please contact to our HR  for more details <br>Contact Number: <br>+91 9074156818";
         }
     }
+ 
+    
 
-
-
-    window.onload = function() {
-      setTimeout(function() {
-            var modal = document.getElementsByClassName("collapsible");
-            var close = document.getElementsByClassName("close")[0];
-            modal.style.display = "block";
-            close.onclick = function() {
-            modal.style.display = "none";
-            }
-        }, 5000); 
-    };
-
-    // var coll = document.getElementsByClassName("collapsible");
-
-    // for (let i = 0; i < coll.length; i++) {
-    //     coll[i].addEventListener("click", function () {
-    //         this.classList.toggle("active");
-
-    //         var content = this.nextElementSibling;
-
-    //         if (content.style.maxHeight) {
-    //             content.style.maxHeight = null;
-    //         } 
-    //         else {
-    //             content.style.maxHeight = content.scrollHeight + "px";
-    //         }
-
-    //     });
-    // }
-
-
-
-    // function toggleMenu(){
-    //     var submenu = document.getElementById("dropdown-menu");
-    //     if (submenu.style.display === "block") {
-    //         submenu.style.display = "none";
-    //     } else {
-    //         submenu.style.display = "block";
-    //     }
-    // }
     </script>
 </body>
 

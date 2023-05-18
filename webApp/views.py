@@ -110,7 +110,7 @@ def ojt(request):
     return render(request,'ojt.html')
 
 def internships(request):
-    return render(request,'internships.html')
+    return render(request,'internship.html')
 
 def short_term(request):
     return render(request,'short_term.html')

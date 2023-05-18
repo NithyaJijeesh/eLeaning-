@@ -1,0 +1,994 @@
+{% extends 'base.html'%}
+{% block content %}
+{% load static %}
+
+<link href="static/img/favicon.ico" rel="icon">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Heebo:wght@400;500;600&family=Nunito:wght@600;700;800&display=swap" rel="stylesheet">
+<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" rel="stylesheet">
+<link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css" rel="stylesheet">
+
+<style>
+    h1{
+        color: var(--light);
+    }
+    p, li,small{
+        font-size: 18px;
+        text-align: justify;
+        text-justify: distribute;
+    }
+    .course-item{
+
+        height: 750px !important;
+        overflow:scroll;
+    }
+    @media (min-width: 600px)and ( max-width:1000px) {
+
+        .course-item{
+            height: 625px !important;
+            overflow:scroll;        
+        }
+    }
+    @media (min-width: 300px)and ( max-width:800px) {
+
+        .course-item{
+            height: 650px !important;
+            overflow:scroll;
+    }
+    }
+
+    p{
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        text-align: justify; 
+        text-justify: distribute; 
+        font-size: 17px; 
+        color: var(--light);
+        line-height: 2rem;
+    }
+
+</style>
+
+    <!-- Header Start -->
+    <div class="container-fluid bg-primary py-5 mb-5 page-header">
+        <div class="container py-0 ">
+            <nav class ="breadcrumb" aria-label="breadcrumb justify-content-right" >
+                <ol class="breadcrumb ">
+                    <li class="breadcrumb-item"><a class="text-white" href="{% url 'index'  %}">Home</a></li>
+                    <li class="breadcrumb-item text-white active" aria-current="page">Courses</li>
+                </ol>
+            </nav>
+            <div class="row justify-content-center">
+                <div class="col-lg-10 text-center wow fadeInUp">
+                    <h6 class="section-title bg-dark text-center text-primary px-3">Courses</h6>
+                    <h1 class="mb-5">On th Job Training</h1>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Header End -->
+
+    <style>
+        .box_main{
+            background-color: rgba(67, 65, 65, 0.685);
+            padding: 10px;
+            border-radius: 10px;
+        }
+        .readmore_bt {
+            text-decoration: none;
+            background: var(--dark);
+            border-radius: 5px;
+            color: var(--light);
+            margin-left: 250px;
+        }
+        .readmore_bt a{
+            text-decoration: none;
+            border-radius: 5px;
+            padding: 10px;
+            color: var(--light);
+        }
+        @media (min-width: 600px)and ( max-width:1000px) {
+
+        .readmore_bt{
+          
+            margin-left: 100px;        
+        }
+        }
+        @media (min-width: 300px)and ( max-width:800px) {
+
+        .readmore_bt{
+            margin-left: 120px;
+        }
+        }
+        .services_section h1{
+            color: var(--dark);
+        }
+        .box_main h3{
+            color: var(--primary);
+        }
+        .dummy_text{
+            color: var(--light);
+        }
+        .box_main li,.course_main li{
+            color: var(--light);
+        }
+        .course_main h3{
+            color: var(--primary);
+        }
+        @media (min-width: 300px)and ( max-width:800px) {
+
+        .box_main{
+            margin-top: 50px;
+        }
+        }
+
+        .services_section .row{
+            background: gray;
+             border-radius: 10px;
+        }
+        .course_column{
+            background: var(--primary);
+            border-radius: 10px;
+            color: var(--dark);
+            padding: 10px;
+        }
+        .course_column h3{
+            
+            color: var(--dark);
+            
+        }
+    </style>
+<!--services section start -->
+<div class="services_section layout_padding margin_90">
+    <div class="container">
+       <div class="row mb-5 p-2">
+        <h1 class="technology_text text-center mb-4">Python Development</h1>
+          <div class="col-md-6 course_column" >
+            
+            <div class="course_main mt-1 p-3">
+                
+                <p class="dummy_text">Our Python Development On-The-Job Training Program is designed to provide you with a
+                    comprehensive learning experience. The first three months are focused on building a solid
+                    foundation in the fundamentals of Python programming, while the remaining three months are
+                    spent working on live projects to give you hands-on experience in real-life situations. As a
+                    graduate of this program, you will receive an experience certificate and be assured of job
+                    placement. With our expert trainers and practical approach to learning, you can be confident in
+                    your ability to succeed in the field of Python development.
+                    </p>
+
+                    <h3 class="technology_text">Why Python Development</h3>
+                    <p class="dummy_text">Python is an incredibly versatile and dynamic programming language, widely used by
+                       developers and businesses worldwide. There are many reasons why Python development is a
+                       top choice for aspiring developers, such as:
+                       </p>
+                    
+                    <ol>
+                       <li class="p-1" >Versatility: Python can be used for a wide range of applications, from web development
+                           to data analysis and machine learning.
+                           </li>
+                       <li class="p-1">Simplicity: Python is easy to learn, read, and write, making it a popular choice for
+                           beginners and experts alike.</li>
+                       <li class="p-1">Popularity: Python is one of the most popular programming languages in the world, with
+                           a large and active community of developers.
+                           </li>
+                       <li class="p-1" >Career Opportunities: There is a huge demand for Python developers in the job market,
+                           with high-paying jobs available in a variety of industries.
+                           </li>
+                       <li class="p-1" >Open Source: Python is an open-source language, which means it's free to use, modify,
+                           and distribute, making it accessible to all.
+                           </li>
+                   </ol>
+
+             </div>
+             <button class="readmore_bt btn"><a href="#">Enroll Now</a></button>
+          </div>
+          <div class="col-md-6">
+             <div class="box_main">
+                
+                <h3 class="technology_text">Why Altos Eduhub</h3>
+                <ul>
+                    <li class="p-1" >Experience certificate upon successful completion of training</li>
+                    <li class="p-1">Assured placement assistance for certain programs</li>
+                    <li class="p-1">Experienced trainers with industry expertise</li>
+                    <li class="p-1" >Practical training on live projects for hands-on experience</li>
+                    <li class="p-1" >Opportunity to work on real-world scenarios to build a strong foundation</li>
+                    <li class="p-1" >Exposure to latest industry trends and technologies</li>
+                    <li class="p-1">Develop essential skills required in the workplace, such as teamwork, communication,
+                        and problem-solving</li>
+                    <li class="p-1">Enhance your resume with relevant job experience and training</li>
+                    <li class="p-1" >Networking opportunities with professionals in the industry</li>
+                    <li class="p-1" >Gain confidence and develop a positive attitude towards work</li>
+                </ul>
+                <h3 class="technology_text">What You Will Learn in the Python Training Program</h3>
+                <ul>
+                    <li class="p-1" >Introduction to Python programming language</li>
+                    <li class="p-1">Data types, variables, and operators</li>
+                    <li class="p-1">Control statements (if, while, for)</li>
+                    <li class="p-1" >Functions and modules</li>
+                    <li class="p-1" >Object-oriented programming concepts</li>
+                    <li class="p-1" >Exception handling</li>
+                    <li class="p-1">File handling </li>
+                    <li class="p-1">Regular expressions</li>
+                    <li class="p-1" >Database connectivity with Python</li>
+                    <li class="p-1" >Web scraping and crawling</li>
+                    <li class="p-1" >Python libraries and frameworks (e.g. NumPy, Pandas, Flask, Django)</li>
+                    <li class="p-1" >Deployment and hosting of Python applications.</li>
+                </ul>
+                
+
+             </div>
+          </div>
+       </div>
+       <div class="row mb-5 p-2">
+        <h1 class="technology_text text-center mb-4">React JS Development</h1>
+          <div class="col-md-6 course_column" >
+            
+            <div class="course_main mt-1 p-3">
+                
+                <p class="dummy_text">Our React JS Development On-The-Job Training Program is designed to equip you with the
+                    skills and knowledge required to succeed in the world of web development. The first three
+                    months are focused on teaching you the basics of React JS, while the remaining three months
+                    are spent working on live projects to give you hands-on experience in real-world scenarios. As a
+                    graduate of this program, you will receive an experience certificate and be assured of job
+                    placement. With our expert trainers and practical approach to learning, you can be confident in
+                    your ability to succeed as a React JS developer.
+                    
+                    </p>
+
+                    <h3 class="technology_text">Why React JS Development</h3>
+                    <p class="dummy_text">React JS has emerged as one of the most popular JavaScript libraries for building modern web
+                        applications. Here are some reasons why you should consider learning React JS development:
+                       </p>
+                    
+                    <ol>
+                       <li class="p-1" >Large Community: React JS has a vast community of developers who continuously
+                        contribute to the framework by creating new libraries, tools, and solutions. This
+                        community support ensures that the framework is continuously evolving and has
+                        excellent documentation.
+                        
+                           </li>
+                       <li class="p-1">Component-Based Architecture: React JS follows a component-based architecture,
+                        where the application is built by combining small, reusable components. This makes the
+                        application easier to maintain and scale.
+                        </li>
+                       <li class="p-1">Virtual DOM: React JS uses a Virtual DOM, which allows developers to build
+                        applications that are faster and more efficient. This feature reduces the need for direct
+                        manipulation of the DOM, which is a significant cause of performance issues.
+                           </li>
+                       <li class="p-1" >High Performance: React JS is known for its high performance and is widely used by
+                        companies to build complex applications that handle a vast amount of data.
+                           </li>
+                       <li class="p-1" >Cross-Platform Development: React JS can be used for building applications across
+                        multiple platforms, including web, mobile, and desktop. This feature reduces the
+                        development time and effort required to create applications for different platforms.
+                           </li>
+                   </ol>
+
+             </div>
+             <button class="readmore_bt btn"><a href="#">Enroll Now</a></button>
+          </div>
+          <div class="col-md-6">
+             <div class="box_main">
+                
+                <h3 class="technology_text">Why Altos Eduhub</h3>
+                <ul>
+                    <li class="p-1" >Experience certificate upon successful completion of training</li>
+                    <li class="p-1">Assured placement assistance for certain programs</li>
+                    <li class="p-1">Experienced trainers with industry expertise</li>
+                    <li class="p-1" >Practical training on live projects for hands-on experience</li>
+                    <li class="p-1" >Opportunity to work on real-world scenarios to build a strong foundation</li>
+                    <li class="p-1" >Exposure to latest industry trends and technologies</li>
+                    <li class="p-1">Develop essential skills required in the workplace, such as teamwork, communication,
+                        and problem-solving</li>
+                    <li class="p-1">Enhance your resume with relevant job experience and training</li>
+                    <li class="p-1" >Networking opportunities with professionals in the industry</li>
+                    <li class="p-1" >Gain confidence and develop a positive attitude towards work</li>
+                </ul>
+                <h3 class="technology_text">What You Will Learn in the React JS Development</h3>
+                <ul>
+                    <li class="p-1" >Introduction to React JS: Understanding the fundamentals of React JS, including
+                        components, virtual DOM, JSX syntax, and data flow.</li>
+                    <li class="p-1">React JS Components: Learning how to create reusable components, props, state, and
+                        lifecycle methods.</li>
+                    <li class="p-1">React Router: Understanding how to handle client-side routing in a React application
+                        using React Router.</li>
+                    <li class="p-1" >Redux: Learning how to manage state using Redux, including Redux store, actions,
+                        reducers, and middleware</li>
+                    <li class="p-1" >React Hooks: Understanding how to use React Hooks for state management and
+                        lifecycle methods.</li>
+                    <li class="p-1" >Server-Side Rendering: Learning how to render React components on the server-side to
+                        improve the performance and SEO of the application.</li>
+                    <li class="p-1">Testing React Components: Understanding how to write unit tests for React components
+                        using Jest and Enzyme. </li>
+                    <li class="p-1">Deployment: Learning how to deploy a React application to various platforms, including
+                        AWS, Heroku, and Netlify.</li>
+                        <li style="color: rgba(67, 65, 65, 0.0);"></li>
+                </ul>
+                
+
+             </div>
+          </div>
+       </div>
+       <div class="row mb-5 p-2">
+        <h1 class="technology_text text-center mb-4">Rest API Development</h1>
+          <div class="col-md-6 course_column" >
+            
+            <div class="course_main mt-1 p-3">
+                
+                <p class="dummy_text">Our REST API Development On-The-Job Training Program is designed to provide you with a
+                    comprehensive learning experience in developing web APIs. The first three months will be spent
+                    learning the fundamentals of REST APIs, while the remaining three months will be spent
+                    working on live projects to give you hands-on experience in real-world scenarios. As a graduate
+                    of this program, you will receive an experience certificate and be assured of job placement. With
+                    our expert trainers and practical approach to learning, you can be confident in your ability to
+                    succeed as a REST API developer.
+                    
+                    </p>
+
+                    <h3 class="technology_text">Why Rest API Development</h3>
+                                        
+                    <ol>
+                       <li class="p-1" >High Demand: REST API development is a rapidly growing field with high demand for
+                        developers who can build RESTful web services. It is widely used for creating robust and
+                        scalable web applications that can communicate with each other.
+                        
+                           </li>
+                       <li class="p-1">Career Growth: REST API development can lead to exciting career opportunities and
+                        can help you advance your career. As more and more companies move towards
+                        service-oriented architecture, REST API development skills are in high demand.
+                        </li>
+                       <li class="p-1">Versatile: REST API can be used with any programming language or framework and can
+                        run on any platform, making it a versatile technology to learn. It can be integrated with a
+                        wide range of applications and can be used to create web, mobile, or desktop
+                        applications.
+                        
+                           </li>
+                       <li class="p-1" >Better User Experience: REST API helps create better user experiences as it enables
+                        communication between various components of an application. It allows developers to
+                        create scalable, robust, and user-friendly applications.
+                           </li>
+                       <li class="p-1" >Open-Source: There are many open-source tools available for REST API development,
+                        making it easy and cost-effective to learn and implement. With a vast community of
+                        developers, there are plenty of resources and support available for those starting out in
+                        this field.
+                        
+                           </li>
+                   </ol>
+
+             </div>
+             <button class="readmore_bt btn"><a href="#">Enroll Now</a></button>
+          </div>
+          <div class="col-md-6">
+             <div class="box_main">
+                
+                <h3 class="technology_text">Benefits</h3>
+                <ul>
+                    <li class="p-1" >Experience certificate upon successful completion of training</li>
+                    <li class="p-1">Assured placement assistance for certain programs</li>
+                    <li class="p-1">Experienced trainers with industry expertise</li>
+                    <li class="p-1" >Practical training on live projects for hands-on experience</li>
+                    <li class="p-1" >Opportunity to work on real-world scenarios to build a strong foundation</li>
+                    <li class="p-1" >Exposure to latest industry trends and technologies</li>
+                    <li class="p-1">Develop essential skills required in the workplace, such as teamwork, communication,
+                        and problem-solving</li>
+                    <li class="p-1">Enhance your resume with relevant job experience and training</li>
+                    <li class="p-1" >Networking opportunities with professionals in the industry</li>
+                    <li class="p-1" >Gain confidence and develop a positive attitude towards work</li>
+                </ul>
+                <h3 class="technology_text">What You Will Learn in the Rest API Development</h3>
+                <ul>
+                    <li class="p-1" >Introduction to RESTful web services and its importance in web development.</li>
+                    <li class="p-1">Understanding HTTP request/response cycle and the role of REST APIs.</li>
+                    <li class="p-1">Overview of popular REST frameworks like Flask, Django, Express, and their
+                        differences.</li>
+                    <li class="p-1" >Implementing RESTful APIs using popular programming languages like Python, Node.js,
+                        and Java</li>
+                    <li class="p-1" >Database integration with REST APIs and designing the database schema for a RESTful
+                        application.</li>
+                    <li class="p-1" >Authentication and authorization mechanisms in RESTful APIs.</li>
+                    <li class="p-1">Testing RESTful APIs and writing automated test cases using frameworks like Postman
+                        and Newman. </li>
+                    <li class="p-1">Deploying RESTful APIs to cloud platforms like AWS and Heroku.</li>
+                    <li style="color: rgba(67, 65, 65, 0.0);"></li>
+                    <li style="color: rgba(67, 65, 65, 0.0);"></li>
+
+                </ul>
+                
+
+             </div>
+          </div>
+       </div>
+       <div class="row mb-5 p-2">
+        <h1 class="technology_text text-center mb-4">Front End Development</h1>
+          <div class="col-md-6 course_column" >
+            
+            <div class="course_main mt-1 p-3">
+                
+                <p class="dummy_text">Our front-end development program is designed to equip learners with the skills needed to build
+                    beautiful, responsive, and user-friendly websites and applications. Through this program, you
+                    will learn the core concepts of front-end development, including HTML, CSS, and JavaScript, as
+                    well as advanced frameworks such as React and Angular. With the guidance of experienced
+                    trainers and practical hands-on training on live projects, you will develop the skills and
+                    confidence needed to succeed as a front-end developer.
+                    
+                    </p>
+
+                    <h3 class="technology_text">Why Front End Development</h3>
+                   
+                    <ol>
+                       <li class="p-1" >In today's digital age, web development is an essential skillset, and front-end
+                        development is the face of web development.
+                           </li>
+                       <li class="p-1">Front-end development is responsible for the interactive and visual elements of a
+                        website, making it a critical aspect of user experience and engagement.</li>
+                       <li class="p-1">With the increasing demand for websites and web applications, there is a growing need
+                        for skilled front-end developers in the job market.
+                        
+                           </li>
+                       <li class="p-1" >Learning front-end development provides you with the opportunity to showcase your
+                        creativity and innovation by designing visually appealing and responsive websites and
+                        web applications.
+                           </li>
+                       <li class="p-1" >By mastering front-end development skills, you can work as a freelancer or join a top
+                        company as a front-end developer, earning a lucrative salary and enjoying job security.
+                        
+                           </li>
+                        <li class="p-1" >Front-end development is constantly evolving, providing exciting opportunities to learn
+                            and stay up-to-date with the latest technologies, frameworks, and tools.
+
+                            </li>
+                        <li class="p-1" >With the rise of mobile and responsive design, front-end development has become even
+                            more critical, making it a valuable skill to have in any industry.
+                            
+                        
+                            </li>
+                   </ol>
+
+             </div>
+             <button class="readmore_bt btn"><a href="#">Enroll Now</a></button>
+          </div>
+          <div class="col-md-6">
+             <div class="box_main">
+                
+                <h3 class="technology_text">Benefits</h3>
+                <ul>
+                    <li class="p-1" >Experience certificate upon successful completion of training</li>
+                    <li class="p-1">Assured placement assistance for certain programs</li>
+                    <li class="p-1">Experienced trainers with industry expertise</li>
+                    <li class="p-1" >Practical training on live projects for hands-on experience</li>
+                    <li class="p-1" >Opportunity to work on real-world scenarios to build a strong foundation</li>
+                    <li class="p-1" >Exposure to latest industry trends and technologies</li>
+                    <li class="p-1">Develop essential skills required in the workplace, such as teamwork, communication,
+                        and problem-solving</li>
+                    <li class="p-1">Enhance your resume with relevant job experience and training</li>
+                    <li class="p-1" >Networking opportunities with professionals in the industry</li>
+                    <li class="p-1" >Gain confidence and develop a positive attitude towards work</li>
+                </ul>
+                <h3 class="technology_text">What You Will Learn in the Front End Development</h3>
+                <ul>
+                    <li class="p-1" >HTML and CSS: You will learn the basics of web development, including HTML tags,
+                        CSS properties, and how to style web pages.</li>
+                    <li class="p-1">JavaScript: You will learn how to add interactivity to web pages using JavaScript,
+                        including working with variables, functions, and conditional statements.
+                    </li>
+                    <li class="p-1">Front-end frameworks: You will learn popular front-end frameworks like React, Angular,
+                        and Vue.js, which can help you build complex and scalable web applications.</li>
+                    <li class="p-1" >Responsive web design: You will learn how to create web pages that are optimized for
+                        different devices, including desktops, tablets, and mobile phones.</li>
+                    <li class="p-1" >Cross-browser compatibility: You will learn how to write code that works across different
+                        web browsers and platforms, ensuring that your web pages are accessible to as many
+                        users as possible.
+                        </li>
+                    <li class="p-1" >User experience (UX) design: You will learn the principles of UX design, including how to
+                        create intuitive interfaces, improve usability, and optimize user engagement.
+                        </li>
+                    <li class="p-1">Version control: You will learn how to use version control tools like Git to manage your
+                        code and collaborate with other developers on projects.
+                         </li>
+                    <li class="p-1">Testing and debugging: You will learn how to test and debug your code to ensure that it
+                        works as expected and is free from errors and bugs.
+                        </li>
+                    <li class="p-1" >Web performance optimization: You will learn techniques to optimize the performance of
+                        web pages, including reducing page load times, improving server response times, and
+                        minimizing file sizes.</li>
+                </ul>
+                
+
+             </div>
+          </div>
+       </div>
+       <div class="row mb-5 p-2">
+        <h1 class="technology_text text-center mb-4">Machine Learning</h1>
+          <div class="col-md-6 course_column" >
+            
+            <div class="course_main mt-1 p-3">
+                
+                <p class="dummy_text">Our Machine Learning On-the-Job Training program is designed to equip candidates with the
+                    necessary skills and knowledge to excel in the field of Machine Learning. Through our
+                    comprehensive training program, candidates will gain hands-on experience working on
+                    real-world projects, under the guidance of experienced trainers.
+                    
+                    </p>
+
+                    <h3 class="technology_text">Why Machine Learning</h3>
+                    
+                    <ol>
+                       <li class="p-1" >Machine learning is the future of technology and the demand for skilled professionals is
+                        rapidly increasing.
+                           </li>
+                       <li class="p-1">With a machine learning training program, you can learn the skills required to build
+                        intelligent systems that can learn and improve from data.</li>
+                       <li class="p-1">The field of machine learning is vast and covers topics like data preprocessing,
+                        algorithms, model selection, deep learning, and much more
+                           </li>
+                       <li class="p-1" >A machine learning training program will provide you with hands-on experience in
+                        working on real-world projects using popular tools and frameworks like Python,
+                        TensorFlow, Keras, and more.
+                        
+                           </li>
+                       <li class="p-1" >With the knowledge and skills gained from a machine learning training program, you can
+                        pursue a career in various fields like healthcare, finance, e-commerce, and more.
+                        
+                           </li>
+                        <li class="p-1" >Machine learning professionals are highly paid and in-demand, making it a lucrative
+                        career option for those interested in technology and innovation.
+                        
+                            </li>
+                        <li class="p-1" >Our machine learning training program is designed and taught by experienced industry
+                            professionals who will provide you with the best learning experience and career
+                            guidance.
+                            
+                        
+                            </li>
+                   </ol>
+
+             </div>
+             <button class="readmore_bt btn"><a href="#">Enroll Now</a></button>
+          </div>
+          <div class="col-md-6">
+             <div class="box_main">
+                
+                <h3 class="technology_text">Benefits                </h3>
+                <ul>
+                    <li class="p-1" >Experience certificate upon successful completion of training</li>
+                    <li class="p-1">Assured placement assistance for certain programs</li>
+                    <li class="p-1">Experienced trainers with industry expertise</li>
+                    <li class="p-1" >Practical training on live projects for hands-on experience</li>
+                    <li class="p-1" >Opportunity to work on real-world scenarios to build a strong foundation</li>
+                    <li class="p-1" >Exposure to latest industry trends and technologies</li>
+                    <li class="p-1">Develop essential skills required in the workplace, such as teamwork, communication,
+                        and problem-solving</li>
+                    <li class="p-1">Enhance your resume with relevant job experience and training</li>
+                    <li class="p-1" >Networking opportunities with professionals in the industry</li>
+                    <li class="p-1" >Gain confidence and develop a positive attitude towards work</li>
+                </ul>
+                <h3 class="technology_text">What You Will Learn in the Machine Learning</h3>
+                <ul>
+                    <li class="p-1" >Introduction to Machine Learning: Understanding the basics of Machine Learning, its
+                        applications, and different types of Machine Learning algorithms.
+                        </li>
+                    <li class="p-1">Data Preparation: Gathering, cleaning, and preparing data for use in Machine Learning
+                        models</li>
+                    <li class="p-1">Regression Analysis: Using regression analysis to make predictions and understand the
+                        relationships between variables.</li>
+                    <li class="p-1" >Classification Algorithms: Understanding different classification algorithms such as
+                        logistic regression, decision trees, and support vector machines (SVMs).</li>
+                    <li class="p-1" >Clustering Algorithms: Understanding different clustering algorithms such as k-means,
+                        hierarchical clustering, and DBSCAN.
+                        </li>
+                    <li class="p-1" >Neural Networks: Understanding neural networks and deep learning, and their
+                        applications in Machine Learning.
+                        </li>
+                    <li class="p-1">Natural Language Processing (NLP): Understanding NLP and how it is used in Machine
+                        Learning applications such as sentiment analysis and chatbots.</li>
+                    <li class="p-1" >Model Evaluation: Techniques for evaluating the accuracy and effectiveness of Machine
+                        Learning models.</li>
+                    <li class="p-1" >Model Deployment: How to deploy Machine Learning models into production and make
+                        them available to end-users.</li>
+                </ul>
+                
+
+             </div>
+          </div>
+       </div>
+       <div class="row mb-5 p-2">
+        <h1 class="technology_text text-center mb-4">Digital Marketing</h1>
+          <div class="col-md-6 course_column" >
+            
+            <div class="course_main mt-1 p-3">
+                
+                <p class="dummy_text">Our Digital Marketing On-The-Job Training Program is designed to equip you with the skills and
+                    knowledge required to succeed in the world of online marketing. The first three months are
+                    focused on teaching you the basics of digital marketing, while the remaining three months are
+                    spent working on live projects to give you hands-on experience in real-world scenarios. As a
+                    graduate of this program, you will receive an experience certificate and be assured of job
+                    placement. With our expert trainers and practical approach to learning, you can be confident in
+                    your ability to succeed as a digital marketer.
+                    
+                    </p>
+
+                    <h3 class="technology_text">Why Digital Marketing</h3>
+                    
+                    <ol>
+                       <li class="p-1" >Digital marketing is a growing industry with a high demand for skilled professionals.
+                           </li>
+                       <li class="p-1">Digital marketing offers a variety of career opportunities, from social media marketing to
+                        search engine optimization to content marketing.
+                        </li>
+                       <li class="p-1">With a digital marketing training program, you can gain a comprehensive understanding
+                        of the industry and its various aspects.                        
+                           </li>
+                       <li class="p-1" >You'll learn how to use tools and techniques to analyze data, track performance, and
+                        measure success.                        
+                           </li>
+                       <li class="p-1" >Our training program will provide you with practical experience working on live projects,
+                        giving you the skills and confidence you need to succeed in a competitive job market.
+                           </li>
+                        <li class="p-1">You'll have access to experienced trainers who are experts in the field and can provide
+                        guidance and support throughout your learning journey.                       
+                            </li>
+                        <li class="p-1" >Digital marketing skills are transferable across a wide range of industries, so you'll have
+                        the opportunity to explore different career paths and industries.                       
+                            </li>
+                        <li class="p-1" >By learning digital marketing, you'll be able to stay up-to-date with the latest trends and
+                        technologies, ensuring that you remain a valuable asset to any organization.
+                            </li>
+                </ol>
+
+             </div>
+             <button class="readmore_bt btn"><a href="#">Enroll Now</a></button>
+          </div>
+          <div class="col-md-6">
+             <div class="box_main">
+                
+                <h3 class="technology_text">Benefits</h3>
+                <ul>
+                    <li class="p-1" >Experience certificate upon successful completion of training</li>
+                    <li class="p-1">Assured placement assistance for certain programs</li>
+                    <li class="p-1">Experienced trainers with industry expertise</li>
+                    <li class="p-1" >Practical training on live projects for hands-on experience</li>
+                    <li class="p-1" >Opportunity to work on real-world scenarios to build a strong foundation</li>
+                    <li class="p-1" >Exposure to latest industry trends and technologies</li>
+                    <li class="p-1">Develop essential skills required in the workplace, such as teamwork, communication,
+                        and problem-solving</li>
+                    <li class="p-1">Enhance your resume with relevant job experience and training</li>
+                    <li class="p-1" >Networking opportunities with professionals in the industry</li>
+                    <li class="p-1" >Gain confidence and develop a positive attitude towards work</li>
+                </ul>
+                <h3 class="technology_text">What You Will Learn in the Digital Marketing</h3>
+                <ul>
+                    <li class="p-1" >Introduction to Digital Marketing: Learn about the basics of digital marketing, its
+                        importance, and how it is different from traditional marketing.</li>
+                    <li class="p-1">Search Engine Optimization (SEO): Learn how to optimize websites and improve their
+                        ranking in search engine results pages (SERPs) using techniques like keyword research,
+                        on-page optimization, link building, and more.
+                    </li>
+                    <li class="p-1">Pay-Per-Click Advertising (PPC): Learn how to create, run, and optimize advertising
+                        campaigns on search engines and social media platforms like Google Ads and
+                        Facebook Ads.
+                    </li>
+                    <li class="p-1" >Social Media Marketing: Learn how to leverage social media platforms like Facebook,
+                        Twitter, Instagram, and LinkedIn to increase brand awareness, engage with customers,
+                        and drive website traffic.</li>
+                    <li class="p-1" >Email Marketing: Learn how to create effective email marketing campaigns that drive
+                        conversions and build customer loyalty.</li>
+                    <li class="p-1" >Content Marketing: Learn how to create high-quality content that resonates with your
+                        target audience and helps you achieve your marketing goals.</li>
+                    <li class="p-1">Analytics and Reporting: Learn how to track and analyze your digital marketing
+                        campaigns using tools like Google Analytics, and how to use the data to optimize your
+                        strategies. </li>
+                    <li class="p-1">Mobile Marketing: Learn how to reach customers on their mobile devices using mobile
+                        apps, mobile-optimized websites, SMS marketing, and more.</li>
+                    <li class="p-1" >E-commerce Marketing: Learn how to market products and services on e-commerce
+                        platforms like Amazon and eBay, and how to use techniques like search engine
+                        optimization, paid advertising, and social media marketing to drive sales.</li>
+                    <li class="p-1" >Digital Marketing Strategy: Learn how to develop a comprehensive digital marketing
+                        strategy that aligns with your business goals and objectives.</li>
+                </ul>
+                
+
+             </div>
+          </div>
+       </div>
+       <div class="row mb-5 p-2">
+        <h1 class="technology_text text-center mb-4">3D Modeling</h1>
+          <div class="col-md-6 course_column" >
+            
+            <div class="course_main mt-1 p-3">
+                
+                <p class="dummy_text">Our 3D Modeling On-The-Job Training Program is designed to provide you with a
+                    comprehensive understanding of 3D modeling and design. Over the first three months, you will
+                    learn the fundamental principles and techniques of 3D modeling, and in the following three
+                    months, you will work on live projects to gain hands-on experience. As a graduate of this
+                    program, you will receive an experience certificate and be assured of job placement. With our
+                    expert trainers and practical approach to learning, you can be confident in your ability to
+                    succeed as a 3D modeler.
+                    
+                    </p>
+
+                    <h3 class="technology_text">Why 3D Modeling</h3>
+                                
+                    <ol>
+                       <li class="p-1" >3D modeling has become a rapidly growing industry with high demand for skilled
+                        professionals.
+                           </li>
+                       <li class="p-1">It offers opportunities in fields like gaming, architecture, product design, film and
+                        animation, and more.
+                        </li>
+                       <li class="p-1">Our 3D modeling training program provides hands-on experience with industry-standard
+                        software and tools.
+                           </li>
+                       <li class="p-1" >Our experienced trainers will guide you through the entire process, from modeling to
+                        rendering and animation.
+                        
+                           </li>
+                       <li class="p-1" >You will learn the fundamentals of 3D modeling, including lighting, texturing, and rigging
+                           </li>
+
+                        <li class="p-1" >We focus on practical, project-based learning to give you real-world experience and build
+                            a strong portfolio.
+                        
+                            </li>
+                        <li class="p-1" >Our program is designed to provide you with the skills and knowledge you need to start a
+                            successful career in 3D modeling.
+                            </li>
+                   </ol>
+
+             </div>
+             <button class="readmore_bt btn"><a href="#">Enroll Now</a></button>
+          </div>
+          <div class="col-md-6">
+             <div class="box_main">
+                
+                <h3 class="technology_text">Benefits</h3>
+                <ul>
+                    <li class="p-1" >Experience certificate upon successful completion of training</li>
+                    <li class="p-1">Assured placement assistance for certain programs</li>
+                    <li class="p-1">Experienced trainers with industry expertise</li>
+                    <li class="p-1" >Practical training on live projects for hands-on experience</li>
+                    <li class="p-1" >Opportunity to work on real-world scenarios to build a strong foundation</li>
+                    <li class="p-1" >Exposure to latest industry trends and technologies</li>
+                    <li class="p-1">Develop essential skills required in the workplace, such as teamwork, communication,
+                        and problem-solving</li>
+                    <li class="p-1">Enhance your resume with relevant job experience and training</li>
+                    <li class="p-1" >Networking opportunities with professionals in the industry</li>
+                    <li class="p-1" >Gain confidence and develop a positive attitude towards work</li>
+                </ul>
+                <h3 class="technology_text">What You Will Learn in the 3D Modeling  </h3>
+                <ul>
+                    <li class="p-1" >Basic 3D modeling principles and techniques.</li>
+                    <li class="p-1">Understanding of industry-standard software such as Autodesk Maya, 3ds Max, Blender,
+                        and ZBrush.
+                    </li>
+                    <li class="p-1" >Modeling 3D objects, characters, and environments.</li>
+                    <li class="p-1" >Creating textures and materials for 3D models.</li>
+                    <li class="p-1" >Rendering 3D models to create final images or animations.</li>
+                    <li class="p-1" >Understanding the fundamentals of lighting and camera techniques for 3D models.</li>
+                    <li class="p-1" >Animating 3D models and creating basic rigs for characters. </li>
+                    <li class="p-1" >Learning the importance of topology and optimization in 3D modeling. </li>
+                    <li class="p-1" >Understanding the workflow and pipeline of 3D modeling and animation in the industry.</li>
+                    <li class="p-1" >Portfolio creation and showcasing your work.</li>
+                </ul>
+                
+
+             </div>
+          </div>
+       </div>
+       <div class="row mb-5 p-2">
+        <h1 class="technology_text text-center mb-4">Accounting</h1>
+          <div class="col-md-6 course_column" >
+            
+            <div class="course_main mt-1 p-3">
+                
+                <p class="dummy_text">Our Accounting On-The-Job Training Program is designed to equip you with the skills and
+                    knowledge needed to become a successful accountant. Over the first three months, you will
+                    learn the basics of accounting principles, financial statements, and bookkeeping. In the following
+                    three months, you will work on live projects to gain practical experience and apply what you
+                    have learned. As a graduate of this program, you will receive an experience certificate and be
+                    assured of job placement. Our experienced trainers and hands-on approach to learning will
+                    provide you with the confidence to pursue a career in accounting.
+                    </p>
+
+                    <h3 class="technology_text">Why Accounting</h3>
+                    <ol>
+                       <li class="p-1" >Develop proficiency in financial accounting principles, bookkeeping, and taxation to
+                        become a skilled accountant.
+                       </li>
+                       <li class="p-1">Gain practical experience in using accounting software and tools, including QuickBooks,
+                        Xero, and SAP.</li>
+                       <li class="p-1">Learn about financial analysis and management, budgeting, financial reporting, and
+                        auditing.
+                           </li>
+                       <li class="p-1" >Acquire in-demand skills that are valued across various industries, including banking,
+                        finance, and accounting.
+                           </li>
+                       <li class="p-1" >Prepare yourself for various job roles in the accounting industry, such as auditor,
+                        bookkeeper, tax specialist, financial analyst, and accountant.
+                           </li>
+
+                        <li class="p-1">Our training program is designed to provide hands-on experience on live projects, and
+                            our experienced trainers offer personalized attention to each student.</li>
+                        <li class="p-1">We offer an experience certificate upon completion of the program, which can add value
+                            to your resume and help you stand out in the job market.
+                            </li>
+                        <li class="p-1" >We also provide placement assistance to our students to help them find job opportunities
+                            in their desired field.
+                            
+                        </li>
+                   </ol>
+
+             </div>
+             <button class="readmore_bt btn"><a href="#">Enroll Now</a></button>
+          </div>
+          <div class="col-md-6">
+             <div class="box_main">
+                
+                <h3 class="technology_text">Benefits</h3>
+                <ul>
+                    <li class="p-1" >Experience certificate upon successful completion of training</li>
+                    <li class="p-1">Assured placement assistance for certain programs</li>
+                    <li class="p-1">Experienced trainers with industry expertise</li>
+                    <li class="p-1" >Practical training on live projects for hands-on experience</li>
+                    <li class="p-1" >Opportunity to work on real-world scenarios to build a strong foundation</li>
+                    <li class="p-1" >Exposure to latest industry trends and technologies</li>
+                    <li class="p-1">Develop essential skills required in the workplace, such as teamwork, communication,
+                        and problem-solving</li>
+                    <li class="p-1">Enhance your resume with relevant job experience and training</li>
+                    <li class="p-1" >Networking opportunities with professionals in the industry</li>
+                    <li class="p-1" >Gain confidence and develop a positive attitude towards work</li>
+                </ul>
+                <h3 class="technology_text">What You Will Learn in the Accounting</h3>
+                <ul>
+                    <li class="p-1" >Fundamentals of accounting: Learn the basics of accounting principles, such as balance
+                        sheets, income statements, and cash flow statements.</li>
+                    <li class="p-1">Financial statement analysis: Learn how to analyze and interpret financial statements to
+                        make informed business decisions.</li>
+                    <li class="p-1">Taxation: Gain an understanding of tax laws, rules and regulations, and how to prepare
+                        and file tax returns.</li>
+                    <li class="p-1" >Accounting software: Get hands-on experience with popular accounting software, such
+                        as QuickBooks, Xero, or Sage.</li>
+                    <li class="p-1" >Cost accounting: Understand how to calculate and allocate costs in a business, including
+                        direct and indirect costs, fixed and variable costs, and overhead costs.</li>
+                    <li class="p-1" >Auditing: Learn the process of auditing financial statements to ensure accuracy and
+                        compliance with accounting standards.</li>
+                    <li class="p-1">Budgeting and forecasting: Learn how to create budgets and forecasts for a business,
+                        and use them to make informed financial decisions. </li>
+                    <li class="p-1">Managerial accounting: Understand the role of accounting in managerial
+                        decision-making, including cost-benefit analysis and performance measurement.</li>
+                    <li class="p-1" >Business communication: Improve your communication skills to effectively communicate
+                        financial information to stakeholders.</li>
+                </ul>
+                
+
+             </div>
+          </div>
+       </div>
+    </div>
+ </div>
+ <!--services section end -->
+<!-- Courses Start 
+ <div class="container-xxl py-5">
+    <div class="container courses-section justify-content-between">
+        <div class="text-center wow fadeInUp" data-wow-delay="0.1s">
+             <h6 class="section-title bg-white text-justify text-primary px-3">Courses</h6>
+            <h1 class="mb-5">On the Job Training</h1> 
+            <p class=" text-light mt-1 p-1">
+                Welcome to Altos Eduhub - the premier software training company in Kerala, and a subsidiary of
+                Altos Technologies - one of the leading software development companies in Kochi. We offer a
+                range of on-the-job training programs in Python, React JS, Front End Development, REST API,
+                and Digital Marketing. Our courses are designed to equip you with the skills and knowledge you
+                need to succeed in the competitive world of software development.
+                <p class="p-1">
+                Our training programs are six months in duration, with the first three months focused on
+                fundamental training and the remaining three months dedicated to practical work on live
+                projects. Upon successful completion of the training, you will receive an experience certificate.
+                For Python training, we also offer guaranteed placement at Altos Technologies, while for other
+                programs, we provide placement assistance.</p>
+                <p class="mb-5 p-1">
+                To ensure the best possible training experience for our candidates, we have implemented
+                several measures. As a part of our training program, we provide candidates with access to Altos
+                core software, where they can update their tasks and track their work status efficiently.
+                Additionally, we conduct weekly meetings for each of the candidates to evaluate their work and
+                performance. We believe in providing continuous support to our candidates and offer a doubt
+                clearing section that is available 24 hours a day, seven days a week.
+            </p>
+        </div>
+
+        <style>
+            .points ul {
+                list-style-type: none;
+            }
+            .points ul li{
+                font-size: 17px; 
+                color: var(--light);
+                line-height: 2rem;
+                text-align: justify;
+                text-justify: distribute-all-lines;
+            }
+            .points ul li::before {
+                content: "-►";
+                color: var(--primary);
+                font-size: 20px;
+                margin-right: 5px;
+            }
+        </style>
+        <div class="text-center animated slideInRight points" data-wow-delay="0.1s">
+            <h3 class="mb-5 animated slideInLeft">Why Altos Eduhub ?</h3>
+            <hr>
+            <div class="row gy-2 gx-4 mb-5 " >
+                    
+                <div class="col-sm-6 text-center m-0 p-0" style="margin-right: 0;">
+                    <ul>
+                        <li class="p-1" >Experience certificate upon successful completion of training</li>
+                        <li class="p-1">Assured placement assistance for certain programs</li>
+                        <li class="p-1">24-hour doubt clearing assistance for all candidates</li>
+                        <li class="p-1" >Training on live projects to gain hands-on experience</li>
+                        <li class="p-1" >Career development guidance to help candidates achieve their career goals</li>
+                    </ul>
+                </div>
+                <div class="col-sm-6 text-center m-0 p-0" style="margin-left: 0;">
+                    <ul>
+                        <li class="p-1" >Highly experienced trainers with years of industry experience</li>
+                        <li class="p-1" >Access to Altos core software for tracking training progress and work status</li>
+                        <li class="p-1" >Weekly meetings to evaluate work and performance</li>
+                        <li class="p-1" >Convenient EMI payment options for training program fees</li>
+                        <li class="p-1" >Located in Infopark, Kochi - a premier technology park with state-of-the-art facilities</li>
+                    </ul>
+                </div>
+
+            </div>
+        </div>
+
+        <div class="row g-4  justify-content-center" >
+            <div class="text-center wow fadeInLeftBig">
+                <h3 class="mb-5">Offered Courses</h3>
+            </div>
+            <hr>
+            {% for c in courses %}
+            <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.1s" >
+                <div class="course-item bg-light">
+                   
+                    <div class="position-relative overflow-hidden">
+
+                        {% if c.image %}
+                            <img src="{{ c.image.url }}" class="img-fluid" style="width:500px; height: 235px !important;">
+                        {% endif %}
+
+                        <div class="w-100 d-flex justify-content-center position-absolute bottom-0 start-0 mb-4">
+                            <a href="#" class="flex-shrink-0 btn btn-sm btn-primary px-3 border-end" style="border-radius: 30px 0 0 30px;">Read More</a>
+                            <a href="#" class="flex-shrink-0 btn btn-sm btn-primary px-3" style="border-radius: 0 30px 30px 0;">Join Now</a>
+                        </div>
+                    </div>
+                    <div class="text-center p-4 pb-0">
+                      
+                        <h4 class="mb-1 text-center ">{{c.course_name}}  </h4>
+                        
+                        <p class="mb-2 p-2 text-dark">{{c.description}}Some of the tools and technologies that can be
+                            offered as part of the program are:
+                            </p>
+                        <ol>
+                            {% for s in c.course_description_list_set.all %}
+                                <li>{{ s.list_item }}</li>
+                            {% endfor %}
+                        </ol>
+                        <h5 class="mb-1 text-left"><b>Course Fee:</b>{%if c.fee is not None %} ₹{{c.fee}}.00 {% endif %}</h5>
+                    </div>
+                    <div class="d-flex border-top">
+                        <small class="flex-fill text-center border-end py-3"><b>Next Batch </b> <br>{%if c.start_date is not None %} {{c.start_date}} {% endif %}</small>
+                        <small class="flex-fill text-center border-end py-3"><b>Duration  </b> <br>{%if c.duration is not None %} {{c.duration}} {% endif %}</small>
+                    </div>
+                    
+                </div>
+            </div>
+            {% endfor %}
+           
+
+        </div>
+    </div>
+</div>
+Courses End -->
+
+
+
+        
+    {% endblock %}
